@@ -11,15 +11,17 @@
 //
 // Revision:
 // Revision 0.01 - File Created
+//          0.02 - Change addressing of font.
 //
 // Additional Comments:
+//   0.02 - Now 
 //
 //-----------------------------------------------------------------------------
 //-- GPL license
 //-----------------------------------------------------------------------------
 module fontROM 
 #(
-    parameter FONT_FILE = "font.list",
+    parameter FONT_FILE = "BRAM_8.list",
     parameter rows = 16*8,
     parameter cols = 16,
     parameter addr_width = $clog2(rows*cols),

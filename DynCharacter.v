@@ -11,6 +11,7 @@
 //
 // Revision: 
 // Revision 0.01 - File Created
+// Revision 0.02 - Changed addressing ROM
 //
 // Additional Comments:
 //
@@ -64,17 +65,19 @@ parameter sdiv = $clog2(psw);     // Shift divider for pixel size.
 reg [2:0] px_color;               // Pixel color.
 
 // Get glyph position in table ROM.
-assign pcx = character[3:0];
-assign pcy = character[7:4];
+//assign pcx = character[3:0];
+//assign pcy = character[7:4];
 
 // Glyph point positon.
-reg [9:0] glyph_x;
-reg [9:0] glyph_y;
+reg [2:0] glyph_x;
+reg [2:0] glyph_y;
 
 // Stage 0: Calculate address ROM and relative glyph position.
 always @(posedge px_clk)
 begin
-    addr_rom <= pcy*fw + glyph_y*gc + pcx;
+// Changed in revision 0.02
+//    addr_rom <= pcy*fw + glyph_y*gc + pcx;
+    addr_rom <= {character,glyph_y};
     glyph_x <= (RGBStr_i[`XC] - pos_x) >> sdiv;
     glyph_y <= (RGBStr_i[`YC] - pos_y) >> sdiv;
 end
