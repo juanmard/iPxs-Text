@@ -19,8 +19,8 @@
 module DynCharacter #(
         parameter color_fg = 3'b110,            // Foreground font color.
         parameter color_bg = 3'b001,            // Background font color.
-        parameter psw = 16,                     // Pixel size width.
-        parameter psh = 16                      // Pixel size height.
+        parameter gsize = 16,                   // Glyph size.
+        parameter alpha = 1                     // Transparent font.
         )
         (
         input wire        px_clk,      // Pixel clock.
@@ -47,17 +47,21 @@ module DynCharacter #(
 `define RGB 25:23
 `define VGA 22:0
 
-// Dimentions and parameters for image of binary font.
+// Dimensions and parameters for image of binary font.
 parameter gw = 8;         // Glyph width.
 parameter gh = 8;         // Glyph height.
-parameter gc = 16;        // Glyphs for row.
-parameter gr = 16;        // Glyphs for column.
+parameter gc = 16;        // Glyphs for column.
+parameter gr = 16;        // Glyphs for row.
 parameter fw = gc*gw;     // Font image width.
 parameter fh = gr*gh;     // Font image height.
+wire [6:0] pcx;           // Position character X in image font.
+wire [6:0] pcy;           // Position character Y in image font.
 
-wire [6:0] pcx;       // Position character X in image font.
-wire [6:0] pcy;       // Position character Y in image font.
-reg  [2:0] px_color;   // Actual pixel color.
+// Pixels dimensions and colors.
+parameter psw = gsize >> 3;       // Pixel size width.
+parameter psh = gsize >> 3;       // Pixel size height.
+parameter sdiv = $clog2(psw);     // Shift divider for pixel size.
+reg [2:0] px_color;               // Pixel color.
 
 // Get glyph position in table ROM.
 assign pcx = character[3:0];
@@ -67,12 +71,12 @@ assign pcy = character[7:4];
 reg [9:0] glyph_x;
 reg [9:0] glyph_y;
 
-// Stage 0: Calculate address ROM direction to glyph and relative glyph position.
+// Stage 0: Calculate address ROM and relative glyph position.
 always @(posedge px_clk)
 begin
     addr_rom <= pcy*fw + glyph_y*gc + pcx;
-    glyph_x <= (RGBStr_i[`XC] - pos_x) >> 4;
-    glyph_y <= (RGBStr_i[`YC] - pos_y) >> 4;
+    glyph_x <= (RGBStr_i[`XC] - pos_x) >> sdiv;
+    glyph_y <= (RGBStr_i[`YC] - pos_y) >> sdiv;
 end
 
 // Stage 1: Calculate pixel color.
@@ -84,7 +88,7 @@ begin
         (RGBStr_i[`YC] >= pos_y) && (RGBStr_i[`YC] < (pos_y + psh*gh))
         )
         begin
-            px_color <= gline[glyph_x] ? color_fg : RGBStr_i[`RGB]; //color_bg;
+            px_color <= gline[glyph_x] ? color_fg : (alpha?RGBStr_i[`RGB]:color_bg);
         end
     else
         begin

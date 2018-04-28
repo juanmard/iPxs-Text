@@ -2,7 +2,7 @@
   "version": "1.1",
   "package": {
     "name": "PxsCharacter",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Draw a character in a stream RGB.",
     "author": "Juan Manuel Rico",
     "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20xmlns:xlink=%22http://www.w3.org/1999/xlink%22%20width=%22353.067%22%20height=%22279.341%22%20viewBox=%220%200%20331.00001%20261.88235%22%3E%3Cg%20transform=%22translate(-197.735%20-187.597)%22%3E%3Crect%20width=%22325%22%20height=%22255.882%22%20x=%2291.176%22%20y=%22192.068%22%20ry=%2278.704%22%20transform=%22translate(109.559%20-1.47)%22%20fill=%22#afafaf%22%20fill-rule=%22evenodd%22%20stroke=%22#0a0a0a%22%20stroke-width=%226%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Cimage%20xlink:href=%22data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAAC1CAIAAADUVw1AAAAAA3NCSVQICAjb4U/gAAACQUlEQVR4%20nO3dwYrbMBRA0ZvS///ldPF2LaaTqR1L6TnLYUgUw0UgWXYBAAAAAAAAAAAAAAAAAAAAAAAAAPA+%20j7sH8FXP5/Ol/3887vlpr47zVVf/rt3H/20/7h4ALEEJUEqAoQQoJcBQApQSYCy3uHvWevZq6+6v%20jsfnv5k5AUoJMJQApQQYSoBSAgwlQNXPuwfwu6N15avvm3/V7evf/2j38Z/OnAClBBhKgFICDCVA%20KQGGEqAW3E/4VLucuziy+/j/ypwApQQYSoBSAgwlQCkBhhKgFnze0ZFdnp+zyzivtt11MCdAKQGG%20EqCUAEMJUEqAoQQo5xO+bff3D2y33n81cwKUEmAoAUoJMJQApQQYSoC68XzC7u9D2H38R67+Xcvu%20S5gToJQAQwlQSoChBCglwFACAAAAAAAAfMWiN4v/abXn83zq+YQjH39uwR4zlBJgKAFKCTCUAKUE%20GEqAWnA/Yfd1693fe7D753+bOQFKCTCUAKUEGEqAUgIMJUDd+D7mu9atj/5++/3xb3bXuv6y19mc%20AKUEGEqAUgIMJUApAYYSoG7cT2CcdR5j2XX6XZgToJQAQwlQSoChBCglwFAC1Eb7Cau9r+Aszl0s%20wpwApQQYSoBSAgwlQCkBhhKgNtpPuPo5/f+bo+t59X6F9yfA0pQApQQYSoBSAgwlQCkBxjb7Cas5%20a79itecdnbXPcNb3vo05AUoJMJQApQQYSoBSAgwlAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACs%205Bcg/4TrvKf22wAAAABJRU5ErkJggg==%22%20preserveAspectRatio=%22none%22%20height=%22181%22%20width=%22259%22%20transform=%22translate(233.735%20228.039)%22%20image-rendering=%22optimizeQuality%22/%3E%3C/g%3E%3C/svg%3E"
@@ -511,6 +511,32 @@
           }
         },
         {
+          "id": "ef95fe85-b34e-4847-a408-e19c158dc626",
+          "type": "basic.constant",
+          "data": {
+            "name": "color",
+            "value": "3'b110",
+            "local": false
+          },
+          "position": {
+            "x": 304,
+            "y": -72
+          }
+        },
+        {
+          "id": "f47c4253-5e32-4469-8bc2-bf1464ea6b70",
+          "type": "basic.constant",
+          "data": {
+            "name": "size",
+            "value": "16",
+            "local": false
+          },
+          "position": {
+            "x": 424,
+            "y": -72
+          }
+        },
+        {
           "id": "7772ad0b-8c06-402c-94c9-627857669e28",
           "type": "862d2a36c72ddee13ea44bf906fe1b60efa90941",
           "position": {
@@ -535,8 +561,8 @@
           }
         },
         {
-          "id": "9eefdbb6-54d9-4295-9428-381b15161f0c",
-          "type": "69ccf5b733e799be3366cc285a7ed815da2d2df2",
+          "id": "a49f0741-62ec-4a53-8c0b-368e735cb39a",
+          "type": "cd703aa770dcbb52db0bf37f22300dd0261590d4",
           "position": {
             "x": 360,
             "y": 72
@@ -554,7 +580,7 @@
             "port": "out"
           },
           "target": {
-            "block": "9eefdbb6-54d9-4295-9428-381b15161f0c",
+            "block": "a49f0741-62ec-4a53-8c0b-368e735cb39a",
             "port": "704ced4d-338f-4fb3-b8a9-24b8b25712f7"
           },
           "vertices": [
@@ -570,7 +596,7 @@
             "port": "out"
           },
           "target": {
-            "block": "9eefdbb6-54d9-4295-9428-381b15161f0c",
+            "block": "a49f0741-62ec-4a53-8c0b-368e735cb39a",
             "port": "176144fc-d840-481f-bdf6-0b43f73ad960"
           },
           "vertices": [
@@ -587,7 +613,7 @@
             "port": "out"
           },
           "target": {
-            "block": "9eefdbb6-54d9-4295-9428-381b15161f0c",
+            "block": "a49f0741-62ec-4a53-8c0b-368e735cb39a",
             "port": "3c94233f-89e8-4d5e-b1f7-05c83f8f51fd"
           },
           "vertices": [
@@ -604,7 +630,7 @@
             "port": "out"
           },
           "target": {
-            "block": "9eefdbb6-54d9-4295-9428-381b15161f0c",
+            "block": "a49f0741-62ec-4a53-8c0b-368e735cb39a",
             "port": "d5adda49-76a9-4495-b680-5dd4735fe8da"
           },
           "vertices": [
@@ -621,7 +647,7 @@
             "port": "1a685972-640c-45e1-8ef8-f7bb2da9750b"
           },
           "target": {
-            "block": "9eefdbb6-54d9-4295-9428-381b15161f0c",
+            "block": "a49f0741-62ec-4a53-8c0b-368e735cb39a",
             "port": "1bb6bd95-43a7-4549-8dd2-b066cec98de4"
           },
           "vertices": [
@@ -638,7 +664,7 @@
             "port": "out"
           },
           "target": {
-            "block": "9eefdbb6-54d9-4295-9428-381b15161f0c",
+            "block": "a49f0741-62ec-4a53-8c0b-368e735cb39a",
             "port": "dc9e3057-4965-406d-9141-9666d0e03b65"
           },
           "vertices": [
@@ -651,7 +677,7 @@
         },
         {
           "source": {
-            "block": "9eefdbb6-54d9-4295-9428-381b15161f0c",
+            "block": "a49f0741-62ec-4a53-8c0b-368e735cb39a",
             "port": "acdf522a-0a26-4773-909b-a4acb54a5111"
           },
           "target": {
@@ -662,7 +688,7 @@
         },
         {
           "source": {
-            "block": "9eefdbb6-54d9-4295-9428-381b15161f0c",
+            "block": "a49f0741-62ec-4a53-8c0b-368e735cb39a",
             "port": "1fdcb461-4e4f-4017-b7f8-ef11a5b1e928"
           },
           "target": {
@@ -700,15 +726,35 @@
             "block": "bc01db76-95c5-4404-b5df-abf9d840d0f1",
             "port": "12894132-1b71-43ca-819f-8f22745cb2a7"
           }
+        },
+        {
+          "source": {
+            "block": "ef95fe85-b34e-4847-a408-e19c158dc626",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "a49f0741-62ec-4a53-8c0b-368e735cb39a",
+            "port": "f43d9be5-03e9-407d-a0a2-7d632f536175"
+          }
+        },
+        {
+          "source": {
+            "block": "f47c4253-5e32-4469-8bc2-bf1464ea6b70",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "a49f0741-62ec-4a53-8c0b-368e735cb39a",
+            "port": "1d05ded0-273a-4248-9a18-3ab1ee19fb22"
+          }
         }
       ]
     },
     "state": {
       "pan": {
-        "x": 3.3333,
-        "y": 84.5
+        "x": 5.1667,
+        "y": 94.4
       },
-      "zoom": 0.9167
+      "zoom": 0.8708
     }
   },
   "dependencies": {
@@ -962,10 +1008,10 @@
         }
       }
     },
-    "69ccf5b733e799be3366cc285a7ed815da2d2df2": {
+    "cd703aa770dcbb52db0bf37f22300dd0261590d4": {
       "package": {
         "name": "DynCharacter",
-        "version": "1.0",
+        "version": "1.1",
         "description": "Dynamic for read and show a character.",
         "author": "Juan Manuel Rico",
         "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22571.654%22%20height=%22404.172%22%20viewBox=%220%200%20535.9259%20378.9108%22%3E%3Cg%20transform=%22translate(-105.602%20-342.794)%22%20fill-rule=%22evenodd%22%3E%3Crect%20width=%22529.926%22%20height=%22372.911%22%20x=%22108.602%22%20y=%22345.794%22%20ry=%2278.704%22%20fill=%22#343434%22%20stroke=%22#0a0a0a%22%20stroke-width=%226%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Cpath%20d=%22M392.155%20546.372c7.675-5.905%2011.745%207.433%209.813%2012.757-5.237%2014.427-24.579%2014.334-35.328%206.87-19.229-13.352-18.033-41.354-3.926-57.9%2020.703-24.282%2058.367-21.874%2080.47-.981%2029.46%2027.847%2025.78%2075.468-1.962%20103.041-34.912%2034.698-92.61%2029.718-125.612-4.907-39.97-41.935-33.676-109.776%207.85-148.183%2048.938-45.261%20126.957-37.645%20170.754%2010.795%2050.566%2055.926%2041.623%20144.147-13.738%20193.325-62.906%2055.879-161.345%2045.606-215.896-16.683-61.199-69.879-49.594-178.547%2019.627-238.467%2076.848-66.522%20195.752-53.583%20261.037%2022.571.331.386.66.774.988%201.162%22%20fill=%22#98a2ec%22/%3E%3C/g%3E%3C/svg%3E"
@@ -1082,11 +1128,76 @@
               }
             },
             {
+              "id": "f43d9be5-03e9-407d-a0a2-7d632f536175",
+              "type": "basic.constant",
+              "data": {
+                "name": "color",
+                "value": "3'b110",
+                "local": false
+              },
+              "position": {
+                "x": 240,
+                "y": -88
+              }
+            },
+            {
+              "id": "22d5995b-348e-4f75-89ce-4c7c3e3d492a",
+              "type": "basic.constant",
+              "data": {
+                "name": "background",
+                "value": "3'b001",
+                "local": true
+              },
+              "position": {
+                "x": 408,
+                "y": -88
+              }
+            },
+            {
+              "id": "1d05ded0-273a-4248-9a18-3ab1ee19fb22",
+              "type": "basic.constant",
+              "data": {
+                "name": "size",
+                "value": "128",
+                "local": false
+              },
+              "position": {
+                "x": 576,
+                "y": -88
+              }
+            },
+            {
+              "id": "97646f6a-1776-4646-b67f-de41308d2358",
+              "type": "basic.constant",
+              "data": {
+                "name": "alpha",
+                "value": "1",
+                "local": true
+              },
+              "position": {
+                "x": 744,
+                "y": -88
+              }
+            },
+            {
               "id": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
               "type": "basic.code",
               "data": {
-                "code": "//@include DynCharacter.v\n\nDynCharacter\nDynCharacter01\n(\n        px_clk,      // Pixel clock.\n        RGBStr_i,    // Input RGB stream.\n        pos_x,       // X screen position.\n        pos_y,       // Y screen position.\n        character,   // Character to stream.\n\n        // ROM interface.\n        addr_rom,    // Output address ROM.\n        gline,       // Glyph line.\n\n        // RGB Stream output.\n        RGBStr_o     // Output RGB stream.\n);\n",
-                "params": [],
+                "code": "//@include DynCharacter.v\n\nDynCharacter\n#(\n     .color_fg(color),       // Foreground font color.\n     .color_bg(background),  // Background font color [with alpha=0].\n     .gsize(size),           // Glyph size [power of 2].\n     .alpha(alpha)           // Transparent font [0,1].\n)\nDynCharacter01\n(\n        px_clk,      // Pixel clock.\n        RGBStr_i,    // Input RGB stream.\n        pos_x,       // X screen position.\n        pos_y,       // Y screen position.\n        character,   // Character to stream.\n\n        // ROM interface.\n        addr_rom,    // Output address ROM.\n        gline,       // Glyph line.\n\n        // RGB Stream output.\n        RGBStr_o     // Output RGB stream.\n);\n",
+                "params": [
+                  {
+                    "name": "color"
+                  },
+                  {
+                    "name": "background"
+                  },
+                  {
+                    "name": "size"
+                  },
+                  {
+                    "name": "alpha"
+                  }
+                ],
                 "ports": {
                   "in": [
                     {
@@ -1229,15 +1340,55 @@
                 "port": "in"
               },
               "size": 26
+            },
+            {
+              "source": {
+                "block": "f43d9be5-03e9-407d-a0a2-7d632f536175",
+                "port": "constant-out"
+              },
+              "target": {
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+                "port": "color"
+              }
+            },
+            {
+              "source": {
+                "block": "22d5995b-348e-4f75-89ce-4c7c3e3d492a",
+                "port": "constant-out"
+              },
+              "target": {
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+                "port": "background"
+              }
+            },
+            {
+              "source": {
+                "block": "97646f6a-1776-4646-b67f-de41308d2358",
+                "port": "constant-out"
+              },
+              "target": {
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+                "port": "alpha"
+              }
+            },
+            {
+              "source": {
+                "block": "1d05ded0-273a-4248-9a18-3ab1ee19fb22",
+                "port": "constant-out"
+              },
+              "target": {
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+                "port": "size"
+              }
             }
           ]
         },
         "state": {
           "pan": {
-            "x": 46.0144,
-            "y": 78.0108
+            "x": 46.3309,
+            "y": 114.7302
           },
-          "zoom": 0.7518
+          "zoom": 0.7914
         }
       }
     }
