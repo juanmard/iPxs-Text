@@ -170,7 +170,7 @@
           "type": "basic.constant",
           "data": {
             "name": "size",
-            "value": "16",
+            "value": "32",
             "local": false
           },
           "position": {
@@ -255,18 +255,6 @@
           }
         },
         {
-          "id": "0ab528b6-b3b6-4148-b8b3-ba64bd5ba2a9",
-          "type": "3550514af27dd45d3901670dd5ceec41b14f626a",
-          "position": {
-            "x": 928,
-            "y": -72
-          },
-          "size": {
-            "width": 96,
-            "height": 224
-          }
-        },
-        {
           "id": "16759fba-c313-4280-b905-533deebeec98",
           "type": "6c407782d89d99b012a1614d20d8003bc63ed986",
           "position": {
@@ -333,6 +321,18 @@
           "size": {
             "width": 96,
             "height": 64
+          }
+        },
+        {
+          "id": "d1e5a96b-535c-413b-8a4c-c5d82f9187f2",
+          "type": "6e462fc53c255fb4fcb93262eb1b8317f599e8f4",
+          "position": {
+            "x": 928,
+            "y": -72
+          },
+          "size": {
+            "width": 96,
+            "height": 224
           }
         }
       ],
@@ -505,7 +505,7 @@
             "port": "constant-out"
           },
           "target": {
-            "block": "0ab528b6-b3b6-4148-b8b3-ba64bd5ba2a9",
+            "block": "d1e5a96b-535c-413b-8a4c-c5d82f9187f2",
             "port": "80cf7460-109e-4c47-b255-09cb20b4e04e"
           }
         },
@@ -515,7 +515,7 @@
             "port": "10563024-bd0a-4a4d-856c-4bb1dff3f104"
           },
           "target": {
-            "block": "0ab528b6-b3b6-4148-b8b3-ba64bd5ba2a9",
+            "block": "d1e5a96b-535c-413b-8a4c-c5d82f9187f2",
             "port": "38845503-ab2c-4d30-9a5c-0dadb0546a76"
           },
           "size": 26
@@ -526,7 +526,7 @@
             "port": "constant-out"
           },
           "target": {
-            "block": "0ab528b6-b3b6-4148-b8b3-ba64bd5ba2a9",
+            "block": "d1e5a96b-535c-413b-8a4c-c5d82f9187f2",
             "port": "b33a34ea-d194-4669-aabe-0358f5197275"
           },
           "vertices": [
@@ -542,7 +542,7 @@
             "port": "cursor_x"
           },
           "target": {
-            "block": "0ab528b6-b3b6-4148-b8b3-ba64bd5ba2a9",
+            "block": "d1e5a96b-535c-413b-8a4c-c5d82f9187f2",
             "port": "5619d993-5d45-4ceb-8950-11f93721414b"
           },
           "vertices": [
@@ -559,7 +559,7 @@
             "port": "cursor_y"
           },
           "target": {
-            "block": "0ab528b6-b3b6-4148-b8b3-ba64bd5ba2a9",
+            "block": "d1e5a96b-535c-413b-8a4c-c5d82f9187f2",
             "port": "d3c3e162-adbb-42e0-83e3-a82bc01f7549"
           },
           "vertices": [
@@ -576,7 +576,7 @@
             "port": "character"
           },
           "target": {
-            "block": "0ab528b6-b3b6-4148-b8b3-ba64bd5ba2a9",
+            "block": "d1e5a96b-535c-413b-8a4c-c5d82f9187f2",
             "port": "0c52c0bf-c51f-4556-9497-c6594dbbfab9"
           },
           "size": 8
@@ -587,7 +587,7 @@
             "port": "6e4ac81b-0abc-4441-a529-d2cb74e0a28c"
           },
           "target": {
-            "block": "0ab528b6-b3b6-4148-b8b3-ba64bd5ba2a9",
+            "block": "d1e5a96b-535c-413b-8a4c-c5d82f9187f2",
             "port": "0dec3afa-b9de-4e5b-907e-9f518bdf284e"
           },
           "vertices": [
@@ -599,7 +599,7 @@
         },
         {
           "source": {
-            "block": "0ab528b6-b3b6-4148-b8b3-ba64bd5ba2a9",
+            "block": "d1e5a96b-535c-413b-8a4c-c5d82f9187f2",
             "port": "ad6a5e0a-2f5c-4b73-b79b-385e1ab20a59"
           },
           "target": {
@@ -641,7 +641,7 @@
             "port": "19c8f68d-5022-487f-9ab0-f0a3cd58bead"
           },
           "target": {
-            "block": "0ab528b6-b3b6-4148-b8b3-ba64bd5ba2a9",
+            "block": "d1e5a96b-535c-413b-8a4c-c5d82f9187f2",
             "port": "c5890148-d5c0-43ce-92af-204f5b198e8f"
           },
           "vertices": [
@@ -3696,10 +3696,238 @@
         }
       }
     },
-    "3550514af27dd45d3901670dd5ceec41b14f626a": {
+    "6c407782d89d99b012a1614d20d8003bc63ed986": {
+      "package": {
+        "name": "PxsRGB",
+        "version": "1.0",
+        "description": "generate a stream of constant RGB color",
+        "author": "Sergio Cuenca",
+        "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22210mm%22%20height=%22297mm%22%20viewBox=%220%200%20210%20297%22%3E%3Cg%20font-weight=%22400%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctext%20style=%22line-height:1.25%22%20x=%2217.886%22%20y=%22129.252%22%20transform=%22scale(1.08086%20.92519)%22%20font-size=%2282.959%22%20fill=%22green%22%20stroke-width=%222.074%22%3E%3Ctspan%20x=%2217.886%22%20y=%22129.252%22%20fill=%22red%22%3ER%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:1.25%22%20x=%2289.093%22%20y=%22116.229%22%20transform=%22scale(.81788%201.22267)%22%20font-size=%22107.755%22%20fill=%22#0f0%22%20stroke-width=%222.694%22%3E%3Ctspan%20x=%2289.093%22%20y=%22116.229%22%3EG%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:1.25%22%20x=%22137.376%22%20y=%22116.873%22%20transform=%22matrix(.96475%20.00849%20-.0079%201.03647%200%200)%22%20font-size=%2278.405%22%20fill=%22#00f%22%20stroke-width=%221.96%22%3E%3Ctspan%20x=%22137.376%22%20y=%22116.873%22%3EB%3C/tspan%3E%3C/text%3E%3C/g%3E%3C/svg%3E"
+      },
+      "design": {
+        "graph": {
+          "blocks": [
+            {
+              "id": "69d500d0-9824-46b8-ae9c-cc19f55eefcb",
+              "type": "basic.input",
+              "data": {
+                "name": "px_clk",
+                "clock": false
+              },
+              "position": {
+                "x": 1552,
+                "y": -216
+              }
+            },
+            {
+              "id": "10563024-bd0a-4a4d-856c-4bb1dff3f104",
+              "type": "basic.output",
+              "data": {
+                "name": "RGBStr",
+                "range": "[25:0]",
+                "size": 26
+              },
+              "position": {
+                "x": 2504,
+                "y": -112
+              }
+            },
+            {
+              "id": "03ffa583-169d-4213-a75b-dd41755aa32a",
+              "type": "basic.input",
+              "data": {
+                "name": "VGAStr",
+                "range": "[22:0]",
+                "clock": false,
+                "size": 23
+              },
+              "position": {
+                "x": 1544,
+                "y": -88
+              }
+            },
+            {
+              "id": "4ef4f2b1-023d-4569-8e10-643ef6cc71cb",
+              "type": "basic.constant",
+              "data": {
+                "name": "COLORext",
+                "value": "3'b111",
+                "local": false
+              },
+              "position": {
+                "x": 2032,
+                "y": -416
+              }
+            },
+            {
+              "id": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
+              "type": "basic.code",
+              "data": {
+                "code": "// @include Pxs.vh\r\n// @include PxsConstant.v\r\n\r\n\r\n//-- Instantiate PxsConstant module.\r\nPxsConstant #(COLORext)\r\nPxsConstant1(\r\n    px_clk,\r\n    VGAStr_i,\r\n    RGBStr_o\r\n    );\r\n",
+                "params": [
+                  {
+                    "name": "COLORext"
+                  }
+                ],
+                "ports": {
+                  "in": [
+                    {
+                      "name": "px_clk"
+                    },
+                    {
+                      "name": "VGAStr_i",
+                      "range": "[22:0]",
+                      "size": 23
+                    }
+                  ],
+                  "out": [
+                    {
+                      "name": "RGBStr_o",
+                      "range": "[25:0]",
+                      "size": 26
+                    }
+                  ]
+                }
+              },
+              "position": {
+                "x": 1864,
+                "y": -296
+              },
+              "size": {
+                "width": 448,
+                "height": 432
+              }
+            }
+          ],
+          "wires": [
+            {
+              "source": {
+                "block": "69d500d0-9824-46b8-ae9c-cc19f55eefcb",
+                "port": "out"
+              },
+              "target": {
+                "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
+                "port": "px_clk"
+              }
+            },
+            {
+              "source": {
+                "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
+                "port": "RGBStr_o"
+              },
+              "target": {
+                "block": "10563024-bd0a-4a4d-856c-4bb1dff3f104",
+                "port": "in"
+              },
+              "vertices": [
+                {
+                  "x": 2416,
+                  "y": -80
+                }
+              ],
+              "size": 26
+            },
+            {
+              "source": {
+                "block": "03ffa583-169d-4213-a75b-dd41755aa32a",
+                "port": "out"
+              },
+              "target": {
+                "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
+                "port": "VGAStr_i"
+              },
+              "size": 23
+            },
+            {
+              "source": {
+                "block": "4ef4f2b1-023d-4569-8e10-643ef6cc71cb",
+                "port": "constant-out"
+              },
+              "target": {
+                "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
+                "port": "COLORext"
+              }
+            }
+          ]
+        },
+        "state": {
+          "pan": {
+            "x": -1191.1061,
+            "y": 403.1288
+          },
+          "zoom": 0.7973
+        }
+      }
+    },
+    "862d2a36c72ddee13ea44bf906fe1b60efa90941": {
+      "package": {
+        "name": "Bit 0",
+        "version": "1.0.0",
+        "description": "Assign 0 to the output wire",
+        "author": "Jesús Arroyo",
+        "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2247.303%22%20height=%2227.648%22%20viewBox=%220%200%2044.346456%2025.919999%22%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22325.37%22%20y=%22315.373%22%20font-weight=%22400%22%20font-size=%2212.669%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20transform=%22translate(-307.01%20-298.51)%22%3E%3Ctspan%20x=%22325.37%22%20y=%22315.373%22%20style=%22-inkscape-font-specification:'Courier%2010%20Pitch'%22%20font-family=%22Courier%2010%20Pitch%22%3E0%3C/tspan%3E%3C/text%3E%3C/svg%3E"
+      },
+      "design": {
+        "graph": {
+          "blocks": [
+            {
+              "id": "b959fb96-ac67-4aea-90b3-ed35a4c17bf5",
+              "type": "basic.code",
+              "data": {
+                "code": "// Bit 0\n\nassign v = 1'b0;",
+                "params": [],
+                "ports": {
+                  "in": [],
+                  "out": [
+                    {
+                      "name": "v"
+                    }
+                  ]
+                }
+              },
+              "position": {
+                "x": 96,
+                "y": 96
+              }
+            },
+            {
+              "id": "19c8f68d-5022-487f-9ab0-f0a3cd58bead",
+              "type": "basic.output",
+              "data": {
+                "name": ""
+              },
+              "position": {
+                "x": 608,
+                "y": 192
+              }
+            }
+          ],
+          "wires": [
+            {
+              "source": {
+                "block": "b959fb96-ac67-4aea-90b3-ed35a4c17bf5",
+                "port": "v"
+              },
+              "target": {
+                "block": "19c8f68d-5022-487f-9ab0-f0a3cd58bead",
+                "port": "in"
+              }
+            }
+          ]
+        },
+        "state": {
+          "pan": {
+            "x": 0,
+            "y": 0
+          },
+          "zoom": 1
+        }
+      }
+    },
+    "6e462fc53c255fb4fcb93262eb1b8317f599e8f4": {
       "package": {
         "name": "PxsConsole",
-        "version": "1.2",
+        "version": "1.1",
         "description": "Console in a stream RGB.",
         "author": "Juan Manuel Rico",
         "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22571.654%22%20height=%22404.172%22%20viewBox=%220%200%20535.9259%20378.9108%22%3E%3Cg%20transform=%22translate(-105.602%20-342.794)%22%3E%3Crect%20ry=%2278.704%22%20y=%22345.794%22%20x=%22108.602%22%20height=%22372.911%22%20width=%22529.926%22%20fill=%22#343434%22%20fill-rule=%22evenodd%22%20stroke=%22#0a0a0a%22%20stroke-width=%226%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%2271.965%22%20y=%22109.368%22%20transform=%22matrix(1.11709%200%200%201.40934%2082.975%20322.05)%22%20font-weight=%22400%22%20font-size=%2290%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#ddff15%22%3E%3Ctspan%20x=%2271.965%22%20y=%22109.368%22%20style=%22line-height:125%25;-inkscape-font-specification:'Courier%20New%20Bold';text-align:start%22%20font-weight=%22700%22%20font-size=%2271.729%22%20font-family=%22Courier%20New%22%3E&gt;DIR_%3C/tspan%3E%3C/text%3E%3C/g%3E%3C/svg%3E"
@@ -3839,6 +4067,18 @@
               }
             },
             {
+              "id": "e92fcb3a-db26-4381-b5eb-cae66f4b4825",
+              "type": "66ff966791cce6e388e479d8210438f29dddca92",
+              "position": {
+                "x": 1064,
+                "y": -96
+              },
+              "size": {
+                "width": 96,
+                "height": 160
+              }
+            },
+            {
               "id": "c3f84601-9e4c-4779-a084-ca879c3a2c91",
               "type": "b566a9a63f963f1e8e8302d1d2089a8321645625",
               "position": {
@@ -3863,8 +4103,8 @@
               }
             },
             {
-              "id": "1acfa4d4-8511-4d6a-a8ae-4d36a97f76f2",
-              "type": "e63fa5e9eeabc7cce2c755d39324aca5d47e470c",
+              "id": "5c692031-f9fc-4f18-b7cb-183b10be13a9",
+              "type": "9ea7f2104895f34bc4bda019ab8f5e4f3c27f032",
               "position": {
                 "x": 456,
                 "y": -96
@@ -3872,18 +4112,6 @@
               "size": {
                 "width": 96,
                 "height": 128
-              }
-            },
-            {
-              "id": "3384e124-2594-4d9b-acc7-e9414cc7d1d0",
-              "type": "66ff966791cce6e388e479d8210438f29dddca92",
-              "position": {
-                "x": 1064,
-                "y": -96
-              },
-              "size": {
-                "width": 96,
-                "height": 160
               }
             }
           ],
@@ -3904,7 +4132,7 @@
                 "port": "1a685972-640c-45e1-8ef8-f7bb2da9750b"
               },
               "target": {
-                "block": "3384e124-2594-4d9b-acc7-e9414cc7d1d0",
+                "block": "e92fcb3a-db26-4381-b5eb-cae66f4b4825",
                 "port": "0c52c0bf-c51f-4556-9497-c6594dbbfab9"
               },
               "size": 8
@@ -3932,7 +4160,7 @@
                 "port": "out"
               },
               "target": {
-                "block": "3384e124-2594-4d9b-acc7-e9414cc7d1d0",
+                "block": "e92fcb3a-db26-4381-b5eb-cae66f4b4825",
                 "port": "0dec3afa-b9de-4e5b-907e-9f518bdf284e"
               },
               "vertices": [
@@ -3944,7 +4172,7 @@
             },
             {
               "source": {
-                "block": "3384e124-2594-4d9b-acc7-e9414cc7d1d0",
+                "block": "e92fcb3a-db26-4381-b5eb-cae66f4b4825",
                 "port": "ad6a5e0a-2f5c-4b73-b79b-385e1ab20a59"
               },
               "target": {
@@ -4020,7 +4248,7 @@
                 "port": "constant-out"
               },
               "target": {
-                "block": "3384e124-2594-4d9b-acc7-e9414cc7d1d0",
+                "block": "e92fcb3a-db26-4381-b5eb-cae66f4b4825",
                 "port": "ef95fe85-b34e-4847-a408-e19c158dc626"
               },
               "vertices": [
@@ -4036,7 +4264,7 @@
                 "port": "constant-out"
               },
               "target": {
-                "block": "3384e124-2594-4d9b-acc7-e9414cc7d1d0",
+                "block": "e92fcb3a-db26-4381-b5eb-cae66f4b4825",
                 "port": "f47c4253-5e32-4469-8bc2-bf1464ea6b70"
               },
               "vertices": [
@@ -4074,7 +4302,7 @@
             },
             {
               "source": {
-                "block": "1acfa4d4-8511-4d6a-a8ae-4d36a97f76f2",
+                "block": "5c692031-f9fc-4f18-b7cb-183b10be13a9",
                 "port": "1fdcb461-4e4f-4017-b7f8-ef11a5b1e928"
               },
               "target": {
@@ -4095,7 +4323,7 @@
                 "port": "out"
               },
               "target": {
-                "block": "1acfa4d4-8511-4d6a-a8ae-4d36a97f76f2",
+                "block": "5c692031-f9fc-4f18-b7cb-183b10be13a9",
                 "port": "176144fc-d840-481f-bdf6-0b43f73ad960"
               },
               "vertices": [
@@ -4112,7 +4340,7 @@
                 "port": "out"
               },
               "target": {
-                "block": "1acfa4d4-8511-4d6a-a8ae-4d36a97f76f2",
+                "block": "5c692031-f9fc-4f18-b7cb-183b10be13a9",
                 "port": "704ced4d-338f-4fb3-b8a9-24b8b25712f7"
               },
               "vertices": [
@@ -4124,33 +4352,33 @@
             },
             {
               "source": {
-                "block": "1acfa4d4-8511-4d6a-a8ae-4d36a97f76f2",
+                "block": "5c692031-f9fc-4f18-b7cb-183b10be13a9",
                 "port": "7cda173c-41bb-476f-8ab4-10f64c10577c"
               },
               "target": {
-                "block": "3384e124-2594-4d9b-acc7-e9414cc7d1d0",
+                "block": "e92fcb3a-db26-4381-b5eb-cae66f4b4825",
                 "port": "4900d80a-3e50-4b02-8204-f827be0cef98"
               },
               "size": 10
             },
             {
               "source": {
-                "block": "1acfa4d4-8511-4d6a-a8ae-4d36a97f76f2",
+                "block": "5c692031-f9fc-4f18-b7cb-183b10be13a9",
                 "port": "f91e521f-c0d8-4d19-8c37-ce9bbb256a3a"
               },
               "target": {
-                "block": "3384e124-2594-4d9b-acc7-e9414cc7d1d0",
+                "block": "e92fcb3a-db26-4381-b5eb-cae66f4b4825",
                 "port": "ac8b2e20-0635-4bd4-b769-35f093b9e98f"
               },
               "size": 10
             },
             {
               "source": {
-                "block": "1acfa4d4-8511-4d6a-a8ae-4d36a97f76f2",
+                "block": "5c692031-f9fc-4f18-b7cb-183b10be13a9",
                 "port": "1ee47b01-e8a1-4016-b256-0598566576e9"
               },
               "target": {
-                "block": "3384e124-2594-4d9b-acc7-e9414cc7d1d0",
+                "block": "e92fcb3a-db26-4381-b5eb-cae66f4b4825",
                 "port": "38845503-ab2c-4d30-9a5c-0dadb0546a76"
               },
               "vertices": [
@@ -4160,733 +4388,31 @@
                 }
               ],
               "size": 26
-            }
-          ]
-        },
-        "state": {
-          "pan": {
-            "x": 28.0571,
-            "y": 236.719
-          },
-          "zoom": 0.4976
-        }
-      }
-    },
-    "b566a9a63f963f1e8e8302d1d2089a8321645625": {
-      "package": {
-        "name": "PxsCursor",
-        "version": "1.1",
-        "description": "Cursor for a console Text.",
-        "author": "Juan Manuel Rico",
-        "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22571.654%22%20height=%22404.172%22%20viewBox=%220%200%20535.9259%20378.9108%22%3E%3Cg%20transform=%22translate(-105.602%20-342.794)%22%3E%3Crect%20width=%22529.926%22%20height=%22372.911%22%20x=%22108.602%22%20y=%22345.794%22%20ry=%2278.704%22%20fill=%22#343434%22%20fill-rule=%22evenodd%22%20stroke=%22#0a0a0a%22%20stroke-width=%226%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22133.654%22%20y=%22138.526%22%20transform=%22matrix(2.80795%200%200%202.73653%20-166.86%20207.687)%22%20font-weight=%22400%22%20font-size=%2290%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#ff0%22%3E%3Ctspan%20x=%22133.654%22%20y=%22138.526%22%3E#_%3C/tspan%3E%3C/text%3E%3C/g%3E%3C/svg%3E"
-      },
-      "design": {
-        "graph": {
-          "blocks": [
-            {
-              "id": "704ced4d-338f-4fb3-b8a9-24b8b25712f7",
-              "type": "basic.input",
-              "data": {
-                "name": "px_clk",
-                "clock": false
-              },
-              "position": {
-                "x": -8,
-                "y": 48
-              }
-            },
-            {
-              "id": "176144fc-d840-481f-bdf6-0b43f73ad960",
-              "type": "basic.input",
-              "data": {
-                "name": "RGBStr_i",
-                "range": "[25:0]",
-                "clock": false,
-                "size": 26
-              },
-              "position": {
-                "x": -8,
-                "y": 144
-              }
-            },
-            {
-              "id": "acdf522a-0a26-4773-909b-a4acb54a5111",
-              "type": "basic.output",
-              "data": {
-                "name": "RGBStr_o",
-                "range": "[25:0]",
-                "size": 26
-              },
-              "position": {
-                "x": 1008,
-                "y": 240
-              }
-            },
-            {
-              "id": "6db98c47-a894-4eee-b6a8-442bca2df1e5",
-              "type": "basic.input",
-              "data": {
-                "name": "pos_x",
-                "range": "[6:0]",
-                "clock": false,
-                "size": 7
-              },
-              "position": {
-                "x": -8,
-                "y": 240
-              }
-            },
-            {
-              "id": "8783f218-8a93-4ab7-9e22-e233e2c4cc65",
-              "type": "basic.input",
-              "data": {
-                "name": "pos_y",
-                "range": "[6:0]",
-                "clock": false,
-                "size": 7
-              },
-              "position": {
-                "x": -8,
-                "y": 336
-              }
-            },
-            {
-              "id": "4031fcfa-3149-4c3b-ab99-36aa538684ff",
-              "type": "basic.input",
-              "data": {
-                "name": "type",
-                "range": "[3:0]",
-                "clock": false,
-                "size": 4
-              },
-              "position": {
-                "x": -8,
-                "y": 432
-              }
-            },
-            {
-              "id": "443d8a2e-3257-4546-8a45-c059e1eb59c6",
-              "type": "basic.constant",
-              "data": {
-                "name": "size",
-                "value": "16",
-                "local": false
-              },
-              "position": {
-                "x": 488,
-                "y": -88
-              }
-            },
-            {
-              "id": "7cac9773-d5f8-4931-a0d0-2b119d26d208",
-              "type": "basic.info",
-              "data": {
-                "info": "<H1>PxsCursor for Text Console</H1>\n",
-                "readonly": true
-              },
-              "position": {
-                "x": 344,
-                "y": -176
-              },
-              "size": {
-                "width": 448,
-                "height": 32
-              }
-            },
-            {
-              "id": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-              "type": "basic.code",
-              "data": {
-                "code": "//@include Pxs.vh\n//@include PxsCursor.v\n\nPxsCursor\n#(\n    .size(size)\n)\nPxsCursor01\n(\n    // RGB Stream input.\n    px_clk,      // Pixel clock.\n    RGBStr_i,    // Input RGB stream.\n    \n    // Modificators. \n    pos_x,       // X screen position (80).\n    pos_y,       // Y screen position (50).\n    type,        // Type cursor.\n    \n    // RGB Stream output.\n    RGBStr_o     // Output RGB stream.\n);\n",
-                "params": [
-                  {
-                    "name": "size"
-                  }
-                ],
-                "ports": {
-                  "in": [
-                    {
-                      "name": "px_clk"
-                    },
-                    {
-                      "name": "RGBStr_i",
-                      "range": "[25:0]",
-                      "size": 26
-                    },
-                    {
-                      "name": "pos_x",
-                      "range": "[6:0]",
-                      "size": 7
-                    },
-                    {
-                      "name": "pos_y",
-                      "range": "[6:0]",
-                      "size": 7
-                    },
-                    {
-                      "name": "type",
-                      "range": "[3:0]",
-                      "size": 4
-                    }
-                  ],
-                  "out": [
-                    {
-                      "name": "RGBStr_o",
-                      "range": "[25:0]",
-                      "size": 26
-                    }
-                  ]
-                }
-              },
-              "position": {
-                "x": 200,
-                "y": 32
-              },
-              "size": {
-                "width": 672,
-                "height": 480
-              }
-            }
-          ],
-          "wires": [
-            {
-              "source": {
-                "block": "704ced4d-338f-4fb3-b8a9-24b8b25712f7",
-                "port": "out"
-              },
-              "target": {
-                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-                "port": "px_clk"
-              }
             },
             {
               "source": {
-                "block": "176144fc-d840-481f-bdf6-0b43f73ad960",
-                "port": "out"
-              },
-              "target": {
-                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-                "port": "RGBStr_i"
-              },
-              "size": 26
-            },
-            {
-              "source": {
-                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-                "port": "RGBStr_o"
-              },
-              "target": {
-                "block": "acdf522a-0a26-4773-909b-a4acb54a5111",
-                "port": "in"
-              },
-              "size": 26
-            },
-            {
-              "source": {
-                "block": "4031fcfa-3149-4c3b-ab99-36aa538684ff",
-                "port": "out"
-              },
-              "target": {
-                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-                "port": "type"
-              },
-              "size": 4
-            },
-            {
-              "source": {
-                "block": "8783f218-8a93-4ab7-9e22-e233e2c4cc65",
-                "port": "out"
-              },
-              "target": {
-                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-                "port": "pos_y"
-              },
-              "size": 7
-            },
-            {
-              "source": {
-                "block": "6db98c47-a894-4eee-b6a8-442bca2df1e5",
-                "port": "out"
-              },
-              "target": {
-                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-                "port": "pos_x"
-              },
-              "size": 7
-            },
-            {
-              "source": {
-                "block": "443d8a2e-3257-4546-8a45-c059e1eb59c6",
+                "block": "b33a34ea-d194-4669-aabe-0358f5197275",
                 "port": "constant-out"
               },
               "target": {
-                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-                "port": "size"
-              }
-            }
-          ]
-        },
-        "state": {
-          "pan": {
-            "x": 46.0144,
-            "y": 120.1115
-          },
-          "zoom": 0.7518
-        }
-      }
-    },
-    "ad0371abec671b4ace0be9cbd3fd624de55ae276": {
-      "package": {
-        "name": "videoRAM",
-        "version": "1.1",
-        "description": "RAM for a simple video console text (BRAM).",
-        "author": "Juan Manuel Rico",
-        "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22571.654%22%20height=%22404.172%22%20viewBox=%220%200%20535.9259%20378.9108%22%3E%3Cdefs%3E%3ClinearGradient%20id=%22a%22%3E%3Cstop%20offset=%220%22/%3E%3Cstop%20offset=%221%22%20stop-opacity=%220%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg%20transform=%22translate(-105.602%20-342.794)%22%3E%3Crect%20width=%22529.926%22%20height=%22372.911%22%20x=%22108.602%22%20y=%22345.794%22%20ry=%2278.704%22%20fill=%22#343434%22%20fill-rule=%22evenodd%22%20stroke=%22#0a0a0a%22%20stroke-width=%226%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Cg%20fill=%22#ff0%22%20fill-rule=%22evenodd%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%3E%3Cpath%20d=%22M146.898%20606.35l379.697%2055.728%2067.498-24.964-348.337-39.151z%22%20fill=%22#afafde%22/%3E%3Cpath%20d=%22M146.898%20453.356v152.995l98.858-8.388v-131.02z%22%20fill=%22#353564%22/%3E%3Cpath%20d=%22M245.756%20466.943l348.337-29.36v199.531l-348.337-39.151z%22%20fill=%22#e9e9ff%22/%3E%3Cpath%20d=%22M146.898%20453.356l379.697-46.674%2067.498%2030.9-348.337%2029.36z%22%20fill=%22#4d4d9f%22/%3E%3Cpath%20d=%22M526.595%20406.682v255.396l67.498-24.964V437.582z%22%20fill=%22#d7d7ff%22/%3E%3Cpath%20d=%22M146.898%20453.356l379.697-46.674v255.396L146.898%20606.35z%22%20fill=%22#8686bf%22/%3E%3C/g%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22234.214%22%20y=%22215.353%22%20transform=%22matrix(1.43582%20-.16598%20-.3792%201.10786%20-65.401%20380.376)%22%20font-weight=%22400%22%20font-size=%2290%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#fffe3c%22%3E%3Ctspan%20x=%22234.214%22%20y=%22215.353%22%20style=%22-inkscape-font-specification:'Showcard%20Gothic'%22%20font-family=%22Showcard%20Gothic%22%3ERAM%3C/tspan%3E%3C/text%3E%3C/g%3E%3C/svg%3E"
-      },
-      "design": {
-        "graph": {
-          "blocks": [
-            {
-              "id": "5d542121-b854-41e7-a538-cf21eecd6340",
-              "type": "basic.input",
-              "data": {
-                "name": "clk",
-                "clock": false
+                "block": "5c692031-f9fc-4f18-b7cb-183b10be13a9",
+                "port": "1d05ded0-273a-4248-9a18-3ab1ee19fb22"
               },
-              "position": {
-                "x": 16,
-                "y": 96
-              }
-            },
-            {
-              "id": "12894132-1b71-43ca-819f-8f22745cb2a7",
-              "type": "basic.input",
-              "data": {
-                "name": "write_en",
-                "clock": false
-              },
-              "position": {
-                "x": 16,
-                "y": 200
-              }
-            },
-            {
-              "id": "1a685972-640c-45e1-8ef8-f7bb2da9750b",
-              "type": "basic.output",
-              "data": {
-                "name": "dout",
-                "range": "[7:0]",
-                "size": 8
-              },
-              "position": {
-                "x": 792,
-                "y": 248
-              }
-            },
-            {
-              "id": "07edeafa-e1fc-46e7-84cf-0a67c064b9eb",
-              "type": "basic.input",
-              "data": {
-                "name": "addr",
-                "range": "[10:0]",
-                "clock": false,
-                "size": 11
-              },
-              "position": {
-                "x": 16,
-                "y": 296
-              }
-            },
-            {
-              "id": "23c82ef8-212e-4b73-af87-95267c9e0250",
-              "type": "basic.input",
-              "data": {
-                "name": "din",
-                "range": "[7:0]",
-                "clock": false,
-                "size": 8
-              },
-              "position": {
-                "x": 16,
-                "y": 400
-              }
-            },
-            {
-              "id": "aaa875d3-4ec0-4182-87e9-22cad096ae0f",
-              "type": "basic.code",
-              "data": {
-                "code": "//@include initRAM.list\n//@include videoRAM.v\n\nvideoRAM\nvideoRAM01\n(\n    clk,\n    write_en,\n    addr,\n    din,\n    dout\n);\n",
-                "params": [],
-                "ports": {
-                  "in": [
-                    {
-                      "name": "clk"
-                    },
-                    {
-                      "name": "write_en"
-                    },
-                    {
-                      "name": "addr",
-                      "range": "[10:0]",
-                      "size": 11
-                    },
-                    {
-                      "name": "din",
-                      "range": "[7:0]",
-                      "size": 8
-                    }
-                  ],
-                  "out": [
-                    {
-                      "name": "dout",
-                      "range": "[7:0]",
-                      "size": 8
-                    }
-                  ]
+              "vertices": [
+                {
+                  "x": 768,
+                  "y": -192
                 }
-              },
-              "position": {
-                "x": 240,
-                "y": 80
-              },
-              "size": {
-                "width": 480,
-                "height": 400
-              }
-            }
-          ],
-          "wires": [
-            {
-              "source": {
-                "block": "5d542121-b854-41e7-a538-cf21eecd6340",
-                "port": "out"
-              },
-              "target": {
-                "block": "aaa875d3-4ec0-4182-87e9-22cad096ae0f",
-                "port": "clk"
-              }
-            },
-            {
-              "source": {
-                "block": "12894132-1b71-43ca-819f-8f22745cb2a7",
-                "port": "out"
-              },
-              "target": {
-                "block": "aaa875d3-4ec0-4182-87e9-22cad096ae0f",
-                "port": "write_en"
-              }
-            },
-            {
-              "source": {
-                "block": "23c82ef8-212e-4b73-af87-95267c9e0250",
-                "port": "out"
-              },
-              "target": {
-                "block": "aaa875d3-4ec0-4182-87e9-22cad096ae0f",
-                "port": "din"
-              },
-              "size": 8
-            },
-            {
-              "source": {
-                "block": "aaa875d3-4ec0-4182-87e9-22cad096ae0f",
-                "port": "dout"
-              },
-              "target": {
-                "block": "1a685972-640c-45e1-8ef8-f7bb2da9750b",
-                "port": "in"
-              },
-              "size": 8
-            },
-            {
-              "source": {
-                "block": "07edeafa-e1fc-46e7-84cf-0a67c064b9eb",
-                "port": "out"
-              },
-              "target": {
-                "block": "aaa875d3-4ec0-4182-87e9-22cad096ae0f",
-                "port": "addr"
-              },
-              "size": 11
+              ]
             }
           ]
         },
         "state": {
           "pan": {
-            "x": 28,
-            "y": 2.5
+            "x": 27.4286,
+            "y": 234.3095
           },
-          "zoom": 1
-        }
-      }
-    },
-    "e63fa5e9eeabc7cce2c755d39324aca5d47e470c": {
-      "package": {
-        "name": "DynConsole",
-        "version": "1.1",
-        "description": "Dynamic for read and show a video text console.",
-        "author": "Juan Manuel Rico",
-        "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22571.654%22%20height=%22404.172%22%20viewBox=%220%200%20535.9259%20378.9108%22%3E%3Cg%20transform=%22translate(-105.602%20-342.794)%22%20fill-rule=%22evenodd%22%3E%3Crect%20width=%22529.926%22%20height=%22372.911%22%20x=%22108.602%22%20y=%22345.794%22%20ry=%2278.704%22%20fill=%22#343434%22%20stroke=%22#0a0a0a%22%20stroke-width=%226%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Cpath%20d=%22M392.155%20546.372c7.675-5.905%2011.745%207.433%209.813%2012.757-5.237%2014.427-24.579%2014.334-35.328%206.87-19.229-13.352-18.033-41.354-3.926-57.9%2020.703-24.282%2058.367-21.874%2080.47-.981%2029.46%2027.847%2025.78%2075.468-1.962%20103.041-34.912%2034.698-92.61%2029.718-125.612-4.907-39.97-41.935-33.676-109.776%207.85-148.183%2048.938-45.261%20126.957-37.645%20170.754%2010.795%2050.566%2055.926%2041.623%20144.147-13.738%20193.325-62.906%2055.879-161.345%2045.606-215.896-16.683-61.199-69.879-49.594-178.547%2019.627-238.467%2076.848-66.522%20195.752-53.583%20261.037%2022.571.331.386.66.774.988%201.162%22%20fill=%22#98a2ec%22/%3E%3C/g%3E%3C/svg%3E"
-      },
-      "design": {
-        "graph": {
-          "blocks": [
-            {
-              "id": "1ee47b01-e8a1-4016-b256-0598566576e9",
-              "type": "basic.output",
-              "data": {
-                "name": "RGBStr_o",
-                "range": "[25:0]",
-                "size": 26
-              },
-              "position": {
-                "x": 1000,
-                "y": 64
-              }
-            },
-            {
-              "id": "704ced4d-338f-4fb3-b8a9-24b8b25712f7",
-              "type": "basic.input",
-              "data": {
-                "name": "px_clk",
-                "clock": false
-              },
-              "position": {
-                "x": -8,
-                "y": 120
-              }
-            },
-            {
-              "id": "1fdcb461-4e4f-4017-b7f8-ef11a5b1e928",
-              "type": "basic.output",
-              "data": {
-                "name": "addr_rom",
-                "range": "[10:0]",
-                "size": 11
-              },
-              "position": {
-                "x": 1000,
-                "y": 184
-              }
-            },
-            {
-              "id": "7cda173c-41bb-476f-8ab4-10f64c10577c",
-              "type": "basic.output",
-              "data": {
-                "name": "pos_x",
-                "range": "[9:0]",
-                "size": 10
-              },
-              "position": {
-                "x": 1000,
-                "y": 304
-              }
-            },
-            {
-              "id": "176144fc-d840-481f-bdf6-0b43f73ad960",
-              "type": "basic.input",
-              "data": {
-                "name": "RGBStr_i",
-                "range": "[25:0]",
-                "clock": false,
-                "size": 26
-              },
-              "position": {
-                "x": 0,
-                "y": 360
-              }
-            },
-            {
-              "id": "f91e521f-c0d8-4d19-8c37-ce9bbb256a3a",
-              "type": "basic.output",
-              "data": {
-                "name": "pos_y",
-                "range": "[9:0]",
-                "size": 10
-              },
-              "position": {
-                "x": 1000,
-                "y": 424
-              }
-            },
-            {
-              "id": "f43d9be5-03e9-407d-a0a2-7d632f536175",
-              "type": "basic.constant",
-              "data": {
-                "name": "color",
-                "value": "3'b110",
-                "local": false
-              },
-              "position": {
-                "x": 320,
-                "y": -88
-              }
-            },
-            {
-              "id": "1d05ded0-273a-4248-9a18-3ab1ee19fb22",
-              "type": "basic.constant",
-              "data": {
-                "name": "size",
-                "value": "128",
-                "local": false
-              },
-              "position": {
-                "x": 656,
-                "y": -88
-              }
-            },
-            {
-              "id": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-              "type": "basic.code",
-              "data": {
-                "code": "//@include DynConsole.v\n\nDynConsole\nDynConsole01\n(\n        px_clk,      // Pixel clock.\n        RGBStr_i,    // Input RGB stream.\n        RGBStr_o,    // Output RGB stream.\n\n        // ROM interface.\n        addr_rom,    // Output address ROM.\n        \n        // Position video character.\n        pos_x,       // X screen position.\n        pos_y        // Y screen position.\n);\n",
-                "params": [
-                  {
-                    "name": "color"
-                  },
-                  {
-                    "name": "size"
-                  }
-                ],
-                "ports": {
-                  "in": [
-                    {
-                      "name": "px_clk"
-                    },
-                    {
-                      "name": "RGBStr_i",
-                      "range": "[25:0]",
-                      "size": 26
-                    }
-                  ],
-                  "out": [
-                    {
-                      "name": "RGBStr_o",
-                      "range": "[25:0]",
-                      "size": 26
-                    },
-                    {
-                      "name": "addr_rom",
-                      "range": "[10:0]",
-                      "size": 11
-                    },
-                    {
-                      "name": "pos_x",
-                      "range": "[9:0]",
-                      "size": 10
-                    },
-                    {
-                      "name": "pos_y",
-                      "range": "[9:0]",
-                      "size": 10
-                    }
-                  ]
-                }
-              },
-              "position": {
-                "x": 200,
-                "y": 32
-              },
-              "size": {
-                "width": 672,
-                "height": 480
-              }
-            }
-          ],
-          "wires": [
-            {
-              "source": {
-                "block": "704ced4d-338f-4fb3-b8a9-24b8b25712f7",
-                "port": "out"
-              },
-              "target": {
-                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-                "port": "px_clk"
-              }
-            },
-            {
-              "source": {
-                "block": "176144fc-d840-481f-bdf6-0b43f73ad960",
-                "port": "out"
-              },
-              "target": {
-                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-                "port": "RGBStr_i"
-              },
-              "size": 26
-            },
-            {
-              "source": {
-                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-                "port": "addr_rom"
-              },
-              "target": {
-                "block": "1fdcb461-4e4f-4017-b7f8-ef11a5b1e928",
-                "port": "in"
-              },
-              "size": 11
-            },
-            {
-              "source": {
-                "block": "f43d9be5-03e9-407d-a0a2-7d632f536175",
-                "port": "constant-out"
-              },
-              "target": {
-                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-                "port": "color"
-              }
-            },
-            {
-              "source": {
-                "block": "1d05ded0-273a-4248-9a18-3ab1ee19fb22",
-                "port": "constant-out"
-              },
-              "target": {
-                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-                "port": "size"
-              }
-            },
-            {
-              "source": {
-                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-                "port": "pos_y"
-              },
-              "target": {
-                "block": "f91e521f-c0d8-4d19-8c37-ce9bbb256a3a",
-                "port": "in"
-              },
-              "size": 10
-            },
-            {
-              "source": {
-                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-                "port": "pos_x"
-              },
-              "target": {
-                "block": "7cda173c-41bb-476f-8ab4-10f64c10577c",
-                "port": "in"
-              },
-              "size": 10
-            },
-            {
-              "source": {
-                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-                "port": "RGBStr_o"
-              },
-              "target": {
-                "block": "1ee47b01-e8a1-4016-b256-0598566576e9",
-                "port": "in"
-              },
-              "size": 26
-            }
-          ]
-        },
-        "state": {
-          "pan": {
-            "x": 46.3309,
-            "y": 114.7302
-          },
-          "zoom": 0.7914
+          "zoom": 0.5238
         }
       }
     },
@@ -5227,71 +4753,6 @@
             "y": 94.4
           },
           "zoom": 0.8708
-        }
-      }
-    },
-    "862d2a36c72ddee13ea44bf906fe1b60efa90941": {
-      "package": {
-        "name": "Bit 0",
-        "version": "1.0.0",
-        "description": "Assign 0 to the output wire",
-        "author": "Jesús Arroyo",
-        "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2247.303%22%20height=%2227.648%22%20viewBox=%220%200%2044.346456%2025.919999%22%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22325.37%22%20y=%22315.373%22%20font-weight=%22400%22%20font-size=%2212.669%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20transform=%22translate(-307.01%20-298.51)%22%3E%3Ctspan%20x=%22325.37%22%20y=%22315.373%22%20style=%22-inkscape-font-specification:'Courier%2010%20Pitch'%22%20font-family=%22Courier%2010%20Pitch%22%3E0%3C/tspan%3E%3C/text%3E%3C/svg%3E"
-      },
-      "design": {
-        "graph": {
-          "blocks": [
-            {
-              "id": "b959fb96-ac67-4aea-90b3-ed35a4c17bf5",
-              "type": "basic.code",
-              "data": {
-                "code": "// Bit 0\n\nassign v = 1'b0;",
-                "params": [],
-                "ports": {
-                  "in": [],
-                  "out": [
-                    {
-                      "name": "v"
-                    }
-                  ]
-                }
-              },
-              "position": {
-                "x": 96,
-                "y": 96
-              }
-            },
-            {
-              "id": "19c8f68d-5022-487f-9ab0-f0a3cd58bead",
-              "type": "basic.output",
-              "data": {
-                "name": ""
-              },
-              "position": {
-                "x": 608,
-                "y": 192
-              }
-            }
-          ],
-          "wires": [
-            {
-              "source": {
-                "block": "b959fb96-ac67-4aea-90b3-ed35a4c17bf5",
-                "port": "v"
-              },
-              "target": {
-                "block": "19c8f68d-5022-487f-9ab0-f0a3cd58bead",
-                "port": "in"
-              }
-            }
-          ]
-        },
-        "state": {
-          "pan": {
-            "x": 0,
-            "y": 0
-          },
-          "zoom": 1
         }
       }
     },
@@ -5864,77 +5325,135 @@
         }
       }
     },
-    "6c407782d89d99b012a1614d20d8003bc63ed986": {
+    "b566a9a63f963f1e8e8302d1d2089a8321645625": {
       "package": {
-        "name": "PxsRGB",
-        "version": "1.0",
-        "description": "generate a stream of constant RGB color",
-        "author": "Sergio Cuenca",
-        "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22210mm%22%20height=%22297mm%22%20viewBox=%220%200%20210%20297%22%3E%3Cg%20font-weight=%22400%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctext%20style=%22line-height:1.25%22%20x=%2217.886%22%20y=%22129.252%22%20transform=%22scale(1.08086%20.92519)%22%20font-size=%2282.959%22%20fill=%22green%22%20stroke-width=%222.074%22%3E%3Ctspan%20x=%2217.886%22%20y=%22129.252%22%20fill=%22red%22%3ER%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:1.25%22%20x=%2289.093%22%20y=%22116.229%22%20transform=%22scale(.81788%201.22267)%22%20font-size=%22107.755%22%20fill=%22#0f0%22%20stroke-width=%222.694%22%3E%3Ctspan%20x=%2289.093%22%20y=%22116.229%22%3EG%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:1.25%22%20x=%22137.376%22%20y=%22116.873%22%20transform=%22matrix(.96475%20.00849%20-.0079%201.03647%200%200)%22%20font-size=%2278.405%22%20fill=%22#00f%22%20stroke-width=%221.96%22%3E%3Ctspan%20x=%22137.376%22%20y=%22116.873%22%3EB%3C/tspan%3E%3C/text%3E%3C/g%3E%3C/svg%3E"
+        "name": "PxsCursor",
+        "version": "1.1",
+        "description": "Cursor for a console Text.",
+        "author": "Juan Manuel Rico",
+        "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22571.654%22%20height=%22404.172%22%20viewBox=%220%200%20535.9259%20378.9108%22%3E%3Cg%20transform=%22translate(-105.602%20-342.794)%22%3E%3Crect%20width=%22529.926%22%20height=%22372.911%22%20x=%22108.602%22%20y=%22345.794%22%20ry=%2278.704%22%20fill=%22#343434%22%20fill-rule=%22evenodd%22%20stroke=%22#0a0a0a%22%20stroke-width=%226%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22133.654%22%20y=%22138.526%22%20transform=%22matrix(2.80795%200%200%202.73653%20-166.86%20207.687)%22%20font-weight=%22400%22%20font-size=%2290%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#ff0%22%3E%3Ctspan%20x=%22133.654%22%20y=%22138.526%22%3E#_%3C/tspan%3E%3C/text%3E%3C/g%3E%3C/svg%3E"
       },
       "design": {
         "graph": {
           "blocks": [
             {
-              "id": "69d500d0-9824-46b8-ae9c-cc19f55eefcb",
+              "id": "704ced4d-338f-4fb3-b8a9-24b8b25712f7",
               "type": "basic.input",
               "data": {
                 "name": "px_clk",
                 "clock": false
               },
               "position": {
-                "x": 1552,
-                "y": -216
+                "x": -8,
+                "y": 48
               }
             },
             {
-              "id": "10563024-bd0a-4a4d-856c-4bb1dff3f104",
+              "id": "176144fc-d840-481f-bdf6-0b43f73ad960",
+              "type": "basic.input",
+              "data": {
+                "name": "RGBStr_i",
+                "range": "[25:0]",
+                "clock": false,
+                "size": 26
+              },
+              "position": {
+                "x": -8,
+                "y": 144
+              }
+            },
+            {
+              "id": "acdf522a-0a26-4773-909b-a4acb54a5111",
               "type": "basic.output",
               "data": {
-                "name": "RGBStr",
+                "name": "RGBStr_o",
                 "range": "[25:0]",
                 "size": 26
               },
               "position": {
-                "x": 2504,
-                "y": -112
+                "x": 1008,
+                "y": 240
               }
             },
             {
-              "id": "03ffa583-169d-4213-a75b-dd41755aa32a",
+              "id": "6db98c47-a894-4eee-b6a8-442bca2df1e5",
               "type": "basic.input",
               "data": {
-                "name": "VGAStr",
-                "range": "[22:0]",
+                "name": "pos_x",
+                "range": "[6:0]",
                 "clock": false,
-                "size": 23
+                "size": 7
               },
               "position": {
-                "x": 1544,
+                "x": -8,
+                "y": 240
+              }
+            },
+            {
+              "id": "8783f218-8a93-4ab7-9e22-e233e2c4cc65",
+              "type": "basic.input",
+              "data": {
+                "name": "pos_y",
+                "range": "[6:0]",
+                "clock": false,
+                "size": 7
+              },
+              "position": {
+                "x": -8,
+                "y": 336
+              }
+            },
+            {
+              "id": "4031fcfa-3149-4c3b-ab99-36aa538684ff",
+              "type": "basic.input",
+              "data": {
+                "name": "type",
+                "range": "[3:0]",
+                "clock": false,
+                "size": 4
+              },
+              "position": {
+                "x": -8,
+                "y": 432
+              }
+            },
+            {
+              "id": "443d8a2e-3257-4546-8a45-c059e1eb59c6",
+              "type": "basic.constant",
+              "data": {
+                "name": "size",
+                "value": "16",
+                "local": false
+              },
+              "position": {
+                "x": 488,
                 "y": -88
               }
             },
             {
-              "id": "4ef4f2b1-023d-4569-8e10-643ef6cc71cb",
-              "type": "basic.constant",
+              "id": "7cac9773-d5f8-4931-a0d0-2b119d26d208",
+              "type": "basic.info",
               "data": {
-                "name": "COLORext",
-                "value": "3'b111",
-                "local": false
+                "info": "<H1>PxsCursor for Text Console</H1>\n",
+                "readonly": true
               },
               "position": {
-                "x": 2032,
-                "y": -416
+                "x": 344,
+                "y": -176
+              },
+              "size": {
+                "width": 448,
+                "height": 32
               }
             },
             {
-              "id": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
+              "id": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
               "type": "basic.code",
               "data": {
-                "code": "// @include Pxs.vh\r\n// @include PxsConstant.v\r\n\r\n\r\n//-- Instantiate PxsConstant module.\r\nPxsConstant #(COLORext)\r\nPxsConstant1(\r\n    px_clk,\r\n    VGAStr_i,\r\n    RGBStr_o\r\n    );\r\n",
+                "code": "//@include Pxs.vh\n//@include PxsCursor.v\n\nPxsCursor\n#(\n    .size(size)\n)\nPxsCursor01\n(\n    // RGB Stream input.\n    px_clk,      // Pixel clock.\n    RGBStr_i,    // Input RGB stream.\n    \n    // Modificators. \n    pos_x,       // X screen position (80).\n    pos_y,       // Y screen position (50).\n    type,        // Type cursor.\n    \n    // RGB Stream output.\n    RGBStr_o     // Output RGB stream.\n);\n",
                 "params": [
                   {
-                    "name": "COLORext"
+                    "name": "size"
                   }
                 ],
                 "ports": {
@@ -5943,9 +5462,24 @@
                       "name": "px_clk"
                     },
                     {
-                      "name": "VGAStr_i",
-                      "range": "[22:0]",
-                      "size": 23
+                      "name": "RGBStr_i",
+                      "range": "[25:0]",
+                      "size": 26
+                    },
+                    {
+                      "name": "pos_x",
+                      "range": "[6:0]",
+                      "size": 7
+                    },
+                    {
+                      "name": "pos_y",
+                      "range": "[6:0]",
+                      "size": 7
+                    },
+                    {
+                      "name": "type",
+                      "range": "[3:0]",
+                      "size": 4
                     }
                   ],
                   "out": [
@@ -5958,72 +5492,554 @@
                 }
               },
               "position": {
-                "x": 1864,
-                "y": -296
+                "x": 200,
+                "y": 32
               },
               "size": {
-                "width": 448,
-                "height": 432
+                "width": 672,
+                "height": 480
               }
             }
           ],
           "wires": [
             {
               "source": {
-                "block": "69d500d0-9824-46b8-ae9c-cc19f55eefcb",
+                "block": "704ced4d-338f-4fb3-b8a9-24b8b25712f7",
                 "port": "out"
               },
               "target": {
-                "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
                 "port": "px_clk"
               }
             },
             {
               "source": {
-                "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
-                "port": "RGBStr_o"
+                "block": "176144fc-d840-481f-bdf6-0b43f73ad960",
+                "port": "out"
               },
               "target": {
-                "block": "10563024-bd0a-4a4d-856c-4bb1dff3f104",
-                "port": "in"
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+                "port": "RGBStr_i"
               },
-              "vertices": [
-                {
-                  "x": 2416,
-                  "y": -80
-                }
-              ],
               "size": 26
             },
             {
               "source": {
-                "block": "03ffa583-169d-4213-a75b-dd41755aa32a",
-                "port": "out"
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+                "port": "RGBStr_o"
               },
               "target": {
-                "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
-                "port": "VGAStr_i"
+                "block": "acdf522a-0a26-4773-909b-a4acb54a5111",
+                "port": "in"
               },
-              "size": 23
+              "size": 26
             },
             {
               "source": {
-                "block": "4ef4f2b1-023d-4569-8e10-643ef6cc71cb",
+                "block": "4031fcfa-3149-4c3b-ab99-36aa538684ff",
+                "port": "out"
+              },
+              "target": {
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+                "port": "type"
+              },
+              "size": 4
+            },
+            {
+              "source": {
+                "block": "8783f218-8a93-4ab7-9e22-e233e2c4cc65",
+                "port": "out"
+              },
+              "target": {
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+                "port": "pos_y"
+              },
+              "size": 7
+            },
+            {
+              "source": {
+                "block": "6db98c47-a894-4eee-b6a8-442bca2df1e5",
+                "port": "out"
+              },
+              "target": {
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+                "port": "pos_x"
+              },
+              "size": 7
+            },
+            {
+              "source": {
+                "block": "443d8a2e-3257-4546-8a45-c059e1eb59c6",
                 "port": "constant-out"
               },
               "target": {
-                "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
-                "port": "COLORext"
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+                "port": "size"
               }
             }
           ]
         },
         "state": {
           "pan": {
-            "x": -1191.1061,
-            "y": 403.1288
+            "x": 46.0144,
+            "y": 120.1115
           },
-          "zoom": 0.7973
+          "zoom": 0.7518
+        }
+      }
+    },
+    "ad0371abec671b4ace0be9cbd3fd624de55ae276": {
+      "package": {
+        "name": "videoRAM",
+        "version": "1.1",
+        "description": "RAM for a simple video console text (BRAM).",
+        "author": "Juan Manuel Rico",
+        "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22571.654%22%20height=%22404.172%22%20viewBox=%220%200%20535.9259%20378.9108%22%3E%3Cdefs%3E%3ClinearGradient%20id=%22a%22%3E%3Cstop%20offset=%220%22/%3E%3Cstop%20offset=%221%22%20stop-opacity=%220%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg%20transform=%22translate(-105.602%20-342.794)%22%3E%3Crect%20width=%22529.926%22%20height=%22372.911%22%20x=%22108.602%22%20y=%22345.794%22%20ry=%2278.704%22%20fill=%22#343434%22%20fill-rule=%22evenodd%22%20stroke=%22#0a0a0a%22%20stroke-width=%226%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Cg%20fill=%22#ff0%22%20fill-rule=%22evenodd%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%3E%3Cpath%20d=%22M146.898%20606.35l379.697%2055.728%2067.498-24.964-348.337-39.151z%22%20fill=%22#afafde%22/%3E%3Cpath%20d=%22M146.898%20453.356v152.995l98.858-8.388v-131.02z%22%20fill=%22#353564%22/%3E%3Cpath%20d=%22M245.756%20466.943l348.337-29.36v199.531l-348.337-39.151z%22%20fill=%22#e9e9ff%22/%3E%3Cpath%20d=%22M146.898%20453.356l379.697-46.674%2067.498%2030.9-348.337%2029.36z%22%20fill=%22#4d4d9f%22/%3E%3Cpath%20d=%22M526.595%20406.682v255.396l67.498-24.964V437.582z%22%20fill=%22#d7d7ff%22/%3E%3Cpath%20d=%22M146.898%20453.356l379.697-46.674v255.396L146.898%20606.35z%22%20fill=%22#8686bf%22/%3E%3C/g%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22234.214%22%20y=%22215.353%22%20transform=%22matrix(1.43582%20-.16598%20-.3792%201.10786%20-65.401%20380.376)%22%20font-weight=%22400%22%20font-size=%2290%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#fffe3c%22%3E%3Ctspan%20x=%22234.214%22%20y=%22215.353%22%20style=%22-inkscape-font-specification:'Showcard%20Gothic'%22%20font-family=%22Showcard%20Gothic%22%3ERAM%3C/tspan%3E%3C/text%3E%3C/g%3E%3C/svg%3E"
+      },
+      "design": {
+        "graph": {
+          "blocks": [
+            {
+              "id": "5d542121-b854-41e7-a538-cf21eecd6340",
+              "type": "basic.input",
+              "data": {
+                "name": "clk",
+                "clock": false
+              },
+              "position": {
+                "x": 16,
+                "y": 96
+              }
+            },
+            {
+              "id": "12894132-1b71-43ca-819f-8f22745cb2a7",
+              "type": "basic.input",
+              "data": {
+                "name": "write_en",
+                "clock": false
+              },
+              "position": {
+                "x": 16,
+                "y": 200
+              }
+            },
+            {
+              "id": "1a685972-640c-45e1-8ef8-f7bb2da9750b",
+              "type": "basic.output",
+              "data": {
+                "name": "dout",
+                "range": "[7:0]",
+                "size": 8
+              },
+              "position": {
+                "x": 792,
+                "y": 248
+              }
+            },
+            {
+              "id": "07edeafa-e1fc-46e7-84cf-0a67c064b9eb",
+              "type": "basic.input",
+              "data": {
+                "name": "addr",
+                "range": "[10:0]",
+                "clock": false,
+                "size": 11
+              },
+              "position": {
+                "x": 16,
+                "y": 296
+              }
+            },
+            {
+              "id": "23c82ef8-212e-4b73-af87-95267c9e0250",
+              "type": "basic.input",
+              "data": {
+                "name": "din",
+                "range": "[7:0]",
+                "clock": false,
+                "size": 8
+              },
+              "position": {
+                "x": 16,
+                "y": 400
+              }
+            },
+            {
+              "id": "aaa875d3-4ec0-4182-87e9-22cad096ae0f",
+              "type": "basic.code",
+              "data": {
+                "code": "//@include initRAM.list\n//@include videoRAM.v\n\nvideoRAM\nvideoRAM01\n(\n    clk,\n    write_en,\n    addr,\n    din,\n    dout\n);\n",
+                "params": [],
+                "ports": {
+                  "in": [
+                    {
+                      "name": "clk"
+                    },
+                    {
+                      "name": "write_en"
+                    },
+                    {
+                      "name": "addr",
+                      "range": "[10:0]",
+                      "size": 11
+                    },
+                    {
+                      "name": "din",
+                      "range": "[7:0]",
+                      "size": 8
+                    }
+                  ],
+                  "out": [
+                    {
+                      "name": "dout",
+                      "range": "[7:0]",
+                      "size": 8
+                    }
+                  ]
+                }
+              },
+              "position": {
+                "x": 240,
+                "y": 80
+              },
+              "size": {
+                "width": 480,
+                "height": 400
+              }
+            }
+          ],
+          "wires": [
+            {
+              "source": {
+                "block": "5d542121-b854-41e7-a538-cf21eecd6340",
+                "port": "out"
+              },
+              "target": {
+                "block": "aaa875d3-4ec0-4182-87e9-22cad096ae0f",
+                "port": "clk"
+              }
+            },
+            {
+              "source": {
+                "block": "12894132-1b71-43ca-819f-8f22745cb2a7",
+                "port": "out"
+              },
+              "target": {
+                "block": "aaa875d3-4ec0-4182-87e9-22cad096ae0f",
+                "port": "write_en"
+              }
+            },
+            {
+              "source": {
+                "block": "23c82ef8-212e-4b73-af87-95267c9e0250",
+                "port": "out"
+              },
+              "target": {
+                "block": "aaa875d3-4ec0-4182-87e9-22cad096ae0f",
+                "port": "din"
+              },
+              "size": 8
+            },
+            {
+              "source": {
+                "block": "aaa875d3-4ec0-4182-87e9-22cad096ae0f",
+                "port": "dout"
+              },
+              "target": {
+                "block": "1a685972-640c-45e1-8ef8-f7bb2da9750b",
+                "port": "in"
+              },
+              "size": 8
+            },
+            {
+              "source": {
+                "block": "07edeafa-e1fc-46e7-84cf-0a67c064b9eb",
+                "port": "out"
+              },
+              "target": {
+                "block": "aaa875d3-4ec0-4182-87e9-22cad096ae0f",
+                "port": "addr"
+              },
+              "size": 11
+            }
+          ]
+        },
+        "state": {
+          "pan": {
+            "x": 28,
+            "y": 2.5
+          },
+          "zoom": 1
+        }
+      }
+    },
+    "9ea7f2104895f34bc4bda019ab8f5e4f3c27f032": {
+      "package": {
+        "name": "DynConsole",
+        "version": "1.1",
+        "description": "Dynamic for read and show a video text console.",
+        "author": "Juan Manuel Rico",
+        "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22571.654%22%20height=%22404.172%22%20viewBox=%220%200%20535.9259%20378.9108%22%3E%3Cg%20transform=%22translate(-105.602%20-342.794)%22%20fill-rule=%22evenodd%22%3E%3Crect%20width=%22529.926%22%20height=%22372.911%22%20x=%22108.602%22%20y=%22345.794%22%20ry=%2278.704%22%20fill=%22#343434%22%20stroke=%22#0a0a0a%22%20stroke-width=%226%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Cpath%20d=%22M392.155%20546.372c7.675-5.905%2011.745%207.433%209.813%2012.757-5.237%2014.427-24.579%2014.334-35.328%206.87-19.229-13.352-18.033-41.354-3.926-57.9%2020.703-24.282%2058.367-21.874%2080.47-.981%2029.46%2027.847%2025.78%2075.468-1.962%20103.041-34.912%2034.698-92.61%2029.718-125.612-4.907-39.97-41.935-33.676-109.776%207.85-148.183%2048.938-45.261%20126.957-37.645%20170.754%2010.795%2050.566%2055.926%2041.623%20144.147-13.738%20193.325-62.906%2055.879-161.345%2045.606-215.896-16.683-61.199-69.879-49.594-178.547%2019.627-238.467%2076.848-66.522%20195.752-53.583%20261.037%2022.571.331.386.66.774.988%201.162%22%20fill=%22#98a2ec%22/%3E%3C/g%3E%3C/svg%3E"
+      },
+      "design": {
+        "graph": {
+          "blocks": [
+            {
+              "id": "1ee47b01-e8a1-4016-b256-0598566576e9",
+              "type": "basic.output",
+              "data": {
+                "name": "RGBStr_o",
+                "range": "[25:0]",
+                "size": 26
+              },
+              "position": {
+                "x": 1000,
+                "y": 64
+              }
+            },
+            {
+              "id": "704ced4d-338f-4fb3-b8a9-24b8b25712f7",
+              "type": "basic.input",
+              "data": {
+                "name": "px_clk",
+                "clock": false
+              },
+              "position": {
+                "x": -8,
+                "y": 120
+              }
+            },
+            {
+              "id": "1fdcb461-4e4f-4017-b7f8-ef11a5b1e928",
+              "type": "basic.output",
+              "data": {
+                "name": "addr_rom",
+                "range": "[10:0]",
+                "size": 11
+              },
+              "position": {
+                "x": 1000,
+                "y": 184
+              }
+            },
+            {
+              "id": "7cda173c-41bb-476f-8ab4-10f64c10577c",
+              "type": "basic.output",
+              "data": {
+                "name": "pos_x",
+                "range": "[9:0]",
+                "size": 10
+              },
+              "position": {
+                "x": 1000,
+                "y": 304
+              }
+            },
+            {
+              "id": "176144fc-d840-481f-bdf6-0b43f73ad960",
+              "type": "basic.input",
+              "data": {
+                "name": "RGBStr_i",
+                "range": "[25:0]",
+                "clock": false,
+                "size": 26
+              },
+              "position": {
+                "x": 0,
+                "y": 360
+              }
+            },
+            {
+              "id": "f91e521f-c0d8-4d19-8c37-ce9bbb256a3a",
+              "type": "basic.output",
+              "data": {
+                "name": "pos_y",
+                "range": "[9:0]",
+                "size": 10
+              },
+              "position": {
+                "x": 1000,
+                "y": 424
+              }
+            },
+            {
+              "id": "f43d9be5-03e9-407d-a0a2-7d632f536175",
+              "type": "basic.constant",
+              "data": {
+                "name": "color",
+                "value": "3'b110",
+                "local": false
+              },
+              "position": {
+                "x": 320,
+                "y": -88
+              }
+            },
+            {
+              "id": "1d05ded0-273a-4248-9a18-3ab1ee19fb22",
+              "type": "basic.constant",
+              "data": {
+                "name": "size",
+                "value": "16",
+                "local": false
+              },
+              "position": {
+                "x": 656,
+                "y": -88
+              }
+            },
+            {
+              "id": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+              "type": "basic.code",
+              "data": {
+                "code": "//@include DynConsole.v\n\nDynConsole\n#(\n.size(size)\n)\nDynConsole01\n(\n        px_clk,      // Pixel clock.\n        RGBStr_i,    // Input RGB stream.\n        RGBStr_o,    // Output RGB stream.\n\n        // ROM interface.\n        addr_rom,    // Output address ROM.\n        \n        // Position video character.\n        pos_x,       // X screen position.\n        pos_y        // Y screen position.\n);\n",
+                "params": [
+                  {
+                    "name": "color"
+                  },
+                  {
+                    "name": "size"
+                  }
+                ],
+                "ports": {
+                  "in": [
+                    {
+                      "name": "px_clk"
+                    },
+                    {
+                      "name": "RGBStr_i",
+                      "range": "[25:0]",
+                      "size": 26
+                    }
+                  ],
+                  "out": [
+                    {
+                      "name": "RGBStr_o",
+                      "range": "[25:0]",
+                      "size": 26
+                    },
+                    {
+                      "name": "addr_rom",
+                      "range": "[10:0]",
+                      "size": 11
+                    },
+                    {
+                      "name": "pos_x",
+                      "range": "[9:0]",
+                      "size": 10
+                    },
+                    {
+                      "name": "pos_y",
+                      "range": "[9:0]",
+                      "size": 10
+                    }
+                  ]
+                }
+              },
+              "position": {
+                "x": 200,
+                "y": 32
+              },
+              "size": {
+                "width": 672,
+                "height": 480
+              }
+            }
+          ],
+          "wires": [
+            {
+              "source": {
+                "block": "704ced4d-338f-4fb3-b8a9-24b8b25712f7",
+                "port": "out"
+              },
+              "target": {
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+                "port": "px_clk"
+              }
+            },
+            {
+              "source": {
+                "block": "176144fc-d840-481f-bdf6-0b43f73ad960",
+                "port": "out"
+              },
+              "target": {
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+                "port": "RGBStr_i"
+              },
+              "size": 26
+            },
+            {
+              "source": {
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+                "port": "addr_rom"
+              },
+              "target": {
+                "block": "1fdcb461-4e4f-4017-b7f8-ef11a5b1e928",
+                "port": "in"
+              },
+              "size": 11
+            },
+            {
+              "source": {
+                "block": "f43d9be5-03e9-407d-a0a2-7d632f536175",
+                "port": "constant-out"
+              },
+              "target": {
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+                "port": "color"
+              }
+            },
+            {
+              "source": {
+                "block": "1d05ded0-273a-4248-9a18-3ab1ee19fb22",
+                "port": "constant-out"
+              },
+              "target": {
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+                "port": "size"
+              }
+            },
+            {
+              "source": {
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+                "port": "pos_y"
+              },
+              "target": {
+                "block": "f91e521f-c0d8-4d19-8c37-ce9bbb256a3a",
+                "port": "in"
+              },
+              "size": 10
+            },
+            {
+              "source": {
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+                "port": "pos_x"
+              },
+              "target": {
+                "block": "7cda173c-41bb-476f-8ab4-10f64c10577c",
+                "port": "in"
+              },
+              "size": 10
+            },
+            {
+              "source": {
+                "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+                "port": "RGBStr_o"
+              },
+              "target": {
+                "block": "1ee47b01-e8a1-4016-b256-0598566576e9",
+                "port": "in"
+              },
+              "size": 26
+            }
+          ]
+        },
+        "state": {
+          "pan": {
+            "x": 46.3309,
+            "y": 114.7302
+          },
+          "zoom": 0.7914
         }
       }
     }

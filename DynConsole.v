@@ -57,12 +57,12 @@ reg [25:0] AuxStr1;
 
 wire [9:0] screenX; 
 wire [9:0] screenY;
-wire [5:0] videoX; 
-wire [5:0] videoY;
+wire [pS-1:0] videoX; 
+wire [pS-1:0] videoY;
 assign screenX = RGBStr_i[`XC];
 assign screenY = RGBStr_i[`YC];
-assign videoX = screenX [9:4];
-assign videoY = screenY [9:4];
+assign videoX = screenX [9:pS];
+assign videoY = screenY [9:pS];
 
 // Stage 0: Calculate address video RAM.
 always @(posedge px_clk)
@@ -74,8 +74,8 @@ end
 // Stage 1: Calculate grid position for character.
 always @(posedge px_clk)
 begin
-    pos_x <= {videoX, 4'b0000};
-    pos_y <= {videoY, 4'b0000};
+    pos_x <= {videoX, {pS{1'b0}}};
+    pos_y <= {videoY, {pS{1'b0}}};
 end
 
 // Stage 2: 

@@ -540,7 +540,7 @@
           "type": "basic.constant",
           "data": {
             "name": "size",
-            "value": "128",
+            "value": "16",
             "local": false
           },
           "position": {
@@ -552,7 +552,7 @@
           "id": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
           "type": "basic.code",
           "data": {
-            "code": "//@include DynConsole.v\n\nDynConsole\nDynConsole01\n(\n        px_clk,      // Pixel clock.\n        RGBStr_i,    // Input RGB stream.\n        RGBStr_o,    // Output RGB stream.\n\n        // ROM interface.\n        addr_rom,    // Output address ROM.\n        \n        // Position video character.\n        pos_x,       // X screen position.\n        pos_y        // Y screen position.\n);\n",
+            "code": "//@include DynConsole.v\n\nDynConsole\n#(\n.size(size)\n)\nDynConsole01\n(\n        px_clk,      // Pixel clock.\n        RGBStr_i,    // Input RGB stream.\n        RGBStr_o,    // Output RGB stream.\n\n        // ROM interface.\n        addr_rom,    // Output address ROM.\n        \n        // Position video character.\n        pos_x,       // X screen position.\n        pos_y        // Y screen position.\n);\n",
             "params": [
               {
                 "name": "color"
