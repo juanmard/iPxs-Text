@@ -57,8 +57,8 @@ reg [25:0] AuxStr1;
 
 wire [9:0] screenX; 
 wire [9:0] screenY;
-wire [pS-1:0] videoX; 
-wire [pS-1:0] videoY;
+wire [6:0] videoX; 
+wire [6:0] videoY;
 assign screenX = RGBStr_i[`XC];
 assign screenY = RGBStr_i[`YC];
 assign videoX = screenX [9:pS];
