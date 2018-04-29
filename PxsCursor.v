@@ -15,12 +15,17 @@
 //
 //
 //////////////////////////////////////////////////////////////////////////////////
+`include "Pxs.vh"
+
 module PxsCursor
+#(
+    parameter size = 8                 // Grid Size must be a power of 2
+)
 (
         input wire        px_clk,      // Pixel clock.
         input wire [25:0] RGBStr_i,    // Input RGB stream.
-        input wire [6:0]  pos_x,       // X screen position (80).
-        input wire [6:0]  pos_y,       // Y screen position (50).
+        input wire [6:0]  pos_x,       // X screen position (max 80).
+        input wire [6:0]  pos_y,       // Y screen position (max 60).
         input wire [3:0]  tcursor,     // Type cursor.
 
         // RGB Stream output.
@@ -40,37 +45,25 @@ module PxsCursor
 `define VGA 22:0
 
 // Cursor grid.
-`define gY 12:7
-`define gX 22:17
-parameter gW = 16;         // Grid width.
-parameter gH = 16;         // Grid height.
+//`define gY 12:7
+//`define gX 22:17
+//parameter gW = size;         // Grid width.
+//parameter gH = size;         // Grid height.
+
+parameter pS = $clog2(size);
+
+wire cursor;
+wire [9:0] abs_x;
+wire [9:0] abs_y;
+
+assign abs_x = pos_x << pS;
+assign abs_y = pos_y << pS;
+assign cursor = (
+                (RGBStr_i[`XC] >= abs_x) && (RGBStr_i[`XC] < (abs_x + size)) &&
+                (RGBStr_i[`YC] >= abs_y) && (RGBStr_i[`YC] < (abs_y + size))
+                ) ? 1 : 0;
 
 reg  [2:0] px_color;      // Actual pixel color.
-
-/*
-// Dimentions and parameters for image of binary font.
-parameter gc = 16;        // Glyphs for row.
-parameter gr = 16;        // Glyphs for column.
-parameter fw = gc*gw;     // Font image width.
-parameter fh = gr*gh;     // Font image height.
-
-wire [6:0] pcx;       // Position character X in image font.
-wire [6:0] pcy;       // Position character Y in image font.
-
-// Get glyph position in table ROM.
-assign pcx = character[3:0];
-assign pcy = character[7:4];
-
-// Glyph point positon.
-reg [9:0] glyph_x;
-reg [9:0] glyph_y;
-
-// Stage 0: Calculate address ROM direction to glyph.
-always @(posedge px_clk)
-begin
-    addr_rom <= pcy*fw + glyph_y*gc + pcx;
-end
-*/
 
 wire blink;
 assign blink = tcursor[1];
@@ -81,8 +74,8 @@ begin
     // Are we inside a cursor limit grid?
     if  (
         //!blink &&
-        (RGBStr_i[`gX] == pos_x) &&
-        (RGBStr_i[`gY] == pos_y)
+//        (RGBStr_i[17:13] == pos_x) && (RGBStr_i[7:3] == pos_y)
+        cursor
         )
         begin
             px_color <= ~RGBStr_i[`RGB];

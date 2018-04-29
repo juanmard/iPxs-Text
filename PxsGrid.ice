@@ -1,18 +1,18 @@
 {
   "version": "1.1",
   "package": {
-    "name": "PxsCursor",
-    "version": "1.1",
-    "description": "Cursor for a console Text.",
+    "name": "PxsGrid",
+    "version": "1.0",
+    "description": "Grid for test.",
     "author": "Juan Manuel Rico",
-    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22571.654%22%20height=%22404.172%22%20viewBox=%220%200%20535.9259%20378.9108%22%3E%3Cg%20transform=%22translate(-105.602%20-342.794)%22%3E%3Crect%20width=%22529.926%22%20height=%22372.911%22%20x=%22108.602%22%20y=%22345.794%22%20ry=%2278.704%22%20fill=%22#343434%22%20fill-rule=%22evenodd%22%20stroke=%22#0a0a0a%22%20stroke-width=%226%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22133.654%22%20y=%22138.526%22%20transform=%22matrix(2.80795%200%200%202.73653%20-166.86%20207.687)%22%20font-weight=%22400%22%20font-size=%2290%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#ff0%22%3E%3Ctspan%20x=%22133.654%22%20y=%22138.526%22%3E#_%3C/tspan%3E%3C/text%3E%3C/g%3E%3C/svg%3E"
+    "image": ""
   },
   "design": {
     "board": "icezum",
     "graph": {
       "blocks": [
         {
-          "id": "704ced4d-338f-4fb3-b8a9-24b8b25712f7",
+          "id": "69d500d0-9824-46b8-ae9c-cc19f55eefcb",
           "type": "basic.input",
           "data": {
             "name": "px_clk",
@@ -27,161 +27,15 @@
             "clock": false
           },
           "position": {
-            "x": -8,
-            "y": 48
+            "x": 1632,
+            "y": -256
           }
         },
         {
-          "id": "176144fc-d840-481f-bdf6-0b43f73ad960",
-          "type": "basic.input",
-          "data": {
-            "name": "RGBStr_i",
-            "range": "[25:0]",
-            "pins": [
-              {
-                "index": "25",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "24",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "23",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "22",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "21",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "20",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "19",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "18",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "17",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "16",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "15",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "14",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "13",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "12",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "11",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "10",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "9",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "8",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "7",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "6",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "5",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "4",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "3",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "2",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "1",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "0",
-                "name": "",
-                "value": "0"
-              }
-            ],
-            "virtual": true,
-            "clock": false
-          },
-          "position": {
-            "x": -8,
-            "y": 144
-          }
-        },
-        {
-          "id": "acdf522a-0a26-4773-909b-a4acb54a5111",
+          "id": "10563024-bd0a-4a4d-856c-4bb1dff3f104",
           "type": "basic.output",
           "data": {
-            "name": "RGBStr_o",
+            "name": "RGBStr",
             "range": "[25:0]",
             "pins": [
               {
@@ -318,17 +172,112 @@
             "virtual": true
           },
           "position": {
-            "x": 1008,
-            "y": 240
+            "x": 2472,
+            "y": -184
           }
         },
         {
-          "id": "6db98c47-a894-4eee-b6a8-442bca2df1e5",
+          "id": "203b57b2-fe52-486c-841b-e4a718c21d3f",
           "type": "basic.input",
           "data": {
-            "name": "pos_x",
-            "range": "[6:0]",
+            "name": "RGBStr",
+            "range": "[25:0]",
             "pins": [
+              {
+                "index": "25",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "24",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "23",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "22",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "21",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "20",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "19",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "18",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "17",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "16",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "15",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "14",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "13",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "12",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "11",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "10",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "9",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "8",
+                "name": "",
+                "value": "0"
+              },
+              {
+                "index": "7",
+                "name": "",
+                "value": "0"
+              },
               {
                 "index": "6",
                 "name": "",
@@ -369,99 +318,12 @@
             "clock": false
           },
           "position": {
-            "x": -8,
-            "y": 240
+            "x": 1632,
+            "y": -112
           }
         },
         {
-          "id": "8783f218-8a93-4ab7-9e22-e233e2c4cc65",
-          "type": "basic.input",
-          "data": {
-            "name": "pos_y",
-            "range": "[6:0]",
-            "pins": [
-              {
-                "index": "6",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "5",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "4",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "3",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "2",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "1",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "0",
-                "name": "",
-                "value": "0"
-              }
-            ],
-            "virtual": true,
-            "clock": false
-          },
-          "position": {
-            "x": -8,
-            "y": 336
-          }
-        },
-        {
-          "id": "4031fcfa-3149-4c3b-ab99-36aa538684ff",
-          "type": "basic.input",
-          "data": {
-            "name": "type",
-            "range": "[3:0]",
-            "pins": [
-              {
-                "index": "3",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "2",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "1",
-                "name": "",
-                "value": "0"
-              },
-              {
-                "index": "0",
-                "name": "",
-                "value": "0"
-              }
-            ],
-            "virtual": true,
-            "clock": false
-          },
-          "position": {
-            "x": -8,
-            "y": 432
-          }
-        },
-        {
-          "id": "443d8a2e-3257-4546-8a45-c059e1eb59c6",
+          "id": "09df88ab-803f-402d-a168-fd91f8016ddb",
           "type": "basic.constant",
           "data": {
             "name": "size",
@@ -469,31 +331,15 @@
             "local": false
           },
           "position": {
-            "x": 488,
-            "y": -88
+            "x": 2040,
+            "y": -408
           }
         },
         {
-          "id": "7cac9773-d5f8-4931-a0d0-2b119d26d208",
-          "type": "basic.info",
-          "data": {
-            "info": "<H1>PxsCursor for Text Console</H1>\n",
-            "readonly": true
-          },
-          "position": {
-            "x": 344,
-            "y": -176
-          },
-          "size": {
-            "width": 448,
-            "height": 32
-          }
-        },
-        {
-          "id": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+          "id": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
           "type": "basic.code",
           "data": {
-            "code": "//@include Pxs.vh\n//@include PxsCursor.v\n\nPxsCursor\n#(\n    .size(size)\n)\nPxsCursor01\n(\n    // RGB Stream input.\n    px_clk,      // Pixel clock.\n    RGBStr_i,    // Input RGB stream.\n    \n    // Modificators. \n    pos_x,       // X screen position (80).\n    pos_y,       // Y screen position (50).\n    type,        // Type cursor.\n    \n    // RGB Stream output.\n    RGBStr_o     // Output RGB stream.\n);\n",
+            "code": "// @include Pxs.vh\r\n// @include PxsGrid.v\r\n\r\nPxsGrid \r\n#(\r\n.size(size)\r\n)\r\nPxsGrid01\r\n(\r\n    px_clk,\r\n    RGBStr_i,\r\n    RGBStr_o\r\n);\r\n",
             "params": [
               {
                 "name": "size"
@@ -508,21 +354,6 @@
                   "name": "RGBStr_i",
                   "range": "[25:0]",
                   "size": 26
-                },
-                {
-                  "name": "pos_x",
-                  "range": "[6:0]",
-                  "size": 7
-                },
-                {
-                  "name": "pos_y",
-                  "range": "[6:0]",
-                  "size": 7
-                },
-                {
-                  "name": "type",
-                  "range": "[3:0]",
-                  "size": 4
                 }
               ],
               "out": [
@@ -535,88 +366,55 @@
             }
           },
           "position": {
-            "x": 200,
-            "y": 32
+            "x": 1864,
+            "y": -296
           },
           "size": {
-            "width": 672,
-            "height": 480
+            "width": 448,
+            "height": 288
           }
         }
       ],
       "wires": [
         {
           "source": {
-            "block": "704ced4d-338f-4fb3-b8a9-24b8b25712f7",
+            "block": "203b57b2-fe52-486c-841b-e4a718c21d3f",
             "port": "out"
           },
           "target": {
-            "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-            "port": "px_clk"
-          }
-        },
-        {
-          "source": {
-            "block": "176144fc-d840-481f-bdf6-0b43f73ad960",
-            "port": "out"
-          },
-          "target": {
-            "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+            "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
             "port": "RGBStr_i"
           },
           "size": 26
         },
         {
           "source": {
-            "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+            "block": "69d500d0-9824-46b8-ae9c-cc19f55eefcb",
+            "port": "out"
+          },
+          "target": {
+            "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
+            "port": "px_clk"
+          }
+        },
+        {
+          "source": {
+            "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
             "port": "RGBStr_o"
           },
           "target": {
-            "block": "acdf522a-0a26-4773-909b-a4acb54a5111",
+            "block": "10563024-bd0a-4a4d-856c-4bb1dff3f104",
             "port": "in"
           },
           "size": 26
         },
         {
           "source": {
-            "block": "4031fcfa-3149-4c3b-ab99-36aa538684ff",
-            "port": "out"
-          },
-          "target": {
-            "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-            "port": "type"
-          },
-          "size": 4
-        },
-        {
-          "source": {
-            "block": "8783f218-8a93-4ab7-9e22-e233e2c4cc65",
-            "port": "out"
-          },
-          "target": {
-            "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-            "port": "pos_y"
-          },
-          "size": 7
-        },
-        {
-          "source": {
-            "block": "6db98c47-a894-4eee-b6a8-442bca2df1e5",
-            "port": "out"
-          },
-          "target": {
-            "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
-            "port": "pos_x"
-          },
-          "size": 7
-        },
-        {
-          "source": {
-            "block": "443d8a2e-3257-4546-8a45-c059e1eb59c6",
+            "block": "09df88ab-803f-402d-a168-fd91f8016ddb",
             "port": "constant-out"
           },
           "target": {
-            "block": "1855e5a5-1a5e-42f3-9799-6b32c4bdf814",
+            "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
             "port": "size"
           }
         }
@@ -624,10 +422,10 @@
     },
     "state": {
       "pan": {
-        "x": 46.0144,
-        "y": 120.1115
+        "x": -1417.641,
+        "y": 468.2778
       },
-      "zoom": 0.7518
+      "zoom": 0.8932
     }
   },
   "dependencies": {}

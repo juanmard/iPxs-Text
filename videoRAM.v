@@ -19,9 +19,10 @@
 //-----------------------------------------------------------------------------
 module videoRAM 
 #(
-    parameter cols = 80,
-    parameter rows = 25,
-    parameter addr_width = $clog2(rows*cols),
+    parameter INTRAM_FILE = "initRAM.list",
+    parameter cols = 40,
+    parameter rows = 30,
+    parameter addr_width = 11, //$clog2(rows*cols),
     parameter data_width = 8
 )
 (
@@ -33,6 +34,10 @@ module videoRAM
 );
 
 reg [data_width-1:0] mem [(1 << addr_width)-1:0];
+
+initial begin
+  if (INTRAM_FILE) $readmemh(INTRAM_FILE, mem);
+end
 
 always @(posedge clk)
 begin
