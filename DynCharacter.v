@@ -72,30 +72,38 @@ reg [2:0] px_color;               // Pixel color.
 reg [2:0] glyph_x;
 reg [2:0] glyph_y;
 
+// Auxiliar pipeline.
+reg [25:0] AuxStr1;
+
 // Stage 0: Calculate address ROM and relative glyph position.
 always @(posedge px_clk)
 begin
 // Changed in revision 0.02
 //    addr_rom <= pcy*fw + glyph_y*gc + pcx;
     addr_rom <= {character,glyph_y};
-    glyph_x <= (RGBStr_i[`XC] - pos_x) >> sdiv;
-    glyph_y <= (RGBStr_i[`YC] - pos_y) >> sdiv;
+
+    // Save auxiliary register for pipeline.
+    AuxStr1[`VGA]<=RGBStr_i[`VGA];
+    AuxStr1[`RGB]<=RGBStr_i[`RGB];
 end
 
 // Stage 1: Calculate pixel color.
 always @(posedge px_clk)
 begin
+    glyph_x <= (AuxStr1[`XC] - pos_x) >> sdiv;
+    glyph_y <= (AuxStr1[`YC] - pos_y) >> sdiv;
+
     // Are we inside a character limit?
     if  (
-        (RGBStr_i[`XC] >= pos_x) && (RGBStr_i[`XC] < (pos_x + psw*gw)) &&
-        (RGBStr_i[`YC] >= pos_y) && (RGBStr_i[`YC] < (pos_y + psh*gh))
+        (AuxStr1[`XC] >= pos_x) && (AuxStr1[`XC] < (pos_x + psw*gw)) &&
+        (AuxStr1[`YC] >= pos_y) && (AuxStr1[`YC] < (pos_y + psh*gh))
         )
         begin
             px_color <= gline[glyph_x] ? color_fg : (alpha?RGBStr_i[`RGB]:color_bg);
         end
     else
         begin
-            px_color <= RGBStr_i[`RGB];
+            px_color <= AuxStr1[`RGB];
         end
 end
 
@@ -103,7 +111,7 @@ end
 always @(posedge px_clk)
 begin
     // Clone VGA stream in a RGB stream.
-    RGBStr_o[`VGA] <= RGBStr_i[`VGA];
+    RGBStr_o[`VGA] <= AuxStr1[`VGA];
 
     // Draw the pixel in stream output RGB.
     RGBStr_o[`RGB] <= px_color;

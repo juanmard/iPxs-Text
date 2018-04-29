@@ -22,6 +22,7 @@ module DynConsole
 (
     input wire        px_clk,      // Pixel clock.
     input wire [25:0] RGBStr_i,    // Input RGB stream.
+    output reg [25:0] RGBStr_o,    // Output RGB stream.
 
     // ROM interface.
     output reg [10:0] addr_vram,    // Output address video RAM.
@@ -50,33 +51,38 @@ parameter pS = $clog2(size);
 //wire grid;
 //assign grid = ((RGBStr_i[13+:pS]==(size-1)) || (RGBStr_i[3+:pS]==(size-1))) ? 1 : 0;
 
+// Auxiliary pipeline register.
+reg [25:0] AuxStr1;
+
+
 wire [9:0] screenX; 
 wire [9:0] screenY;
-wire [7:0] videoX; 
-wire [7:0] videoY;
-assign screenX = RGBStr_i[`XC]; 
+wire [5:0] videoX; 
+wire [5:0] videoY;
+assign screenX = RGBStr_i[`XC];
 assign screenY = RGBStr_i[`YC];
-assign videoX = screenX [9:4]; 
+assign videoX = screenX [9:4];
 assign videoY = screenY [9:4];
 
 // Stage 0: Calculate address video RAM.
 always @(posedge px_clk)
 begin
     addr_vram <= videoY * screenW + videoX;
+    AuxStr1 <= RGBStr_i;
 end
 
 // Stage 1: Calculate grid position for character.
 always @(posedge px_clk)
 begin
-    if (RGBStr_i[13+:pS]==(size-1))
-    begin
-        pos_x <= screenX;
-    end
-
-    if (RGBStr_i[3+:pS]==(size-1))
-    begin
-        pos_y <= screenY;
-    end
+    pos_x <= {videoX, 4'b0000};
+    pos_y <= {videoY, 4'b0000};
 end
+
+// Stage 2: 
+always @(posedge px_clk)
+begin
+    RGBStr_o <= AuxStr1;
+end
+
 
 endmodule

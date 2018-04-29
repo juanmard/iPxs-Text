@@ -22,7 +22,7 @@ module videoRAM
     parameter INTRAM_FILE = "initRAM.list",
     parameter cols = 40,
     parameter rows = 30,
-    parameter addr_width = 11, //$clog2(rows*cols),
+    parameter addr_width = $clog2(rows*cols),
     parameter data_width = 8
 )
 (
