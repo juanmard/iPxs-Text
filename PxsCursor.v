@@ -73,7 +73,7 @@ always @(posedge px_clk)
 begin
     // Are we inside a cursor limit grid?
     if  (
-        //!blink &&
+//        !blink &&
 //        (RGBStr_i[17:13] == pos_x) && (RGBStr_i[7:3] == pos_y)
         cursor
         )

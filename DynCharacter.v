@@ -74,6 +74,7 @@ reg [2:0] glyph_y;
 
 // Auxiliar pipeline.
 reg [25:0] AuxStr1;
+reg [25:0] AuxStr2;
 
 // Stage 0: Calculate address ROM and relative glyph position.
 always @(posedge px_clk)
@@ -83,8 +84,7 @@ begin
     addr_rom <= {character,glyph_y};
 
     // Save auxiliary register for pipeline.
-    AuxStr1[`VGA]<=RGBStr_i[`VGA];
-    AuxStr1[`RGB]<=RGBStr_i[`RGB];
+    AuxStr1 <= RGBStr_i;
 end
 
 // Stage 1: Calculate pixel color.
@@ -105,13 +105,16 @@ begin
         begin
             px_color <= AuxStr1[`RGB];
         end
+
+     // Save auxiliary register for pipeline.
+     AuxStr2 <= AuxStr1;
 end
 
 // Stage 2: Update output stream RGB.
 always @(posedge px_clk)
 begin
     // Clone VGA stream in a RGB stream.
-    RGBStr_o[`VGA] <= AuxStr1[`VGA];
+    RGBStr_o[`VGA] <= AuxStr2[`VGA];
 
     // Draw the pixel in stream output RGB.
     RGBStr_o[`RGB] <= px_color;
