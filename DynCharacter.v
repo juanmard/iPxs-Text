@@ -76,30 +76,34 @@ reg [2:0] glyph_y;
 reg [25:0] AuxStr1;
 reg [25:0] AuxStr2;
 
-// Stage 0: Calculate address ROM and relative glyph position.
+// Stage 0: Calculate relative glyph position.
 always @(posedge px_clk)
 begin
 // Changed in revision 0.02
 //    addr_rom <= pcy*fw + glyph_y*gc + pcx;
-    addr_rom <= {character,glyph_y};
+    glyph_x <= (RGBStr_i[`XC] - pos_x) >> sdiv;
+    glyph_y <= (RGBStr_i[`YC] - pos_y) >> sdiv;
 
     // Save auxiliary register for pipeline.
     AuxStr1 <= RGBStr_i;
 end
 
+// Stage 1: Calculate address ROM.
+always @(posedge px_clk)
+begin
+    addr_rom <= {character,glyph_y};
+end
+
 // Stage 1: Calculate pixel color.
 always @(posedge px_clk)
 begin
-    glyph_x <= (AuxStr1[`XC] - pos_x) >> sdiv;
-    glyph_y <= (AuxStr1[`YC] - pos_y) >> sdiv;
-
     // Are we inside a character limit?
     if  (
         (AuxStr1[`XC] >= pos_x) && (AuxStr1[`XC] < (pos_x + psw*gw)) &&
         (AuxStr1[`YC] >= pos_y) && (AuxStr1[`YC] < (pos_y + psh*gh))
         )
         begin
-            px_color <= gline[glyph_x] ? color_fg : (alpha?RGBStr_i[`RGB]:color_bg);
+            px_color <= gline[glyph_x] ? color_fg : ( alpha ? AuxStr1[`RGB] : color_bg);
         end
     else
         begin
