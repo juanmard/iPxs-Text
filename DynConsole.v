@@ -46,53 +46,24 @@ module DynConsole
 
 parameter screenW = 40;
 parameter screenH = 30;
-parameter pS = $clog2(size);
-
-// Auxiliary pipeline register.
-reg [25:0] AuxStr1;
-reg [25:0] AuxStr2;
-
+parameter pS = 4; //$clog2(size);
 
 wire [9:0] screenX; 
 wire [9:0] screenY;
 wire [9:pS] videoX; 
 wire [9:pS] videoY;
-reg [9:pS] videoX_S1; 
-reg [9:pS] videoY_S1;
 assign screenX = RGBStr_i[`XC];
 assign screenY = RGBStr_i[`YC];
 assign videoX = screenX [9:pS];
 assign videoY = screenY [9:pS];
 
-reg [9:0] aux_pos_x;
-reg [9:0] aux_pos_y;
-
-reg [10:0] addr_vram_S1;
-reg [10:0] addr_vram_S2;
-
-// Stage 0: Calculate address video RAM.
+// Stage 1: Calculate address video RAM.
 always @(posedge px_clk)
 begin
     addr_vram <= videoY * screenW + videoX;
-    aux_pos_x <= {videoX, {pS{1'b0}}};
-    aux_pos_y <= {videoY, {pS{1'b0}}};
-    AuxStr1 <= RGBStr_i;
-end
-
-// Stage 1: Calculate grid position for character.
-always @(posedge px_clk)
-begin
-//    aux_pos_x <= {videoX_S1, {pS{1'b0}}};
-//    aux_pos_y <= {videoY_S1, {pS{1'b0}}};
-//    AuxStr2 <= AuxStr1;
-end
-
-// Stage 2: Calculate grid position for character.
-always @(posedge px_clk)
-begin
-    pos_x <= aux_pos_x-1;
-    pos_y <= aux_pos_y;
-    RGBStr_o <= AuxStr1;
+    pos_x <= {videoX, {pS{1'b0}}};
+    pos_y <= {videoY, {pS{1'b0}}};
+    RGBStr_o <= RGBStr_i;
 end
 
 endmodule
