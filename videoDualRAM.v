@@ -20,9 +20,9 @@
 module videoDualRAM 
 #(
     parameter INTRAM_FILE = "initRAM.list",
-    parameter cols = 40,
-    parameter rows = 30,
-    parameter addr_width = $clog2(rows*cols),
+//    parameter cols = 80,
+//    parameter rows = 51,
+    parameter addr_width = 12,  // 80x51 = 4080 bytes -> 2^12 = 4096 bytes (sobran 16).
     parameter data_width = 8
 )
 (

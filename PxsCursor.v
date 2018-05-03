@@ -66,16 +66,15 @@ assign cursor = (
 reg  [2:0] px_color;      // Actual pixel color.
 
 wire blink;
-assign blink = tcursor[1];
+assign blink = tcursor[0];
 
 // Stage 1: Calculate pixel color.
 always @(posedge px_clk)
 begin
     // Are we inside a cursor limit grid?
     if  (
-//        !blink &&
-//        (RGBStr_i[17:13] == pos_x) && (RGBStr_i[7:3] == pos_y)
-        cursor
+         //!blink &&
+         cursor
         )
         begin
             px_color <= ~RGBStr_i[`RGB];

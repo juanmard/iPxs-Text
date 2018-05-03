@@ -25,7 +25,7 @@ module DynConsole
     output reg [25:0] RGBStr_o,    // Output RGB stream.
 
     // Video RAM interface.
-    output reg [10:0] addr_vram,    // Output address video VRAM.
+    output reg [12:0] addr_vram,    // Output address video VRAM.
 
     // Position video character.
     output reg [9:0]  pos_x,       // X screen position for a character.
@@ -44,9 +44,8 @@ module DynConsole
 `define RGB 25:23
 `define VGA 22:0
 
-parameter screenW = 40;
-parameter screenH = 30;
-parameter pS = 4; //$clog2(size);
+parameter screenW = (640/size);
+parameter pS = $clog2(size);
 
 wire [9:0] screenX; 
 wire [9:0] screenY;
