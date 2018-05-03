@@ -103,25 +103,31 @@ begin
         (AuxStr1[`YC] >= pos_y) && (AuxStr1[`YC] < (pos_y + psh*gh))
         )
         begin
-            px_color <= gline[glyph_x] ? color_fg : ( alpha ? AuxStr1[`RGB] : color_bg);
+            RGBStr_o[`RGB] <= gline[glyph_x] ? color_fg : ( alpha ? AuxStr1[`RGB] : color_bg);
         end
     else
         begin
-            px_color <= AuxStr1[`RGB];
+            RGBStr_o[`RGB] <= AuxStr1[`RGB]; //px_color <= AuxStr1[`RGB];
         end
 
      // Save auxiliary register for pipeline.
-     AuxStr2 <= AuxStr1;
+//     AuxStr2 <= AuxStr1;
+
+     // Clone VGA stream in a RGB stream.
+    RGBStr_o[`VGA] <= AuxStr1[`VGA];
+
+    // Draw the pixel in stream output RGB.
+//    RGBStr_o[`RGB] <= px_color;
 end
 
 // Stage 2: Update output stream RGB.
 always @(posedge px_clk)
 begin
     // Clone VGA stream in a RGB stream.
-    RGBStr_o[`VGA] <= AuxStr2[`VGA];
+ //   RGBStr_o[`VGA] <= AuxStr2[`VGA];
 
     // Draw the pixel in stream output RGB.
-    RGBStr_o[`RGB] <= px_color;
+   // RGBStr_o[`RGB] <= px_color;
 end
 
 endmodule
