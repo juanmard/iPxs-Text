@@ -21,8 +21,8 @@ module videoDualRAM
 #(
     parameter INTRAM_FILE = "initRAM.list",
 //    parameter cols = 80,
-//    parameter rows = 51,
-    parameter addr_width = 12,  // 80x51 = 4080 bytes -> 2^12 = 4096 bytes (sobran 16).
+//    parameter rows = 76,
+    parameter addr_width = 13,  // 80x76 = 6080 bytes -> 12 BRAM x 512 = 6144 bytes (sobran 64 bytes) -> 2^13 = 8192 bytes para direccionar.
     parameter data_width = 8
 )
 (

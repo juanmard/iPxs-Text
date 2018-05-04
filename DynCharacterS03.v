@@ -4,7 +4,7 @@
 // 
 // Create Date: 23/04/2018 
 // Module Name: DynCharacterS03
-// Description: Dynamic block for read from a font and show a simple
+// Description: Stage 03 - Dynamic block for read from a font and show a simple
 //              character in a stream RGB.
 //
 // Dependencies: 
@@ -13,9 +13,12 @@
 // Revision 0.01 - File Created
 //
 // Additional Comments:
+//      TODO: Clean code.
 //
 //
 //////////////////////////////////////////////////////////////////////////////////
+`include "Pxs.vh"
+
 module DynCharacterS03 #(
         parameter color_fg = 3'b110,            // Foreground font color.
         parameter color_bg = 3'b001,            // Background font color.
@@ -38,18 +41,6 @@ module DynCharacterS03 #(
         output reg [25:0] RGBStr_o     // Output RGB stream.
         );
 
-// Address alias. 
-`define Active 0:0
-`define VS 1:1
-`define HS 2:2
-`define YC 12:3
-`define XC 22:13
-`define R 23:23
-`define G 24:24
-`define B 25:25
-`define RGB 25:23
-`define VGA 22:0
-
 // Dimensions and parameters for image of binary font.
 parameter gw = 8;         // Glyph width.
 parameter gh = 8;         // Glyph height.
@@ -70,11 +61,12 @@ begin
 
     // Are we inside a character limit?
     if  (
+        (RGBStr_i[`XC] > 0) && (RGBStr_i[`YC] > 0) &&                            // Warning: glitch in 0,0... Why?
         (RGBStr_i[`XC] >= posx_i) && (RGBStr_i[`XC] < (posx_i + psw*gw)) &&
         (RGBStr_i[`YC] >= posy_i) && (RGBStr_i[`YC] < (posy_i + psh*gh))
         )
         begin
-            RGBStr_o[`RGB] <= gline[glyph_x] ? color_fg : ( alpha ? RGBStr_i[`RGB] : color_bg);
+            RGBStr_o[`RGB] <= gline[glyph_x] ? color_fg : (alpha ? RGBStr_i[`RGB] : color_bg);
         end
     else
         begin

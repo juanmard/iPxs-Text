@@ -47,13 +47,28 @@ begin
     // Dinámica del cursor.
     case (data_i)
         // Ctrl+j
-        8'h0A: cursor_x <= cursor_x - 1;
+        8'h0A:
+        begin
+            cursor_x <= cursor_x - 1;
+            if (cursor_x < 0) cursor_x <= (640/size)-1;
+        end
+
         // Ctrl+l
-        8'h0C: cursor_x <= cursor_x + 1;
+        8'h0C:
+        begin
+            cursor_x <= cursor_x + 1;
+            if (cursor_x >= (640/size)-1) cursor_x <= 0;
+        end
+
         // Ctrl+k
         8'h0B: cursor_y <= cursor_y + 1;
+
         // Ctrl+i
-        8'h09: cursor_y <= cursor_y - 1;
+        8'h09:
+        begin
+            cursor_y <= cursor_y - 1;
+            if (cursor_y < 0) cursor_y <= fin_pag-1;
+        end
 
         // Enter
         8'h0D, 8'h0A:
@@ -79,13 +94,6 @@ begin
             write <= 1;
         end
     endcase
-
-    // Final de la línea.
-    if (cursor_x >= (640/size)-1)
-    begin
-       cursor_x <= 0;
-       cursor_y <= cursor_y + 1;
-    end
 
     // Final de la página.
     if (cursor_y > fin_pag)

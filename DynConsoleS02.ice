@@ -2,7 +2,7 @@
   "version": "1.1",
   "package": {
     "name": "DynConsoleS02",
-    "version": "1.0",
+    "version": "2.0",
     "description": "Stage 02 for PxsConsole.",
     "author": "Juan Manuel Rico",
     "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22571.654%22%20height=%22404.172%22%20viewBox=%220%200%20535.9259%20378.9108%22%3E%3Cg%20transform=%22translate(-105.602%20-342.794)%22%20fill-rule=%22evenodd%22%3E%3Crect%20width=%22529.926%22%20height=%22372.911%22%20x=%22108.602%22%20y=%22345.794%22%20ry=%2278.704%22%20fill=%22#343434%22%20stroke=%22#0a0a0a%22%20stroke-width=%226%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Cpath%20d=%22M392.155%20546.372c7.675-5.905%2011.745%207.433%209.813%2012.757-5.237%2014.427-24.579%2014.334-35.328%206.87-19.229-13.352-18.033-41.354-3.926-57.9%2020.703-24.282%2058.367-21.874%2080.47-.981%2029.46%2027.847%2025.78%2075.468-1.962%20103.041-34.912%2034.698-92.61%2029.718-125.612-4.907-39.97-41.935-33.676-109.776%207.85-148.183%2048.938-45.261%20126.957-37.645%20170.754%2010.795%2050.566%2055.926%2041.623%20144.147-13.738%20193.325-62.906%2055.879-161.345%2045.606-215.896-16.683-61.199-69.879-49.594-178.547%2019.627-238.467%2076.848-66.522%20195.752-53.583%20261.037%2022.571.331.386.66.774.988%201.162%22%20fill=%22#98a2ec%22/%3E%3C/g%3E%3C/svg%3E"
@@ -933,8 +933,8 @@
           }
         },
         {
-          "id": "e2517464-9b08-4990-9b4e-301d1e4d8095",
-          "type": "ccacf27f329ad556ef4d2a012fcb6d7913c5350d",
+          "id": "07630cad-c048-4c0d-94ef-b0f792105c89",
+          "type": "6ff98f023d46c278e1c92f2a96dc8a559f24b2ef",
           "position": {
             "x": 928,
             "y": 136
@@ -952,7 +952,7 @@
             "port": "out"
           },
           "target": {
-            "block": "e2517464-9b08-4990-9b4e-301d1e4d8095",
+            "block": "07630cad-c048-4c0d-94ef-b0f792105c89",
             "port": "23c82ef8-212e-4b73-af87-95267c9e0250"
           },
           "vertices": [
@@ -969,7 +969,7 @@
             "port": "out"
           },
           "target": {
-            "block": "e2517464-9b08-4990-9b4e-301d1e4d8095",
+            "block": "07630cad-c048-4c0d-94ef-b0f792105c89",
             "port": "5d542121-b854-41e7-a538-cf21eecd6340"
           },
           "vertices": [
@@ -985,7 +985,7 @@
             "port": "out"
           },
           "target": {
-            "block": "e2517464-9b08-4990-9b4e-301d1e4d8095",
+            "block": "07630cad-c048-4c0d-94ef-b0f792105c89",
             "port": "65a10c8e-e5ee-4002-83ac-69b27bf1ea42"
           },
           "vertices": [
@@ -1013,7 +1013,7 @@
         },
         {
           "source": {
-            "block": "e2517464-9b08-4990-9b4e-301d1e4d8095",
+            "block": "07630cad-c048-4c0d-94ef-b0f792105c89",
             "port": "1a685972-640c-45e1-8ef8-f7bb2da9750b"
           },
           "target": {
@@ -1122,8 +1122,8 @@
             "port": "out"
           },
           "target": {
-            "block": "e2517464-9b08-4990-9b4e-301d1e4d8095",
-            "port": "aed833e9-2c29-420e-8a54-b8b181f0009c"
+            "block": "07630cad-c048-4c0d-94ef-b0f792105c89",
+            "port": "28a56b28-e02c-40a5-bde9-205df0380aa6"
           },
           "vertices": [
             {
@@ -1139,8 +1139,8 @@
             "port": "out"
           },
           "target": {
-            "block": "e2517464-9b08-4990-9b4e-301d1e4d8095",
-            "port": "11cfcde5-dc00-4fbf-b220-4a22070a00fd"
+            "block": "07630cad-c048-4c0d-94ef-b0f792105c89",
+            "port": "b81fdd88-a665-4441-ac93-d8311ee06667"
           },
           "vertices": [
             {
@@ -1156,7 +1156,7 @@
             "port": "out"
           },
           "target": {
-            "block": "e2517464-9b08-4990-9b4e-301d1e4d8095",
+            "block": "07630cad-c048-4c0d-94ef-b0f792105c89",
             "port": "12894132-1b71-43ca-819f-8f22745cb2a7"
           }
         }
@@ -1164,17 +1164,17 @@
     },
     "state": {
       "pan": {
-        "x": -46.75,
-        "y": 233.6809
+        "x": -148.25,
+        "y": 225.7447
       },
-      "zoom": 0.7593
+      "zoom": 0.6449
     }
   },
   "dependencies": {
-    "ccacf27f329ad556ef4d2a012fcb6d7913c5350d": {
+    "6ff98f023d46c278e1c92f2a96dc8a559f24b2ef": {
       "package": {
         "name": "videoDualRAM",
-        "version": "1.1",
+        "version": "2.0",
         "description": "RAM for a simple video console text (Dual RAM).",
         "author": "Juan Manuel Rico",
         "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22571.654%22%20height=%22404.172%22%20viewBox=%220%200%20535.9259%20378.9108%22%3E%3Cdefs%3E%3ClinearGradient%20id=%22a%22%3E%3Cstop%20offset=%220%22/%3E%3Cstop%20offset=%221%22%20stop-opacity=%220%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg%20transform=%22translate(-105.602%20-342.794)%22%3E%3Crect%20width=%22529.926%22%20height=%22372.911%22%20x=%22108.602%22%20y=%22345.794%22%20ry=%2278.704%22%20fill=%22#343434%22%20fill-rule=%22evenodd%22%20stroke=%22#0a0a0a%22%20stroke-width=%226%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22/%3E%3Cg%20fill=%22#ff0%22%20fill-rule=%22evenodd%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%3E%3Cpath%20d=%22M146.898%20606.35l379.697%2055.728%2067.498-24.964-348.337-39.151z%22%20fill=%22#afafde%22/%3E%3Cpath%20d=%22M146.898%20453.356v152.995l98.858-8.388v-131.02z%22%20fill=%22#353564%22/%3E%3Cpath%20d=%22M245.756%20466.943l348.337-29.36v199.531l-348.337-39.151z%22%20fill=%22#e9e9ff%22/%3E%3Cpath%20d=%22M146.898%20453.356l379.697-46.674%2067.498%2030.9-348.337%2029.36z%22%20fill=%22#4d4d9f%22/%3E%3Cpath%20d=%22M526.595%20406.682v255.396l67.498-24.964V437.582z%22%20fill=%22#d7d7ff%22/%3E%3Cpath%20d=%22M146.898%20453.356l379.697-46.674v255.396L146.898%20606.35z%22%20fill=%22#8686bf%22/%3E%3C/g%3E%3Ctext%20style=%22line-height:125%25%22%20x=%22234.214%22%20y=%22215.353%22%20transform=%22matrix(1.43582%20-.16598%20-.3792%201.10786%20-65.401%20380.376)%22%20font-weight=%22400%22%20font-size=%2290%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22#fffe3c%22%3E%3Ctspan%20x=%22234.214%22%20y=%22215.353%22%20style=%22-inkscape-font-specification:'Showcard%20Gothic'%22%20font-family=%22Showcard%20Gothic%22%3ERAM%3C/tspan%3E%3C/text%3E%3C/g%3E%3C/svg%3E"
@@ -1207,7 +1207,7 @@
               }
             },
             {
-              "id": "aed833e9-2c29-420e-8a54-b8b181f0009c",
+              "id": "28a56b28-e02c-40a5-bde9-205df0380aa6",
               "type": "basic.input",
               "data": {
                 "name": "raddr",
@@ -1246,7 +1246,7 @@
               }
             },
             {
-              "id": "11cfcde5-dc00-4fbf-b220-4a22070a00fd",
+              "id": "b81fdd88-a665-4441-ac93-d8311ee06667",
               "type": "basic.input",
               "data": {
                 "name": "waddr",
@@ -1277,7 +1277,7 @@
               "id": "aaa875d3-4ec0-4182-87e9-22cad096ae0f",
               "type": "basic.code",
               "data": {
-                "code": "//@include initRAM.list\n//@include videoDualRAM.v\n\n// 80 columnas x 51 filas = 4080 bytes necesarios.\n// 2^12 = 4096 bytes (sobran 16 bytes).\nvideoDualRAM\n#(\n    .addr_width(12),\n    .data_width(8)\n)\nvideoDualRAM01\n(\n    din,\n    write_en,\n    waddr,\n    wclk,\n    raddr,\n    rclk,\n    dout\n);\n",
+                "code": "//@include initRAM.list\n//@include videoDualRAM.v\n\n// 80 columnas x 76 filas = 6080 bytes\n// 12 BRAM x 512 = 6144 bytes (sobran 64 bytes)\n// 2^13 = 8192 bytes para direccionar.\nvideoDualRAM\n#(\n    .addr_width(12),\n    .data_width(8)\n)\nvideoDualRAM01\n(\n    din,\n    write_en,\n    waddr,\n    wclk,\n    raddr,\n    rclk,\n    dout\n);\n",
                 "params": [],
                 "ports": {
                   "in": [
@@ -1380,7 +1380,7 @@
             },
             {
               "source": {
-                "block": "aed833e9-2c29-420e-8a54-b8b181f0009c",
+                "block": "28a56b28-e02c-40a5-bde9-205df0380aa6",
                 "port": "out"
               },
               "target": {
@@ -1391,7 +1391,7 @@
             },
             {
               "source": {
-                "block": "11cfcde5-dc00-4fbf-b220-4a22070a00fd",
+                "block": "b81fdd88-a665-4441-ac93-d8311ee06667",
                 "port": "out"
               },
               "target": {
@@ -1404,10 +1404,10 @@
         },
         "state": {
           "pan": {
-            "x": 24.8,
-            "y": 1.3
+            "x": 24,
+            "y": -13.5
           },
-          "zoom": 0.95
+          "zoom": 1
         }
       }
     }
