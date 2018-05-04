@@ -3,7 +3,7 @@ verbose = 1;
 %---
 
 % Read 128x128 image containing 16x16 characters
-I = imread('862-8x8-binario.png');
+I = imread('..\images\862-8x8-binario.png');
 
 %---
 
@@ -21,7 +21,7 @@ for x=1:16;
 	  imagesc(t);
 	  subplot(1,2,2);
       imagesc( O );
-      pause(.1)
+      pause(.05)
 	end
 	
   end;
@@ -32,6 +32,15 @@ O8 = O(9:end,:);
 
 % Save to txt file
 dlmwrite('BRAM_8.list', O8, '')
+
+% Save with separate glyphs.
+file_name = 'BRAM_8_split.list';
+fileID = fopen(file_name,'a');
+for i = 1:8:256*8
+    fprintf(fileID, '//\n// 0x%0X (%d)\n', (i-1)/8, (i-1)/8);
+    dlmwrite(file_name, O8(i:i+7,:), '-append', 'delimiter','');
+end
+fclose(fileID);
 
 %---
 
@@ -50,7 +59,7 @@ for x=1:256;
     imagesc(O8( xo+1:xo+8, : ));  
     subplot(1,2,2);
     imagesc( O );
-    pause(.1)
+    pause(.05)
   end
   
 end;
