@@ -4,7 +4,7 @@
 // 
 // Create Date: 23/04/2018 
 // Module Name: DynConsole
-// Description: Dynamic block for text console.
+// Description: Dynamic block for control cursor and text console.
 //
 // Dependencies: 
 //
@@ -17,52 +17,82 @@
 //////////////////////////////////////////////////////////////////////////////////
 module DynConsole
 #(
-    parameter size = 16             // Glhyp size (must be a power of 2).
+    parameter size = 16             // Glyhp size (must be a power of 2).
 )
 (
-    input wire        px_clk,      // Pixel clock.
-    input wire [25:0] RGBStr_i,    // Input RGB stream.
-    output reg [25:0] RGBStr_o,    // Output RGB stream.
+    // Data interface.
+    input wire        rcv,         // Data received.
+    input wire [7:0]  data_i,      // Data input.
+
+    // Position cursor.
+    output reg [6:0]  cursor_x,     // X video map cursor position.
+    output reg [6:0]  cursor_y,     // Y video map cursor position.
 
     // Video RAM interface.
-    output reg [12:0] addr_vram,    // Output address video VRAM.
+    output reg  write,              // Write character in address video RAM.
+    output reg [12:0] addr_vram,    // Output address video RAM.
 
-    // Position video character.
-    output reg [9:0]  pos_x,       // X screen position for a character.
-    output reg [9:0]  pos_y        // Y screen position for a character.
+    // Data output.
+    output reg [7:0] character      // Character to write in RAM.
 );
 
-// Address alias. 
-`define Active 0:0
-`define VS 1:1
-`define HS 2:2
-`define YC 12:3
-`define XC 22:13
-`define R 23:23
-`define G 24:24
-`define B 25:25
-`define RGB 25:23
-`define VGA 22:0
+// Limit cursor in page.
+localparam fin_pag = (size==8) ? 51 : (size==16) ? 30 : (size==32) ? 15 : (size==64) ? 7 : (size==128) ? 3 : (size==256) ? 1 : 0;
 
-parameter screenW = (640/size);
-parameter pS = $clog2(size);
-
-wire [9:0] screenX; 
-wire [9:0] screenY;
-wire [9:pS] videoX; 
-wire [9:pS] videoY;
-assign screenX = RGBStr_i[`XC];
-assign screenY = RGBStr_i[`YC];
-assign videoX = screenX [9:pS];
-assign videoY = screenY [9:pS];
-
-// Stage 1: Calculate address video RAM.
-always @(posedge px_clk)
+always @(posedge rcv)
 begin
-    addr_vram <= videoY * screenW + videoX;
-    pos_x <= {videoX, {pS{1'b0}}};
-    pos_y <= {videoY, {pS{1'b0}}};
-    RGBStr_o <= RGBStr_i;
+    addr_vram <= cursor_y*(640/size) + cursor_x;
+    write <= 0;
+
+    // Dinámica del cursor.
+    case (data_i)
+        // Ctrl+j
+        8'h0A: cursor_x <= cursor_x - 1;
+        // Ctrl+l
+        8'h0C: cursor_x <= cursor_x + 1;
+        // Ctrl+k
+        8'h0B: cursor_y <= cursor_y + 1;
+        // Ctrl+i
+        8'h09: cursor_y <= cursor_y - 1;
+
+        // Enter
+        8'h0D, 8'h0A:
+        begin
+            cursor_x <= 0;
+            cursor_y <= cursor_y + 1;
+        end
+
+        // Retroceso
+        8'h7F:
+        begin
+            cursor_x <= cursor_x - 1;
+            if (cursor_x < 0) cursor_x <= 0;
+            character <= 0;
+            write <= 1;
+        end
+
+        // Numbers, letters...
+        default:
+        begin
+            character <= data_i;
+            cursor_x <= cursor_x + 1;
+            write <= 1;
+        end
+    endcase
+
+    // Final de la línea.
+    if (cursor_x >= (640/size)-1)
+    begin
+       cursor_x <= 0;
+       cursor_y <= cursor_y + 1;
+    end
+
+    // Final de la página.
+    if (cursor_y > fin_pag)
+    begin
+       cursor_y <= 0;
+    end
+
 end
 
 endmodule
