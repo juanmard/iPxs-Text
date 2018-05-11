@@ -25,8 +25,8 @@ module DynConsole
     input wire [7:0]  data_i,      // Data input.
 
     // Position cursor.
-    output reg [6:0]  cursor_x = 1,     // X video map cursor position.
-    output reg [6:0]  cursor_y = 1,     // Y video map cursor position.
+    output reg [6:0]  cursor_x = 0,     // X video map cursor position.
+    output reg [6:0]  cursor_y = 0,     // Y video map cursor position.
 
     // Video RAM interface.
     output reg  write,              // Write character in address video RAM.

@@ -26,8 +26,8 @@
             "virtual": false
           },
           "position": {
-            "x": 1456,
-            "y": -224
+            "x": 1728,
+            "y": -200
           }
         },
         {
@@ -45,8 +45,8 @@
             "virtual": false
           },
           "position": {
-            "x": 1456,
-            "y": -144
+            "x": 1728,
+            "y": -120
           }
         },
         {
@@ -64,8 +64,8 @@
             "virtual": false
           },
           "position": {
-            "x": 1456,
-            "y": 40
+            "x": 1728,
+            "y": 64
           }
         },
         {
@@ -83,8 +83,8 @@
             "virtual": false
           },
           "position": {
-            "x": 1456,
-            "y": 112
+            "x": 1728,
+            "y": 136
           }
         },
         {
@@ -102,8 +102,8 @@
             "virtual": false
           },
           "position": {
-            "x": 1456,
-            "y": 184
+            "x": 1728,
+            "y": 208
           }
         },
         {
@@ -122,8 +122,48 @@
             "clock": false
           },
           "position": {
-            "x": 144,
+            "x": 272,
             "y": 232
+          }
+        },
+        {
+          "id": "8631bb6f-ea94-405b-9644-12800d8100a6",
+          "type": "basic.input",
+          "data": {
+            "name": "sw1",
+            "pins": [
+              {
+                "index": "0",
+                "name": "SW1",
+                "value": "10"
+              }
+            ],
+            "virtual": false,
+            "clock": false
+          },
+          "position": {
+            "x": 232,
+            "y": 440
+          }
+        },
+        {
+          "id": "84640577-a6df-4594-b787-7bb650c8bb55",
+          "type": "basic.input",
+          "data": {
+            "name": "sw2",
+            "pins": [
+              {
+                "index": "0",
+                "name": "SW2",
+                "value": "11"
+              }
+            ],
+            "virtual": false,
+            "clock": false
+          },
+          "position": {
+            "x": 232,
+            "y": 544
           }
         },
         {
@@ -135,7 +175,7 @@
             "local": false
           },
           "position": {
-            "x": -8,
+            "x": -80,
             "y": -296
           }
         },
@@ -148,8 +188,8 @@
             "local": false
           },
           "position": {
-            "x": 352,
-            "y": -128
+            "x": 216,
+            "y": -136
           }
         },
         {
@@ -161,8 +201,8 @@
             "local": false
           },
           "position": {
-            "x": 664,
-            "y": -424
+            "x": 520,
+            "y": -416
           }
         },
         {
@@ -170,11 +210,11 @@
           "type": "basic.constant",
           "data": {
             "name": "size",
-            "value": "8",
+            "value": "16",
             "local": false
           },
           "position": {
-            "x": 904,
+            "x": 1032,
             "y": -352
           }
         },
@@ -187,7 +227,7 @@
             "local": false
           },
           "position": {
-            "x": 984,
+            "x": 1112,
             "y": -48
           }
         },
@@ -199,8 +239,8 @@
             "readonly": true
           },
           "position": {
-            "x": 160,
-            "y": -392
+            "x": 96,
+            "y": -400
           },
           "size": {
             "width": 592,
@@ -211,8 +251,8 @@
           "id": "834b00de-8610-45e7-ac60-54384082ee01",
           "type": "fa43b3b58a23474ad61d20f48bfe5dd1d0f21b39",
           "position": {
-            "x": 1240,
-            "y": -40
+            "x": 1512,
+            "y": -16
           },
           "size": {
             "width": 96,
@@ -223,7 +263,7 @@
           "id": "25888628-65eb-4769-90e4-bf0990c9d8ff",
           "type": "e304dcebf8f3416db8e9b0230b3a516bbbcd0aaa",
           "position": {
-            "x": -8,
+            "x": -80,
             "y": -184
           },
           "size": {
@@ -235,7 +275,7 @@
           "id": "eb30d10f-1eb8-45d6-b6db-1c351733c117",
           "type": "f8a63bec44260e47587e9fd93ceabbb59604aa0f",
           "position": {
-            "x": 312,
+            "x": 440,
             "y": 216
           },
           "size": {
@@ -247,7 +287,7 @@
           "id": "9141230d-5144-4ac3-8b82-5bc2bc7a3df5",
           "type": "70ff7f2a2f0ede80fc37c66a997650a1d0d0102b",
           "position": {
-            "x": 472,
+            "x": 600,
             "y": 128
           },
           "size": {
@@ -259,20 +299,8 @@
           "id": "3b4056e4-66d5-45bf-920f-ad3695a0c24f",
           "type": "20ddb4320c224a04d37219231ac441c74b6f3b89",
           "position": {
-            "x": 1120,
+            "x": 1248,
             "y": -184
-          },
-          "size": {
-            "width": 96,
-            "height": 64
-          }
-        },
-        {
-          "id": "16759fba-c313-4280-b905-533deebeec98",
-          "type": "6c407782d89d99b012a1614d20d8003bc63ed986",
-          "position": {
-            "x": 352,
-            "y": -16
           },
           "size": {
             "width": 96,
@@ -283,8 +311,8 @@
           "id": "76fedaf3-9f23-4f55-b5a6-1f6d524d24d4",
           "type": "11e26e510c025bb4612b7d685133367dcf927edd",
           "position": {
-            "x": 640,
-            "y": -296
+            "x": 496,
+            "y": -280
           },
           "size": {
             "width": 96,
@@ -299,7 +327,7 @@
             "readonly": true
           },
           "position": {
-            "x": 824,
+            "x": 952,
             "y": -400
           },
           "size": {
@@ -311,12 +339,75 @@
           "id": "1c64bfe3-368e-4360-b56c-9ccd41746bb2",
           "type": "2a9d86620988f39bd7247576d84f556384515d54",
           "position": {
-            "x": 928,
+            "x": 1056,
             "y": 80
           },
           "size": {
             "width": 96,
             "height": 160
+          }
+        },
+        {
+          "id": "f42fbed9-3b40-4aa3-8b72-e60fe8945b77",
+          "type": "basic.code",
+          "data": {
+            "code": "reg [7:0] byte;\nreg rcv;\n\nalways @(clk)\nbegin\n    rcv <= 1'b0;\n    if (sw1)\n    begin\n        rcv <= 1'b1;\n        byte <= 8'h01;\n    end\n    if (sw2)\n    begin\n        rcv <= 1'b1;\n        byte <= 8'h02;\n    end\nend",
+            "params": [],
+            "ports": {
+              "in": [
+                {
+                  "name": "clk"
+                },
+                {
+                  "name": "sw1"
+                },
+                {
+                  "name": "sw2"
+                }
+              ],
+              "out": [
+                {
+                  "name": "rcv"
+                },
+                {
+                  "name": "byte",
+                  "range": "[7:0]",
+                  "size": 8
+                }
+              ]
+            }
+          },
+          "position": {
+            "x": 496,
+            "y": 368
+          },
+          "size": {
+            "width": 384,
+            "height": 208
+          }
+        },
+        {
+          "id": "ebb50e8c-ce22-47e9-9417-b2522f2a6d41",
+          "type": "38cb4050c876fc7e3f55ca80ba16c113335782af",
+          "position": {
+            "x": 744,
+            "y": -32
+          },
+          "size": {
+            "width": 96,
+            "height": 64
+          }
+        },
+        {
+          "id": "4519fe5b-43f1-4464-b0b2-6b9a0cb69044",
+          "type": "6c407782d89d99b012a1614d20d8003bc63ed986",
+          "position": {
+            "x": 216,
+            "y": -16
+          },
+          "size": {
+            "width": 96,
+            "height": 64
           }
         }
       ],
@@ -332,8 +423,8 @@
           },
           "vertices": [
             {
-              "x": 1400,
-              "y": -56
+              "x": 1672,
+              "y": -32
             }
           ]
         },
@@ -348,8 +439,8 @@
           },
           "vertices": [
             {
-              "x": 1424,
-              "y": -24
+              "x": 1696,
+              "y": 0
             }
           ]
         },
@@ -375,8 +466,8 @@
           },
           "vertices": [
             {
-              "x": 1408,
-              "y": 96
+              "x": 1680,
+              "y": 120
             }
           ]
         },
@@ -391,8 +482,8 @@
           },
           "vertices": [
             {
-              "x": 1384,
-              "y": 152
+              "x": 1656,
+              "y": 176
             }
           ]
         },
@@ -412,12 +503,12 @@
             "port": "6e4ac81b-0abc-4441-a529-d2cb74e0a28c"
           },
           "target": {
-            "block": "16759fba-c313-4280-b905-533deebeec98",
+            "block": "4519fe5b-43f1-4464-b0b2-6b9a0cb69044",
             "port": "69d500d0-9824-46b8-ae9c-cc19f55eefcb"
           },
           "vertices": [
             {
-              "x": 304,
+              "x": 160,
               "y": -96
             }
           ]
@@ -483,101 +574,8 @@
           },
           "vertices": [
             {
-              "x": 952,
-              "y": -80
-            }
-          ]
-        },
-        {
-          "source": {
-            "block": "25888628-65eb-4769-90e4-bf0990c9d8ff",
-            "port": "6e4ac81b-0abc-4441-a529-d2cb74e0a28c"
-          },
-          "target": {
-            "block": "1c64bfe3-368e-4360-b56c-9ccd41746bb2",
-            "port": "0dec3afa-b9de-4e5b-907e-9f518bdf284e"
-          },
-          "vertices": [
-            {
-              "x": 808,
-              "y": -24
-            }
-          ]
-        },
-        {
-          "source": {
-            "block": "25888628-65eb-4769-90e4-bf0990c9d8ff",
-            "port": "e84dbc94-005f-4010-aaa3-62116805de5a"
-          },
-          "target": {
-            "block": "16759fba-c313-4280-b905-533deebeec98",
-            "port": "03ffa583-169d-4213-a75b-dd41755aa32a"
-          },
-          "vertices": [
-            {
-              "x": 264,
-              "y": -40
-            }
-          ],
-          "size": 23
-        },
-        {
-          "source": {
-            "block": "ef2ad66d-1ee4-4fbc-a1c2-1e906a970fff",
-            "port": "constant-out"
-          },
-          "target": {
-            "block": "16759fba-c313-4280-b905-533deebeec98",
-            "port": "4ef4f2b1-023d-4569-8e10-643ef6cc71cb"
-          }
-        },
-        {
-          "source": {
-            "block": "16759fba-c313-4280-b905-533deebeec98",
-            "port": "10563024-bd0a-4a4d-856c-4bb1dff3f104"
-          },
-          "target": {
-            "block": "76fedaf3-9f23-4f55-b5a6-1f6d524d24d4",
-            "port": "3cf58950-86f0-4ac3-bd72-8ae37305e1dd"
-          },
-          "vertices": [
-            {
-              "x": 568,
-              "y": -80
-            }
-          ],
-          "size": 26
-        },
-        {
-          "source": {
-            "block": "76fedaf3-9f23-4f55-b5a6-1f6d524d24d4",
-            "port": "6ec618f9-1638-44b1-8517-0df4e1600f58"
-          },
-          "target": {
-            "block": "1c64bfe3-368e-4360-b56c-9ccd41746bb2",
-            "port": "38845503-ab2c-4d30-9a5c-0dadb0546a76"
-          },
-          "vertices": [
-            {
-              "x": 768,
-              "y": -120
-            }
-          ],
-          "size": 26
-        },
-        {
-          "source": {
-            "block": "25888628-65eb-4769-90e4-bf0990c9d8ff",
-            "port": "6e4ac81b-0abc-4441-a529-d2cb74e0a28c"
-          },
-          "target": {
-            "block": "76fedaf3-9f23-4f55-b5a6-1f6d524d24d4",
-            "port": "53d23702-bcff-4596-9137-d9d3616cc7d7"
-          },
-          "vertices": [
-            {
-              "x": 528,
-              "y": -224
+              "x": 1080,
+              "y": -88
             }
           ]
         },
@@ -593,14 +591,23 @@
         },
         {
           "source": {
-            "block": "1c64bfe3-368e-4360-b56c-9ccd41746bb2",
-            "port": "ad6a5e0a-2f5c-4b73-b79b-385e1ab20a59"
+            "block": "8631bb6f-ea94-405b-9644-12800d8100a6",
+            "port": "out"
           },
           "target": {
-            "block": "834b00de-8610-45e7-ac60-54384082ee01",
-            "port": "203b57b2-fe52-486c-841b-e4a718c21d3f"
+            "block": "f42fbed9-3b40-4aa3-8b72-e60fe8945b77",
+            "port": "sw1"
+          }
+        },
+        {
+          "source": {
+            "block": "84640577-a6df-4594-b787-7bb650c8bb55",
+            "port": "out"
           },
-          "size": 26
+          "target": {
+            "block": "f42fbed9-3b40-4aa3-8b72-e60fe8945b77",
+            "port": "sw2"
+          }
         },
         {
           "source": {
@@ -623,20 +630,157 @@
           },
           "vertices": [
             {
-              "x": 616,
-              "y": 216
+              "x": 856,
+              "y": 248
             }
           ],
           "size": 8
+        },
+        {
+          "source": {
+            "block": "25888628-65eb-4769-90e4-bf0990c9d8ff",
+            "port": "6e4ac81b-0abc-4441-a529-d2cb74e0a28c"
+          },
+          "target": {
+            "block": "ebb50e8c-ce22-47e9-9417-b2522f2a6d41",
+            "port": "8a14e36d-4929-4adc-b776-71420fe9bdaf"
+          },
+          "vertices": [
+            {
+              "x": 656,
+              "y": -120
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "25888628-65eb-4769-90e4-bf0990c9d8ff",
+            "port": "6e4ac81b-0abc-4441-a529-d2cb74e0a28c"
+          },
+          "target": {
+            "block": "1c64bfe3-368e-4360-b56c-9ccd41746bb2",
+            "port": "0dec3afa-b9de-4e5b-907e-9f518bdf284e"
+          },
+          "vertices": [
+            {
+              "x": 976,
+              "y": 40
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "25888628-65eb-4769-90e4-bf0990c9d8ff",
+            "port": "e84dbc94-005f-4010-aaa3-62116805de5a"
+          },
+          "target": {
+            "block": "4519fe5b-43f1-4464-b0b2-6b9a0cb69044",
+            "port": "03ffa583-169d-4213-a75b-dd41755aa32a"
+          },
+          "vertices": [
+            {
+              "x": 120,
+              "y": -40
+            }
+          ],
+          "size": 23
+        },
+        {
+          "source": {
+            "block": "ef2ad66d-1ee4-4fbc-a1c2-1e906a970fff",
+            "port": "constant-out"
+          },
+          "target": {
+            "block": "4519fe5b-43f1-4464-b0b2-6b9a0cb69044",
+            "port": "4ef4f2b1-023d-4569-8e10-643ef6cc71cb"
+          }
+        },
+        {
+          "source": {
+            "block": "4519fe5b-43f1-4464-b0b2-6b9a0cb69044",
+            "port": "10563024-bd0a-4a4d-856c-4bb1dff3f104"
+          },
+          "target": {
+            "block": "76fedaf3-9f23-4f55-b5a6-1f6d524d24d4",
+            "port": "3cf58950-86f0-4ac3-bd72-8ae37305e1dd"
+          },
+          "size": 26
+        },
+        {
+          "source": {
+            "block": "25888628-65eb-4769-90e4-bf0990c9d8ff",
+            "port": "6e4ac81b-0abc-4441-a529-d2cb74e0a28c"
+          },
+          "target": {
+            "block": "76fedaf3-9f23-4f55-b5a6-1f6d524d24d4",
+            "port": "53d23702-bcff-4596-9137-d9d3616cc7d7"
+          },
+          "vertices": [
+            {
+              "x": 400,
+              "y": -224
+            }
+          ]
+        },
+        {
+          "source": {
+            "block": "76fedaf3-9f23-4f55-b5a6-1f6d524d24d4",
+            "port": "6ec618f9-1638-44b1-8517-0df4e1600f58"
+          },
+          "target": {
+            "block": "ebb50e8c-ce22-47e9-9417-b2522f2a6d41",
+            "port": "f49f87db-c266-4657-a00f-2c72462ff13b"
+          },
+          "vertices": [
+            {
+              "x": 632,
+              "y": -112
+            }
+          ],
+          "size": 26
+        },
+        {
+          "source": {
+            "block": "ebb50e8c-ce22-47e9-9417-b2522f2a6d41",
+            "port": "3c3144a8-9ba1-4ef4-86e9-3f209d58bc5b"
+          },
+          "target": {
+            "block": "1c64bfe3-368e-4360-b56c-9ccd41746bb2",
+            "port": "38845503-ab2c-4d30-9a5c-0dadb0546a76"
+          },
+          "vertices": [
+            {
+              "x": 936,
+              "y": 56
+            }
+          ],
+          "size": 26
+        },
+        {
+          "source": {
+            "block": "1c64bfe3-368e-4360-b56c-9ccd41746bb2",
+            "port": "ad6a5e0a-2f5c-4b73-b79b-385e1ab20a59"
+          },
+          "target": {
+            "block": "834b00de-8610-45e7-ac60-54384082ee01",
+            "port": "203b57b2-fe52-486c-841b-e4a718c21d3f"
+          },
+          "vertices": [
+            {
+              "x": 1336,
+              "y": 120
+            }
+          ],
+          "size": 26
         }
       ]
     },
     "state": {
       "pan": {
-        "x": 70.6468,
-        "y": 317.5249
+        "x": 218.1406,
+        "y": 271.9688
       },
-      "zoom": 0.5473
+      "zoom": 0.5576
     }
   },
   "dependencies": {
@@ -3671,169 +3815,6 @@
             "y": 468.2778
           },
           "zoom": 0.8932
-        }
-      }
-    },
-    "6c407782d89d99b012a1614d20d8003bc63ed986": {
-      "package": {
-        "name": "PxsRGB",
-        "version": "1.0",
-        "description": "generate a stream of constant RGB color",
-        "author": "Sergio Cuenca",
-        "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22210mm%22%20height=%22297mm%22%20viewBox=%220%200%20210%20297%22%3E%3Cg%20font-weight=%22400%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctext%20style=%22line-height:1.25%22%20x=%2217.886%22%20y=%22129.252%22%20transform=%22scale(1.08086%20.92519)%22%20font-size=%2282.959%22%20fill=%22green%22%20stroke-width=%222.074%22%3E%3Ctspan%20x=%2217.886%22%20y=%22129.252%22%20fill=%22red%22%3ER%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:1.25%22%20x=%2289.093%22%20y=%22116.229%22%20transform=%22scale(.81788%201.22267)%22%20font-size=%22107.755%22%20fill=%22#0f0%22%20stroke-width=%222.694%22%3E%3Ctspan%20x=%2289.093%22%20y=%22116.229%22%3EG%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:1.25%22%20x=%22137.376%22%20y=%22116.873%22%20transform=%22matrix(.96475%20.00849%20-.0079%201.03647%200%200)%22%20font-size=%2278.405%22%20fill=%22#00f%22%20stroke-width=%221.96%22%3E%3Ctspan%20x=%22137.376%22%20y=%22116.873%22%3EB%3C/tspan%3E%3C/text%3E%3C/g%3E%3C/svg%3E"
-      },
-      "design": {
-        "graph": {
-          "blocks": [
-            {
-              "id": "69d500d0-9824-46b8-ae9c-cc19f55eefcb",
-              "type": "basic.input",
-              "data": {
-                "name": "px_clk",
-                "clock": false
-              },
-              "position": {
-                "x": 1552,
-                "y": -216
-              }
-            },
-            {
-              "id": "10563024-bd0a-4a4d-856c-4bb1dff3f104",
-              "type": "basic.output",
-              "data": {
-                "name": "RGBStr",
-                "range": "[25:0]",
-                "size": 26
-              },
-              "position": {
-                "x": 2504,
-                "y": -112
-              }
-            },
-            {
-              "id": "03ffa583-169d-4213-a75b-dd41755aa32a",
-              "type": "basic.input",
-              "data": {
-                "name": "VGAStr",
-                "range": "[22:0]",
-                "clock": false,
-                "size": 23
-              },
-              "position": {
-                "x": 1544,
-                "y": -88
-              }
-            },
-            {
-              "id": "4ef4f2b1-023d-4569-8e10-643ef6cc71cb",
-              "type": "basic.constant",
-              "data": {
-                "name": "COLORext",
-                "value": "3'b111",
-                "local": false
-              },
-              "position": {
-                "x": 2032,
-                "y": -416
-              }
-            },
-            {
-              "id": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
-              "type": "basic.code",
-              "data": {
-                "code": "// @include Pxs.vh\r\n// @include PxsConstant.v\r\n\r\n\r\n//-- Instantiate PxsConstant module.\r\nPxsConstant #(COLORext)\r\nPxsConstant1(\r\n    px_clk,\r\n    VGAStr_i,\r\n    RGBStr_o\r\n    );\r\n",
-                "params": [
-                  {
-                    "name": "COLORext"
-                  }
-                ],
-                "ports": {
-                  "in": [
-                    {
-                      "name": "px_clk"
-                    },
-                    {
-                      "name": "VGAStr_i",
-                      "range": "[22:0]",
-                      "size": 23
-                    }
-                  ],
-                  "out": [
-                    {
-                      "name": "RGBStr_o",
-                      "range": "[25:0]",
-                      "size": 26
-                    }
-                  ]
-                }
-              },
-              "position": {
-                "x": 1864,
-                "y": -296
-              },
-              "size": {
-                "width": 448,
-                "height": 432
-              }
-            }
-          ],
-          "wires": [
-            {
-              "source": {
-                "block": "69d500d0-9824-46b8-ae9c-cc19f55eefcb",
-                "port": "out"
-              },
-              "target": {
-                "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
-                "port": "px_clk"
-              }
-            },
-            {
-              "source": {
-                "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
-                "port": "RGBStr_o"
-              },
-              "target": {
-                "block": "10563024-bd0a-4a4d-856c-4bb1dff3f104",
-                "port": "in"
-              },
-              "vertices": [
-                {
-                  "x": 2416,
-                  "y": -80
-                }
-              ],
-              "size": 26
-            },
-            {
-              "source": {
-                "block": "03ffa583-169d-4213-a75b-dd41755aa32a",
-                "port": "out"
-              },
-              "target": {
-                "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
-                "port": "VGAStr_i"
-              },
-              "size": 23
-            },
-            {
-              "source": {
-                "block": "4ef4f2b1-023d-4569-8e10-643ef6cc71cb",
-                "port": "constant-out"
-              },
-              "target": {
-                "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
-                "port": "COLORext"
-              }
-            }
-          ]
-        },
-        "state": {
-          "pan": {
-            "x": -1191.1061,
-            "y": 403.1288
-          },
-          "zoom": 0.7973
         }
       }
     },
@@ -7982,6 +7963,326 @@
             "y": -13.5
           },
           "zoom": 1
+        }
+      }
+    },
+    "38cb4050c876fc7e3f55ca80ba16c113335782af": {
+      "package": {
+        "name": "PxsFrame",
+        "version": "1.0",
+        "description": "Draw a frame in a RGB stream.",
+        "author": "Juan Manuel Rico",
+        "image": ""
+      },
+      "design": {
+        "graph": {
+          "blocks": [
+            {
+              "id": "8a14e36d-4929-4adc-b776-71420fe9bdaf",
+              "type": "basic.input",
+              "data": {
+                "name": "px_clk",
+                "clock": false
+              },
+              "position": {
+                "x": 80,
+                "y": 168
+              }
+            },
+            {
+              "id": "3c3144a8-9ba1-4ef4-86e9-3f209d58bc5b",
+              "type": "basic.output",
+              "data": {
+                "name": "RGBStr_o",
+                "range": "[25:0]",
+                "size": 26
+              },
+              "position": {
+                "x": 960,
+                "y": 256
+              }
+            },
+            {
+              "id": "f49f87db-c266-4657-a00f-2c72462ff13b",
+              "type": "basic.input",
+              "data": {
+                "name": "RGBStr_i",
+                "range": "[25:0]",
+                "clock": false,
+                "size": 26
+              },
+              "position": {
+                "x": 80,
+                "y": 344
+              }
+            },
+            {
+              "id": "4c81326c-1ab7-42ed-96c1-ab75263876c9",
+              "type": "basic.constant",
+              "data": {
+                "name": "color",
+                "value": "3'b100",
+                "local": false
+              },
+              "position": {
+                "x": 536,
+                "y": 0
+              }
+            },
+            {
+              "id": "6e679b27-16b2-47bb-88b3-09901dcbfe7b",
+              "type": "basic.code",
+              "data": {
+                "code": "`define VGA 22:0\n`define Active 0\n`define YC 12:3\n`define XC 22:13\n`define RGB 25:23\n\nreg [25:0] RGBStr_o;\n\nalways @(posedge px_clk)\nbegin\n    RGBStr_o[`VGA] <= RGBStr_i[`VGA];\n    RGBStr_o[`RGB] <= (\n                        (RGBStr_i[`Active]) &&\n                        (\n                        (RGBStr_i[`XC] == 0) ||\n                        (RGBStr_i[`XC] == 639) ||\n                        (RGBStr_i[`YC] == 0) ||\n                        (RGBStr_i[`YC] == 479)\n                        )\n                    ) ? color : RGBStr_i[`RGB];\nend",
+                "params": [
+                  {
+                    "name": "color"
+                  }
+                ],
+                "ports": {
+                  "in": [
+                    {
+                      "name": "px_clk"
+                    },
+                    {
+                      "name": "RGBStr_i",
+                      "range": "[25:0]",
+                      "size": 26
+                    }
+                  ],
+                  "out": [
+                    {
+                      "name": "RGBStr_o",
+                      "range": "[25:0]",
+                      "size": 26
+                    }
+                  ]
+                }
+              },
+              "position": {
+                "x": 328,
+                "y": 112
+              },
+              "size": {
+                "width": 512,
+                "height": 352
+              }
+            }
+          ],
+          "wires": [
+            {
+              "source": {
+                "block": "4c81326c-1ab7-42ed-96c1-ab75263876c9",
+                "port": "constant-out"
+              },
+              "target": {
+                "block": "6e679b27-16b2-47bb-88b3-09901dcbfe7b",
+                "port": "color"
+              }
+            },
+            {
+              "source": {
+                "block": "8a14e36d-4929-4adc-b776-71420fe9bdaf",
+                "port": "out"
+              },
+              "target": {
+                "block": "6e679b27-16b2-47bb-88b3-09901dcbfe7b",
+                "port": "px_clk"
+              }
+            },
+            {
+              "source": {
+                "block": "f49f87db-c266-4657-a00f-2c72462ff13b",
+                "port": "out"
+              },
+              "target": {
+                "block": "6e679b27-16b2-47bb-88b3-09901dcbfe7b",
+                "port": "RGBStr_i"
+              },
+              "size": 26
+            },
+            {
+              "source": {
+                "block": "6e679b27-16b2-47bb-88b3-09901dcbfe7b",
+                "port": "RGBStr_o"
+              },
+              "target": {
+                "block": "3c3144a8-9ba1-4ef4-86e9-3f209d58bc5b",
+                "port": "in"
+              },
+              "size": 26
+            }
+          ]
+        },
+        "state": {
+          "pan": {
+            "x": 123,
+            "y": 93.5
+          },
+          "zoom": 1
+        }
+      }
+    },
+    "6c407782d89d99b012a1614d20d8003bc63ed986": {
+      "package": {
+        "name": "PxsRGB",
+        "version": "1.0",
+        "description": "generate a stream of constant RGB color",
+        "author": "Sergio Cuenca",
+        "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22210mm%22%20height=%22297mm%22%20viewBox=%220%200%20210%20297%22%3E%3Cg%20font-weight=%22400%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%3E%3Ctext%20style=%22line-height:1.25%22%20x=%2217.886%22%20y=%22129.252%22%20transform=%22scale(1.08086%20.92519)%22%20font-size=%2282.959%22%20fill=%22green%22%20stroke-width=%222.074%22%3E%3Ctspan%20x=%2217.886%22%20y=%22129.252%22%20fill=%22red%22%3ER%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:1.25%22%20x=%2289.093%22%20y=%22116.229%22%20transform=%22scale(.81788%201.22267)%22%20font-size=%22107.755%22%20fill=%22#0f0%22%20stroke-width=%222.694%22%3E%3Ctspan%20x=%2289.093%22%20y=%22116.229%22%3EG%3C/tspan%3E%3C/text%3E%3Ctext%20style=%22line-height:1.25%22%20x=%22137.376%22%20y=%22116.873%22%20transform=%22matrix(.96475%20.00849%20-.0079%201.03647%200%200)%22%20font-size=%2278.405%22%20fill=%22#00f%22%20stroke-width=%221.96%22%3E%3Ctspan%20x=%22137.376%22%20y=%22116.873%22%3EB%3C/tspan%3E%3C/text%3E%3C/g%3E%3C/svg%3E"
+      },
+      "design": {
+        "graph": {
+          "blocks": [
+            {
+              "id": "69d500d0-9824-46b8-ae9c-cc19f55eefcb",
+              "type": "basic.input",
+              "data": {
+                "name": "px_clk",
+                "clock": false
+              },
+              "position": {
+                "x": 1552,
+                "y": -216
+              }
+            },
+            {
+              "id": "10563024-bd0a-4a4d-856c-4bb1dff3f104",
+              "type": "basic.output",
+              "data": {
+                "name": "RGBStr",
+                "range": "[25:0]",
+                "size": 26
+              },
+              "position": {
+                "x": 2504,
+                "y": -112
+              }
+            },
+            {
+              "id": "03ffa583-169d-4213-a75b-dd41755aa32a",
+              "type": "basic.input",
+              "data": {
+                "name": "VGAStr",
+                "range": "[22:0]",
+                "clock": false,
+                "size": 23
+              },
+              "position": {
+                "x": 1544,
+                "y": -88
+              }
+            },
+            {
+              "id": "4ef4f2b1-023d-4569-8e10-643ef6cc71cb",
+              "type": "basic.constant",
+              "data": {
+                "name": "COLORext",
+                "value": "3'b111",
+                "local": false
+              },
+              "position": {
+                "x": 2032,
+                "y": -416
+              }
+            },
+            {
+              "id": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
+              "type": "basic.code",
+              "data": {
+                "code": "// @include Pxs.vh\r\n// @include PxsConstant.v\r\n\r\n\r\n//-- Instantiate PxsConstant module.\r\nPxsConstant #(COLORext)\r\nPxsConstant1(\r\n    px_clk,\r\n    VGAStr_i,\r\n    RGBStr_o\r\n    );\r\n",
+                "params": [
+                  {
+                    "name": "COLORext"
+                  }
+                ],
+                "ports": {
+                  "in": [
+                    {
+                      "name": "px_clk"
+                    },
+                    {
+                      "name": "VGAStr_i",
+                      "range": "[22:0]",
+                      "size": 23
+                    }
+                  ],
+                  "out": [
+                    {
+                      "name": "RGBStr_o",
+                      "range": "[25:0]",
+                      "size": 26
+                    }
+                  ]
+                }
+              },
+              "position": {
+                "x": 1864,
+                "y": -296
+              },
+              "size": {
+                "width": 448,
+                "height": 432
+              }
+            }
+          ],
+          "wires": [
+            {
+              "source": {
+                "block": "69d500d0-9824-46b8-ae9c-cc19f55eefcb",
+                "port": "out"
+              },
+              "target": {
+                "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
+                "port": "px_clk"
+              }
+            },
+            {
+              "source": {
+                "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
+                "port": "RGBStr_o"
+              },
+              "target": {
+                "block": "10563024-bd0a-4a4d-856c-4bb1dff3f104",
+                "port": "in"
+              },
+              "vertices": [
+                {
+                  "x": 2416,
+                  "y": -80
+                }
+              ],
+              "size": 26
+            },
+            {
+              "source": {
+                "block": "03ffa583-169d-4213-a75b-dd41755aa32a",
+                "port": "out"
+              },
+              "target": {
+                "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
+                "port": "VGAStr_i"
+              },
+              "size": 23
+            },
+            {
+              "source": {
+                "block": "4ef4f2b1-023d-4569-8e10-643ef6cc71cb",
+                "port": "constant-out"
+              },
+              "target": {
+                "block": "fabbd2ae-d75a-443d-9b7e-b8205b86adb7",
+                "port": "COLORext"
+              }
+            }
+          ]
+        },
+        "state": {
+          "pan": {
+            "x": -1191.1061,
+            "y": 403.1288
+          },
+          "zoom": 0.7973
         }
       }
     }

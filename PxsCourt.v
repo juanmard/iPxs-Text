@@ -48,15 +48,24 @@ begin
     // Clone VGA stream in a RGB stream.
     RGBStr_o[`VGA] <= VGAStr_i[`VGA];
 
+    if (VGAStr_i[`Active])
+    begin
     // Draw lines.
     RGBStr_o[`RGB] <= (
                        // Middle line.
-                       ((VGAStr_i[`XC] > (width_screen/2 - width_line/2)) && (VGAStr_i[`XC] < (width_screen/2 + width_line/2)) && (VGAStr_i[`separator_line])) ||
+                       (
+                       (VGAStr_i[`XC] > (width_screen/2 - width_line/2)) &&
+                       (VGAStr_i[`XC] < (width_screen/2 + width_line/2)) &&
+                       (VGAStr_i[`separator_line])
+                       ) ||
                        // Top line.
-                       ((VGAStr_i[`YC] > 0) && (VGAStr_i[`YC] < width_line)) ||
+                       ((VGAStr_i[`YC] >= 0) && (VGAStr_i[`YC] < width_line)) ||
                        // Bottom line.
-                       ((VGAStr_i[`YC] > (height_screen - width_line)) && (VGAStr_i[`YC] < height_screen))
-                      ) ? white : black;
+                       ((VGAStr_i[`YC] >= (height_screen - width_line)) && (VGAStr_i[`YC] < height_screen))
+                       ) ? white : black;
+    end
+    else
+        RGBStr_o[`RGB] <= 3'b000;
 end
 
 endmodule

@@ -47,7 +47,7 @@ assign scr_y = cursor_y << pS;
 // Signal with cursor inside.
 wire cursor_in;
 assign cursor_in = (
-                    (RGBStr_i[`XC] != 0) && (RGBStr_i[`YC] != 0) &&                   // Warning: glitch in 0,0... Why?
+//                    (RGBStr_i[`XC] != 0) && (RGBStr_i[`YC] != 0) &&                   // Warning: glitch in 0,0... Why?
                     (RGBStr_i[`XC] >= scr_x) && (RGBStr_i[`XC] < (scr_x + size)) &&
                     (RGBStr_i[`YC] >= scr_y) && (RGBStr_i[`YC] < (scr_y + size))
                    ) ? 1 : 0;
@@ -64,6 +64,7 @@ begin
 
     // Are we inside a cursor limit grid? Reverse pixel.
     if  (
+         RGBStr_i[`Active] &&
          //blink &&
          cursor_in
         )

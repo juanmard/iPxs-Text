@@ -59,9 +59,9 @@ begin
      // Clone VGA stream in a RGB stream.
     RGBStr_o[`VGA] <= RGBStr_i[`VGA];
 
-    // Are we inside a character limit?
+    // Are pixel active and are we inside a character limit?
     if  (
-        (RGBStr_i[`XC] > 0) && (RGBStr_i[`YC] > 0) &&                            // Warning: glitch in 0,0... Why?
+        (RGBStr_i[`Active]) &&
         (RGBStr_i[`XC] >= posx_i) && (RGBStr_i[`XC] < (posx_i + psw*gw)) &&
         (RGBStr_i[`YC] >= posy_i) && (RGBStr_i[`YC] < (posy_i + psh*gh))
         )

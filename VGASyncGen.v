@@ -28,7 +28,8 @@ module VGASyncGen #(
             output wire      vsync,         // Vertical sync out
             output reg [9:0] x_px,          // X position for actual pixel.
             output reg [9:0] y_px,          // Y position for actual pixel.
-            output wire      endframe,      // End for actual frame.
+            output wire      activevideo,   // Video is actived.
+//            output wire      endframe,      // End for actual frame.
             output wire      px_clk         // Pixel clock.
          );
 
@@ -98,6 +99,25 @@ module VGASyncGen #(
     */
 
     // Video structure constants.
+    //
+    //   Horizonal Dots         640 (activeHvideo)
+    //   Vertical Scan Lines    480 (activeVvideo)
+    //
+    //   Horiz. Sync Polarity     NEG
+    //   A (hpixels)          Scanline time
+    //   B (hpulse)           Sync pulse lenght 
+    //   C (hbp)              Back porch
+    //   D (activeHvideo)     Active video time
+    //   E (hfp)              Front porch
+    //              ______________________            ______________
+    //   __________|        VIDEO         |__________| VIDEO (next line)
+    //   |-E-| |-C-|----------D-----------|-E-|
+    //   ____   ______________________________   ___________________
+    //       |_|                              |_|
+    //       |B|
+    //       |---------------A----------------|
+    //   
+    //
     parameter activeHvideo = 640;               // Width of visible pixels.
     parameter activeVvideo =  480;              // Height of visible lines.
     parameter hfp = 24;                         // Horizontal front porch length.
@@ -145,13 +165,13 @@ module VGASyncGen #(
      end
 
     // Generate sync pulses (active low) and active video.
-    assign hsync = (hc >= hfp && hc < hfp + hpulse) ? 0:1;
-    assign vsync = (vc >= vfp && vc < vfp + vpulse) ? 0:1;
-    assign activevideo = (hc >= blackH && vc >= blackV) ? 1:0;
-    assign endframe = (hc == hpixels-1 && vc == vlines-1) ? 1'b1 : 1'b0 ;
+    assign hsync = (hc >= hfp && hc < hfp + hpulse) ? 1'b0 : 1'b1;
+    assign vsync = (vc >= vfp && vc < vfp + vpulse) ? 1'b0 : 1'b1;
+    assign activevideo = (hc >= blackH) && (vc >= blackV) ? 1'b1 : 1'b0; //&& (hc < blackH + activeHvideo) && (vc < blackV + activeVvideo) ? 1'b1 : 1'b0;
+//    assign endframe = (hc == hpixels-1 && vc == vlines-1) ? 1'b1 : 1'b0 ;
 
     // Generate new pixel position.
-    always @(posedge px_clk)
+    always @(*)
     begin
         // First check if we are within vertical active video range.
         if (activevideo)
@@ -162,9 +182,10 @@ module VGASyncGen #(
         else
         // We are outside active video range so initial position it's ok.
         begin
-            x_px <= 0;
-            y_px <= 0;
+            x_px <= 0; //activeHvideo;
+            y_px <= 0; //activeVvideo;
         end
      end
+     
 
 endmodule
