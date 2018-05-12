@@ -58,7 +58,7 @@ begin
         // Enter
         8'h0D, 8'h0A:
         begin
-            cursor_x <= 1;
+            cursor_x <= 0;
             cursor_y <= cursor_y + 1;
         end
 
@@ -66,7 +66,7 @@ begin
         8'h7F:
         begin
             cursor_x <= cursor_x - 1;
-            if (cursor_x < 0) cursor_x <= 1;
+            if (cursor_x < 0) cursor_x <= 0;
             character <= 0;
             write <= 1;
         end
@@ -83,7 +83,7 @@ begin
     // Final de línea.
     if (cursor_x >= (640/size)-1)
     begin
-        cursor_x <= 1;
+        cursor_x <= 0;
         cursor_y <= cursor_y + 1;
     end
     

@@ -573,8 +573,8 @@
           }
         },
         {
-          "id": "79517513-9b27-4cfe-9401-28275ca68e62",
-          "type": "71c420f3a9d8f44d0ca7775910f6ce8c271581ca",
+          "id": "8a483bea-7f0d-4ca3-ac87-362503fa33a9",
+          "type": "415453b03e464e7719a13c5db7154d18bcc39cc8",
           "position": {
             "x": 800,
             "y": -136
@@ -685,7 +685,7 @@
             "port": "out"
           },
           "target": {
-            "block": "79517513-9b27-4cfe-9401-28275ca68e62",
+            "block": "8a483bea-7f0d-4ca3-ac87-362503fa33a9",
             "port": "0dec3afa-b9de-4e5b-907e-9f518bdf284e"
           },
           "vertices": [
@@ -701,7 +701,7 @@
             "port": "1ee47b01-e8a1-4016-b256-0598566576e9"
           },
           "target": {
-            "block": "79517513-9b27-4cfe-9401-28275ca68e62",
+            "block": "8a483bea-7f0d-4ca3-ac87-362503fa33a9",
             "port": "38845503-ab2c-4d30-9a5c-0dadb0546a76"
           },
           "size": 26
@@ -712,7 +712,7 @@
             "port": "7cda173c-41bb-476f-8ab4-10f64c10577c"
           },
           "target": {
-            "block": "79517513-9b27-4cfe-9401-28275ca68e62",
+            "block": "8a483bea-7f0d-4ca3-ac87-362503fa33a9",
             "port": "1f3770ca-8db2-4ba7-bbcd-91b7c064fd89"
           },
           "size": 10
@@ -723,7 +723,7 @@
             "port": "f91e521f-c0d8-4d19-8c37-ce9bbb256a3a"
           },
           "target": {
-            "block": "79517513-9b27-4cfe-9401-28275ca68e62",
+            "block": "8a483bea-7f0d-4ca3-ac87-362503fa33a9",
             "port": "cec1b27d-c1b8-4aec-9706-f058fe018396"
           },
           "size": 10
@@ -734,14 +734,14 @@
             "port": "5d7af2ec-d0a7-468b-ab1d-09b528c63b80"
           },
           "target": {
-            "block": "79517513-9b27-4cfe-9401-28275ca68e62",
+            "block": "8a483bea-7f0d-4ca3-ac87-362503fa33a9",
             "port": "604edfab-6618-4a7c-9a57-0d37cacaf244"
           },
           "size": 13
         },
         {
           "source": {
-            "block": "79517513-9b27-4cfe-9401-28275ca68e62",
+            "block": "8a483bea-7f0d-4ca3-ac87-362503fa33a9",
             "port": "ad6a5e0a-2f5c-4b73-b79b-385e1ab20a59"
           },
           "target": {
@@ -752,7 +752,7 @@
         },
         {
           "source": {
-            "block": "79517513-9b27-4cfe-9401-28275ca68e62",
+            "block": "8a483bea-7f0d-4ca3-ac87-362503fa33a9",
             "port": "887da7ec-0d24-431c-8b46-fb3f89bd6f12"
           },
           "target": {
@@ -769,7 +769,7 @@
         },
         {
           "source": {
-            "block": "79517513-9b27-4cfe-9401-28275ca68e62",
+            "block": "8a483bea-7f0d-4ca3-ac87-362503fa33a9",
             "port": "abca3b88-b576-438c-94f8-35090557e20d"
           },
           "target": {
@@ -786,7 +786,7 @@
         },
         {
           "source": {
-            "block": "79517513-9b27-4cfe-9401-28275ca68e62",
+            "block": "8a483bea-7f0d-4ca3-ac87-362503fa33a9",
             "port": "1ec62b1c-aba6-4f33-a223-c5a2ca8567af"
           },
           "target": {
@@ -850,7 +850,7 @@
             "port": "cf31411c-424a-4dc3-8499-52846b5e5a0c"
           },
           "target": {
-            "block": "79517513-9b27-4cfe-9401-28275ca68e62",
+            "block": "8a483bea-7f0d-4ca3-ac87-362503fa33a9",
             "port": "c5890148-d5c0-43ce-92af-204f5b198e8f"
           },
           "vertices": [
@@ -866,7 +866,7 @@
             "port": "5d7af2ec-d0a7-468b-ab1d-09b528c63b80"
           },
           "target": {
-            "block": "79517513-9b27-4cfe-9401-28275ca68e62",
+            "block": "8a483bea-7f0d-4ca3-ac87-362503fa33a9",
             "port": "855f0b81-1d38-4a2d-b65e-8b51ab6377a6"
           },
           "vertices": [
@@ -883,7 +883,7 @@
             "port": "53638c49-bfda-4ac5-a848-d6ac6365b000"
           },
           "target": {
-            "block": "79517513-9b27-4cfe-9401-28275ca68e62",
+            "block": "8a483bea-7f0d-4ca3-ac87-362503fa33a9",
             "port": "0c52c0bf-c51f-4556-9497-c6594dbbfab9"
           },
           "vertices": [
@@ -972,10 +972,10 @@
     },
     "state": {
       "pan": {
-        "x": 61.551,
-        "y": 304.051
+        "x": 60.4735,
+        "y": 302.9735
       },
-      "zoom": 0.449
+      "zoom": 0.4265
     }
   },
   "dependencies": {
@@ -3574,7 +3574,7 @@
         }
       }
     },
-    "71c420f3a9d8f44d0ca7775910f6ce8c271581ca": {
+    "415453b03e464e7719a13c5db7154d18bcc39cc8": {
       "package": {
         "name": "DynConsoleS02",
         "version": "2.0",
@@ -3801,8 +3801,8 @@
               }
             },
             {
-              "id": "07630cad-c048-4c0d-94ef-b0f792105c89",
-              "type": "6ff98f023d46c278e1c92f2a96dc8a559f24b2ef",
+              "id": "c10fb057-5429-427e-977e-8cc0807d8dee",
+              "type": "debd0d382b624257914faf5ff9d5846ee480e4a9",
               "position": {
                 "x": 928,
                 "y": 136
@@ -3820,7 +3820,7 @@
                 "port": "out"
               },
               "target": {
-                "block": "07630cad-c048-4c0d-94ef-b0f792105c89",
+                "block": "c10fb057-5429-427e-977e-8cc0807d8dee",
                 "port": "23c82ef8-212e-4b73-af87-95267c9e0250"
               },
               "vertices": [
@@ -3837,7 +3837,7 @@
                 "port": "out"
               },
               "target": {
-                "block": "07630cad-c048-4c0d-94ef-b0f792105c89",
+                "block": "c10fb057-5429-427e-977e-8cc0807d8dee",
                 "port": "5d542121-b854-41e7-a538-cf21eecd6340"
               },
               "vertices": [
@@ -3853,7 +3853,7 @@
                 "port": "out"
               },
               "target": {
-                "block": "07630cad-c048-4c0d-94ef-b0f792105c89",
+                "block": "c10fb057-5429-427e-977e-8cc0807d8dee",
                 "port": "65a10c8e-e5ee-4002-83ac-69b27bf1ea42"
               },
               "vertices": [
@@ -3881,7 +3881,7 @@
             },
             {
               "source": {
-                "block": "07630cad-c048-4c0d-94ef-b0f792105c89",
+                "block": "c10fb057-5429-427e-977e-8cc0807d8dee",
                 "port": "1a685972-640c-45e1-8ef8-f7bb2da9750b"
               },
               "target": {
@@ -3990,7 +3990,7 @@
                 "port": "out"
               },
               "target": {
-                "block": "07630cad-c048-4c0d-94ef-b0f792105c89",
+                "block": "c10fb057-5429-427e-977e-8cc0807d8dee",
                 "port": "28a56b28-e02c-40a5-bde9-205df0380aa6"
               },
               "vertices": [
@@ -4007,7 +4007,7 @@
                 "port": "out"
               },
               "target": {
-                "block": "07630cad-c048-4c0d-94ef-b0f792105c89",
+                "block": "c10fb057-5429-427e-977e-8cc0807d8dee",
                 "port": "b81fdd88-a665-4441-ac93-d8311ee06667"
               },
               "vertices": [
@@ -4024,7 +4024,7 @@
                 "port": "out"
               },
               "target": {
-                "block": "07630cad-c048-4c0d-94ef-b0f792105c89",
+                "block": "c10fb057-5429-427e-977e-8cc0807d8dee",
                 "port": "12894132-1b71-43ca-819f-8f22745cb2a7"
               }
             }
@@ -4039,7 +4039,7 @@
         }
       }
     },
-    "6ff98f023d46c278e1c92f2a96dc8a559f24b2ef": {
+    "debd0d382b624257914faf5ff9d5846ee480e4a9": {
       "package": {
         "name": "videoDualRAM",
         "version": "2.0",
@@ -4145,7 +4145,7 @@
               "id": "aaa875d3-4ec0-4182-87e9-22cad096ae0f",
               "type": "basic.code",
               "data": {
-                "code": "//@include initRAM.list\n//@include videoDualRAM.v\n\n// 80 columnas x 76 filas = 6080 bytes\n// 12 BRAM x 512 = 6144 bytes (sobran 64 bytes)\n// 2^13 = 8192 bytes para direccionar.\nvideoDualRAM\n#(\n    .addr_width(12),\n    .data_width(8)\n)\nvideoDualRAM01\n(\n    din,\n    write_en,\n    waddr,\n    wclk,\n    raddr,\n    rclk,\n    dout\n);\n",
+                "code": "//@include initRAM.list\n//@include videoDualRAM.v\n\n// 80 columnas x 76 filas = 6080 bytes\n// 12 BRAM x 512 = 6144 bytes (sobran 64 bytes)\n// 2^13 = 8192 bytes para direccionar.\nvideoDualRAM\n#(\n    .addr_width(13),\n    .data_width(8)\n)\nvideoDualRAM01\n(\n    din,\n    write_en,\n    waddr,\n    wclk,\n    raddr,\n    rclk,\n    dout\n);\n",
                 "params": [],
                 "ports": {
                   "in": [
@@ -4272,10 +4272,10 @@
         },
         "state": {
           "pan": {
-            "x": 24,
-            "y": -13.5
+            "x": 24.8,
+            "y": 1.3
           },
-          "zoom": 1
+          "zoom": 0.95
         }
       }
     }

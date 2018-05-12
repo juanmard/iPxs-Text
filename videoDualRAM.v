@@ -20,10 +20,9 @@
 module videoDualRAM 
 #(
     parameter INTRAM_FILE = "initRAM.list",
-//    parameter cols = 80,
-//    parameter rows = 76,
-    parameter addr_width = 13,  // 80x76 = 6080 bytes -> 12 BRAM x 512 = 6144 bytes (sobran 64 bytes) -> 2^13 = 8192 bytes para direccionar.
-    parameter data_width = 8
+    parameter data_width =  8,
+    parameter ram_size =  80*60,  // 640/8 píxeles = 80 columnas y 480/8 = 60 filas.
+    parameter addr_width =  $clog2(ram_size)
 )
 (
     input wire [data_width-1:0] din,
@@ -35,7 +34,7 @@ module videoDualRAM
     output reg [data_width-1:0] dout
 );
 
-reg [data_width-1:0] mem [(1 << addr_width)-1:0];
+reg [data_width-1:0] mem [ram_size-1:0];
 
 initial
 begin
