@@ -18,6 +18,7 @@ module vgaChar (
     input wire         px_clk,      // Pixel clock.
     input wire  [25:0] strRGB_i,    // Stream RGB in.
     input wire  [2:0]  color,       // RGB color character.
+    input wire  [2:0]  zoom,        // Zoom to character.
     input wire  [9:0]  x_pos,       // Position byte X
     input wire  [9:0]  y_pos,       // Position byte Y.
     input wire  [7:0]  character,   // Character to show.
@@ -35,17 +36,25 @@ module vgaChar (
     `define B      25:25
     `define RGB    25:23
     `define VGA    22:0
-    `define ZOOM   5:3
+    `define ZOOM   3:1
+//    `define zoom   5
 
     // Dimensions.
     localparam width_line = 6;
     localparam width_screen = 800;
     localparam height_screen = 600;
-    localparam separation = 2;
-    localparam wGlypho = 8;
-    localparam hGlypho = 8;
-    localparam wByte = 2*wGlypho + 2*separation; 
-    localparam hByte = hGlypho; 
+
+    // Registers zoom.
+    wire [9:0] wGlyph;
+    wire [9:0] hGlyph;
+    assign wGlyph = (8 << zoom);
+    assign hGlyph = (8 << zoom);
+
+    // always @(px_clk)
+    // begin
+    //     wGlyph <= 8 << zoom;
+    //     hGlyph <= 8 << zoom;
+    // end
 
     // Colors.
     localparam black = 3'b000;
@@ -66,9 +75,9 @@ module vgaChar (
     wire [11:0] bAddress;
 
     // Assigns.
-    assign x_px = strRGB[`XC];
-    assign y_px = strRGB[`YC];
-    assign bAddress = {character, y_px[`ZOOM]};
+    assign x_px = strRGB[`XC] >> zoom;
+    assign y_px = strRGB[`YC] >> zoom;
+    assign bAddress = {character, y_px[2:0]};
 
     // Font ROM.
     fontROM  font_0 (
@@ -85,11 +94,11 @@ module vgaChar (
 
         if (strRGB_i [`Active])
         begin
-            // Draw glyphos.
+            // Draw glyphs.
             strRGB [`RGB] <= ( 
-                                 (strRGB_i[`XC] > x_pos) && (strRGB_i[`XC] < x_pos + wGlypho*8) &&
-                                 (strRGB_i[`YC] > y_pos) && (strRGB_i[`YC] < y_pos + hGlypho*8) &&
-                                 pixels[x_px[`ZOOM]]
+                                 (strRGB_i[`XC] > x_pos) && (strRGB_i[`XC] < x_pos + wGlyph) &&
+                                 (strRGB_i[`YC] > y_pos) && (strRGB_i[`YC] < y_pos + hGlyph) &&
+                                 pixels[x_px[2:0]]
                                ) ? color : strRGB_i[`RGB];
         end
     end

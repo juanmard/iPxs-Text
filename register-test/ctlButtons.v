@@ -30,8 +30,8 @@ module ctlButtons #(parameter speed = 1)
    parameter tope_inf = screen_height - 10;
 
    // Memory positions.
-   reg [9:0] reg1 = 63;
-   reg [9:0] reg2 = 63;
+   reg [9:0] reg1 = 1;
+   reg [9:0] reg2 = 1;
 
    assign pos_ply1 = reg1;
    assign pos_ply2 = reg2;

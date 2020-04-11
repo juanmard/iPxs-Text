@@ -17,6 +17,7 @@
 module vgaREG (
     input wire         px_clk,      // Pixel clock.
     input wire  [25:0] strRGB_i,    // Stream RGB in.
+    input wire  [2:0]  zoom,        // Zoom to character.
     input wire  [9:0]  x_pos,       // Position byte X
     input wire  [9:0]  y_pos,       // Position byte Y.
     input wire  [15:0] register,    // Register to show.
@@ -40,11 +41,16 @@ module vgaREG (
     localparam width_line = 6;
     localparam width_screen = 800;
     localparam height_screen = 600;
-    localparam separation = 8;
-    localparam wGlypho = 8;
-    localparam hGlypho = 8;
-    localparam wChar =  64; //wGlypho*128; 
-    localparam hChar = hGlypho; 
+    localparam wGlyph = 8;
+
+    // Registers.
+    wire [9:0] wChar;
+    assign wChar = (wGlyph << zoom); 
+
+    // always @(px_clk)
+    // begin
+    //     wChar <= wGlyph << zoom; 
+    // end
 
     // Wire module conections.
     wire [25:0] strRGB_p0;
@@ -66,6 +72,7 @@ module vgaREG (
     vgaChar vgaChar_0 (
         .px_clk (px_clk),
         .strRGB_i (strRGB_i),
+        .zoom (zoom),
         .color (3'b111),
         .x_pos (x_pos + 0*wChar),
         .y_pos (y_pos),
@@ -77,6 +84,7 @@ module vgaREG (
     vgaChar vgaChar_1 (
         .px_clk (px_clk),
         .strRGB_i (strRGB_p0),
+        .zoom (zoom),
         .color (3'b110),
         .x_pos (x_pos + 1*wChar),
         .y_pos (y_pos),
@@ -88,6 +96,7 @@ module vgaREG (
     vgaChar vgaChar_3 (
         .px_clk (px_clk),
         .strRGB_i (strRGB_p1),
+        .zoom (zoom),
         .color (3'b101),
         .x_pos (x_pos + 2*wChar),
         .y_pos (y_pos),
@@ -99,6 +108,7 @@ module vgaREG (
     vgaChar vgaChar_2 (
         .px_clk (px_clk),
         .strRGB_i (strRGB_p2),
+        .zoom (zoom),
         .color (3'b011),
         .x_pos (x_pos + 3*wChar),
         .y_pos (y_pos),

@@ -30,6 +30,8 @@ module top (
     output wire PIN_10,     // VGA - G.
     output wire PIN_9,      // VGA - B.
 
+    output wire PIN_14,     // Test led.
+
     output wire PIN_20,     // Right channel.
     output wire PIN_19      // Left channel.
 );
@@ -44,26 +46,46 @@ module top (
     wire [25:0] strRGB_o;       // Stream RGB.
     wire endframe;              // End frame signal.
 
-
-    // Register test.
-    reg [7:0] counter;                // Counter frames.
+    /// --- Register test. ---
+    // Counter frame: 2^4 = 16 frames -> 72Hz (72 frames/second) -> 16/72 ~= 0.22 seconds
+    reg [7:0] counter;                 // Counter frames.
     reg [15:0] register = 16'h0019;    // Register to show.
 
-    // Register temporal test.
     always @(posedge endframe)
     begin
         counter <= counter + 1;
     end
 
-    // Counter frame: 2^4 = 16 frames -> 70Hz (70 frames/second) -> 16/70 ~= 0.23 seconds
     always @(posedge counter[4])
     begin
         register <= register + 1;
     end
 
-    // Positions.
-    wire [9:0] x_pos;
-    wire [9:0] y_pos;
+    reg [2:0] zoom = 0;
+    reg inc = 1;
+    assign PIN_14 = counter[7];
+    always @(posedge counter[7])
+    begin
+        zoom <= (inc) ? (zoom + 1) : (zoom - 1);
+        if ((zoom < 0) || (zoom > 4))
+        begin
+            inc =  ~inc;
+            zoom <= inc ? 0 : 4;
+        end
+    end
+
+    // Control test module.
+    ctlButtons ctlButtons_0 (
+        .clk (endframe),
+        .ply1_up   (PIN_21),
+        .ply1_down (PIN_22),
+        .ply2_up   (PIN_23),
+        .ply2_down (PIN_24),
+//        .pos_ply1 (zoom),
+//        .pos_ply2 (zoom)
+    );
+
+    /// --- End temporal register test. ---
 
     // Generated VGA stream module.
     strVGAGen strVGAGen_0 (
@@ -81,23 +103,13 @@ module top (
     // Temporal black background.
     assign strRGB_i = {strVGA, 0'b000};
 
-    // Control test module.
-    // ctlButtons ctlButtons_0 (
-    //     .clk (endframe),
-    //     .ply1_up   (PIN_21),
-    //     .ply1_down (PIN_22),
-    //     .ply2_up   (PIN_23),
-    //     .ply2_down (PIN_24),
-    //     .pos_ply1 (x_pos),
-    //     .pos_ply2 (y_pos)
-    // );
-
     // Register module.
     vgaREG vgaREG_0 (
         .px_clk (px_clk),
         .strRGB_i (strRGB_i),
-        .x_pos (63),
-        .y_pos (63),
+        .zoom (zoom),
+        .x_pos (0),
+        .y_pos (0),
         .register (register),
         .strRGB_o (strRGB_o)
     );
