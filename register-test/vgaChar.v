@@ -4,7 +4,7 @@
 // Create Date: 11/04/2020
 // Module Name: vgaChar.v
 //
-// Description: Draw zone of a character in a stream RGB.
+// Description: Draw a character in a stream RGB.
 //
 // Dependencies:
 //
@@ -16,11 +16,12 @@
 ////////////////////////////////////////////////////////////////////////////////
 module vgaChar (
     input wire         px_clk,      // Pixel clock.
-    input wire  [22:0] strVGA,      // Stream VGA input.
+    input wire  [25:0] strRGB_i,    // Stream RGB in.
+    input wire  [2:0]  color,       // RGB color character.
     input wire  [9:0]  x_pos,       // Position byte X
     input wire  [9:0]  y_pos,       // Position byte Y.
-    input wire  [7:0]  character,   // Register to show.
-    output wire [25:0] strRGB       // Stream RGB out.
+    input wire  [7:0]  character,   // Character to show.
+    output wire [25:0] strRGB_o     // Stream RGB out.
 );
 
     // Bit address alias.
@@ -51,8 +52,8 @@ module vgaChar (
     localparam white = 3'b111;
 
     // Output RGB stream.
-    reg [25:0] strRGB_reg;
-    assign strRGB = strRGB_reg;
+    reg [25:0] strRGB;
+    assign strRGB_o = strRGB;
 
     // Pixels to draw (inverted).
     wire [0:7] pixels;
@@ -65,8 +66,8 @@ module vgaChar (
     wire [11:0] bAddress;
 
     // Assigns.
-    assign x_px = strVGA[`XC];
-    assign y_px = strVGA[`YC];
+    assign x_px = strRGB[`XC];
+    assign y_px = strRGB[`YC];
     assign bAddress = {character, y_px[`ZOOM]};
 
     // Font ROM.
@@ -80,16 +81,16 @@ module vgaChar (
     always @(posedge px_clk)
     begin
         // Clone VGA stream signals in a RGB stream.
-        strRGB_reg[`VGA] <= strVGA[`VGA];
+        strRGB [`VGA] <= strRGB_i[`VGA];
 
-        if (strVGA[`Active])
+        if (strRGB_i [`Active])
         begin
             // Draw glyphos.
-            strRGB_reg[`RGB] <= ( 
-                                 (strVGA[`XC] > x_pos) && (strVGA[`XC] < x_pos + 128) &&
-                                 (strVGA[`YC] > y_pos) && (strVGA[`YC] < y_pos + 128) &&
+            strRGB [`RGB] <= ( 
+                                 (strRGB_i[`XC] > x_pos) && (strRGB_i[`XC] < x_pos + wGlypho*8) &&
+                                 (strRGB_i[`YC] > y_pos) && (strRGB_i[`YC] < y_pos + hGlypho*8) &&
                                  pixels[x_px[`ZOOM]]
-                               ) ? white : black;
+                               ) ? color : strRGB_i[`RGB];
         end
     end
 

@@ -40,9 +40,26 @@ module top (
     // Module wire conections. 
     wire px_clk;                // Pixel clk.
     wire [22:0] strVGA;         // Stream VGA.
-    wire [25:0] strRGB;         // Stream RGB.
+    wire [25:0] strRGB_i;       // Stream RGB.
+    wire [25:0] strRGB_o;       // Stream RGB.
     wire endframe;              // End frame signal.
-    wire [7:0] register;        // Register to show.
+
+
+    // Register test.
+    reg [7:0] counter;                // Counter frames.
+    reg [15:0] register = 16'h0019;    // Register to show.
+
+    // Register temporal test.
+    always @(posedge endframe)
+    begin
+        counter <= counter + 1;
+    end
+
+    // Counter frame: 2^4 = 16 frames -> 70Hz (70 frames/second) -> 16/70 ~= 0.23 seconds
+    always @(posedge counter[4])
+    begin
+        register <= register + 1;
+    end
 
     // Positions.
     wire [9:0] x_pos;
@@ -61,30 +78,33 @@ module top (
         .endframe(endframe)
     );
 
-    // Control game module.
-    ctlButtons ctlButtons_0 (
-        .clk (endframe),
-        .ply1_up   (PIN_21),
-        .ply1_down (PIN_22),
-        .ply2_up   (PIN_23),
-        .ply2_down (PIN_24),
-        .pos_ply1 (x_pos[9:2]),
-        .pos_ply2 (y_pos[9:2])
-    );
+    // Temporal black background.
+    assign strRGB_i = {strVGA, 0'b000};
+
+    // Control test module.
+    // ctlButtons ctlButtons_0 (
+    //     .clk (endframe),
+    //     .ply1_up   (PIN_21),
+    //     .ply1_down (PIN_22),
+    //     .ply2_up   (PIN_23),
+    //     .ply2_down (PIN_24),
+    //     .pos_ply1 (x_pos),
+    //     .pos_ply2 (y_pos)
+    // );
 
     // Register module.
     vgaREG vgaREG_0 (
         .px_clk (px_clk),
-        .strVGA (strVGA),
-        .x_pos (x_pos),
-        .y_pos (y_pos),
+        .strRGB_i (strRGB_i),
+        .x_pos (63),
+        .y_pos (63),
         .register (register),
-        .strRGB (strRGB)
+        .strRGB_o (strRGB_o)
     );
 
     // Unzip RGB stream module.
     unzipRGB unzipRGB_0 (
-        .strRGB (strRGB),
+        .strRGB (strRGB_o),
         .vsync (PIN_13),
         .hsync (PIN_12),
         .Red (PIN_11),
