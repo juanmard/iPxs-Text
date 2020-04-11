@@ -44,6 +44,10 @@ module top (
     wire endframe;              // End frame signal.
     wire [7:0] register;        // Register to show.
 
+    // Positions.
+    wire [9:0] x_pos;
+    wire [9:0] y_pos;
+
     // Generated VGA stream module.
     strVGAGen strVGAGen_0 (
         .sys_clk (CLK),
@@ -58,23 +62,22 @@ module top (
     );
 
     // Control game module.
-/*
     ctlButtons ctlButtons_0 (
         .clk (endframe),
         .ply1_up   (PIN_21),
         .ply1_down (PIN_22),
         .ply2_up   (PIN_23),
         .ply2_down (PIN_24),
-        .pos_ply1 (pos_ply1),
-        .pos_ply2 (pos_ply2),
+        .pos_ply1 (x_pos[9:2]),
+        .pos_ply2 (y_pos[9:2])
     );
-*/
+
     // Register module.
     vgaREG vgaREG_0 (
         .px_clk (px_clk),
         .strVGA (strVGA),
-        .x_pos (100),
-        .y_pos (100),
+        .x_pos (x_pos),
+        .y_pos (y_pos),
         .register (register),
         .strRGB (strRGB)
     );
