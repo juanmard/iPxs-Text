@@ -35,7 +35,6 @@ module vgaREG (
     `define B      25:25
     `define RGB    25:23
     `define VGA    22:0
-    `define ZOOM   5:3
 
     // Dimensions.
     localparam width_line = 6;
@@ -47,11 +46,6 @@ module vgaREG (
     wire [9:0] wChar;
     assign wChar = (wGlyph << zoom); 
 
-    // always @(px_clk)
-    // begin
-    //     wChar <= wGlyph << zoom; 
-    // end
-
     // Wire module conections.
     wire [25:0] strRGB_p0;
     wire [25:0] strRGB_p1;
@@ -62,7 +56,7 @@ module vgaREG (
     wire [25:0] strRGB_o;
     assign strRGB_o = strRGB_p3;
 
-    // Calcule character for nibbles.
+    // Calcule character (ASCII) for nibbles.
     `define nibble_3 (register[15:12] < 10) ? (register[15:12] + 7'h30) : (register[15:12] + 7'h37)
     `define nibble_2 (register[11:8]  < 10) ?  (register[11:8] + 7'h30) :  (register[11:8] + 7'h37)
     `define nibble_1 (register[7:4]   < 10) ?   (register[7:4] + 7'h30) :   (register[7:4] + 7'h37)

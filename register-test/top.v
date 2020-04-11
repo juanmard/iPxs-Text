@@ -51,19 +51,25 @@ module top (
     reg [7:0] counter;                 // Counter frames.
     reg [15:0] register = 16'h0019;    // Register to show.
 
+    // Test led.
+    assign PIN_14 = counter[7];
+
+    // New frame.
     always @(posedge endframe)
     begin
         counter <= counter + 1;
     end
 
+    // Increment register.
     always @(posedge counter[4])
     begin
         register <= register + 1;
     end
 
+    // Test zoom.
     reg [2:0] zoom = 0;
     reg inc = 1;
-    assign PIN_14 = counter[7];
+
     always @(posedge counter[7])
     begin
         zoom <= (inc) ? (zoom + 1) : (zoom - 1);
@@ -75,17 +81,21 @@ module top (
     end
 
     // Control test module.
+    wire [9:0] x_pos;
+    wire [9:0] y_pos;
+
     ctlButtons ctlButtons_0 (
         .clk (endframe),
         .ply1_up   (PIN_21),
         .ply1_down (PIN_22),
         .ply2_up   (PIN_23),
         .ply2_down (PIN_24),
-//        .pos_ply1 (zoom),
-//        .pos_ply2 (zoom)
+        .pos_ply1 (x_pos),
+        .pos_ply2 (y_pos)
     );
 
     /// --- End temporal register test. ---
+
 
     // Generated VGA stream module.
     strVGAGen strVGAGen_0 (
@@ -101,15 +111,15 @@ module top (
     );
 
     // Temporal black background.
-    assign strRGB_i = {strVGA, 0'b000};
+    assign strRGB_i = {strVGA, 0'b001};
 
     // Register module.
     vgaREG vgaREG_0 (
         .px_clk (px_clk),
         .strRGB_i (strRGB_i),
         .zoom (zoom),
-        .x_pos (0),
-        .y_pos (0),
+        .x_pos (x_pos),
+        .y_pos (y_pos),
         .register (register),
         .strRGB_o (strRGB_o)
     );

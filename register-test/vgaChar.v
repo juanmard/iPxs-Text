@@ -36,25 +36,17 @@ module vgaChar (
     `define B      25:25
     `define RGB    25:23
     `define VGA    22:0
-    `define ZOOM   3:1
-//    `define zoom   5
 
-    // Dimensions.
+    // Dimentions.
     localparam width_line = 6;
     localparam width_screen = 800;
     localparam height_screen = 600;
 
-    // Registers zoom.
+    // Dimentions from glyph at zoom.
     wire [9:0] wGlyph;
     wire [9:0] hGlyph;
     assign wGlyph = (8 << zoom);
     assign hGlyph = (8 << zoom);
-
-    // always @(px_clk)
-    // begin
-    //     wGlyph <= 8 << zoom;
-    //     hGlyph <= 8 << zoom;
-    // end
 
     // Colors.
     localparam black = 3'b000;
@@ -75,8 +67,8 @@ module vgaChar (
     wire [11:0] bAddress;
 
     // Assigns.
-    assign x_px = strRGB[`XC] >> zoom;
-    assign y_px = strRGB[`YC] >> zoom;
+    assign x_px = (strRGB[`XC] - x_pos) >> zoom;
+    assign y_px = (strRGB[`YC] - y_pos) >> zoom;
     assign bAddress = {character, y_px[2:0]};
 
     // Font ROM.
@@ -96,10 +88,10 @@ module vgaChar (
         begin
             // Draw glyphs.
             strRGB [`RGB] <= ( 
-                                 (strRGB_i[`XC] > x_pos) && (strRGB_i[`XC] < x_pos + wGlyph) &&
-                                 (strRGB_i[`YC] > y_pos) && (strRGB_i[`YC] < y_pos + hGlyph) &&
-                                 pixels[x_px[2:0]]
-                               ) ? color : strRGB_i[`RGB];
+                                (strRGB_i[`XC] >= x_pos) && (strRGB_i[`XC] < x_pos + wGlyph) &&
+                                (strRGB_i[`YC] >= y_pos) && (strRGB_i[`YC] < y_pos + hGlyph) &&
+                                pixels[x_px[2:0]]
+                            ) ? color : strRGB_i[`RGB];
         end
     end
 
