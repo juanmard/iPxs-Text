@@ -27,11 +27,11 @@ module ctlButtons #(parameter speed = 1)
    // Parameters for vertical players.
    parameter screen_height = 600;
    parameter tope_sup = 5;
-   parameter tope_inf = screen_height - 10;
+   parameter tope_inf = screen_height - 5;
 
    // Memory positions.
-   reg [9:0] reg1 = 1;
-   reg [9:0] reg2 = 1;
+   reg [9:0] reg1 = 0;
+   reg [9:0] reg2 = 150;
 
    assign pos_ply1 = reg1;
    assign pos_ply2 = reg2;

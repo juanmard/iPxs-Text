@@ -73,10 +73,10 @@ module top (
     always @(posedge counter[7])
     begin
         zoom <= (inc) ? (zoom + 1) : (zoom - 1);
-        if ((zoom < 0) || (zoom > 4))
+        if ((zoom <= 0) || (zoom > 3))
         begin
             inc =  ~inc;
-            zoom <= inc ? 0 : 4;
+            zoom <= inc ? 1 : 3;
         end
     end
 
@@ -84,7 +84,8 @@ module top (
     wire [9:0] x_pos;
     wire [9:0] y_pos;
 
-    ctlButtons ctlButtons_0 (
+    ctlButtons #(.speed(3)) ctlButtons_0
+    (
         .clk (endframe),
         .ply1_up   (PIN_21),
         .ply1_down (PIN_22),
@@ -111,7 +112,8 @@ module top (
     );
 
     // Temporal black background.
-    assign strRGB_i = {strVGA, 0'b001};
+    assign strRGB_i[`VGA] = strVGA;
+    assign strRGB_i[`RGB] = 3'b000;
 
     // Register module.
     vgaREG vgaREG_0 (
@@ -129,9 +131,9 @@ module top (
         .strRGB (strRGB_o),
         .vsync (PIN_13),
         .hsync (PIN_12),
-        .Red (PIN_11),
+        .Red   (PIN_11),
         .Green (PIN_10),
-        .Blue (PIN_9)
+        .Blue  (PIN_9)
     );
 
 endmodule
